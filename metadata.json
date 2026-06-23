@@ -1,0 +1,6 @@
+{
+  "name": "Cosmic Astrology Platform",
+  "description": "Premium astrology eCommerce, consultation and free tools platform featuring dark elegant design, full spiritual services, and multi-step booking logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
