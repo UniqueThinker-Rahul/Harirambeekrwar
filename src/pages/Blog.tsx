@@ -6,7 +6,7 @@ const Blog = () => (
   <>
     <SEO 
       title="Cosmic Wisdom Blog | Astrology Insights" 
-      description="Read the latest articles on Vedic astrology, Vastu tips, numerology, and cosmic energy by Arviend Sud."
+      description="Read the latest articles on Vedic astrology, Vastu tips, numerology, and cosmic energy by Hariram Beekrwar."
     />
     <div className="min-h-screen py-20 px-4 bg-light-grey">
       <div className="max-w-5xl mx-auto">

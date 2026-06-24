@@ -10,7 +10,7 @@ const BlogDetail = () => {
     return (
         <>
             <SEO 
-                title={`${title} - Cosmic Wisdom Blog | Arviend Sud`} 
+                title={`${title} - Cosmic Wisdom Blog | HARIRAM BEEKRWAR`} 
                 description={`Read our detailed insights on ${title}. Learn about Vedic astrology, Vastu, and spiritual remedies to improve your cosmic alignment.`}
             />
             <div className="min-h-screen py-20 px-4 bg-white">
@@ -24,7 +24,7 @@ const BlogDetail = () => {
                           <p className="text-secondary font-bold tracking-widest uppercase text-sm mb-4">Cosmic Insights</p>
                           <h1 className="text-4xl md:text-6xl font-bold text-dark-grey capitalize leading-tight mb-6">{title}</h1>
                           <div className="flex items-center text-medium-grey text-sm">
-                              <span>By Master Arviend Sud</span>
+                              <span>By Master Hariram Beekrwar</span>
                               <span className="mx-3">•</span>
                               <span>5 min read</span>
                           </div>

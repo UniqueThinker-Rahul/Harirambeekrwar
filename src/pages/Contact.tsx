@@ -5,8 +5,8 @@ import SEO from '../components/SEO';
 const Contact = () => (
     <>
       <SEO 
-        title="Contact Us | Support & Enquiries | Arviend Sud" 
-        description="Get in touch with Arviend Sud's team for consultation bookings, shop enquiries, or general support. We are here to guide you securely."
+        title="Contact Us | Support & Enquiries | HARIRAM BEEKRWAR" 
+        description="Get in touch with Hariram Beekrwar's team for consultation bookings, or general support. We are here to guide you securely."
       />
       <div className="min-h-screen py-24 px-4 bg-light-grey block relative pb-32">
           {/* Background Map Placeholder Pattern */}
@@ -16,7 +16,7 @@ const Contact = () => (
               <div className="text-center mb-20">
                  <div className="inline-block bg-white border border-gray-200 text-secondary px-6 py-2 rounded-full font-bold mb-6 text-sm tracking-widest uppercase shadow-sm">Support Center</div>
                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-dark-grey">Get in Touch</h1>
-                 <p className="text-xl text-medium-grey max-w-2xl mx-auto leading-relaxed">Have questions about our reports, gemstones, or booking a private consultation? Our dedicated support team is here to assist you promptly.</p>
+                 <p className="text-xl text-medium-grey max-w-2xl mx-auto leading-relaxed">Have questions about our reports or booking a private consultation? Our dedicated support team is here to assist you promptly.</p>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                   <div className="lg:col-span-2 space-y-6">
@@ -26,7 +26,7 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold text-dark-grey mb-1">Call Us</h3>
-                              <p className="text-medium-grey text-lg font-medium">+91 98765 43210</p>
+                              <p className="text-medium-grey text-lg font-medium">+91 9509610711</p>
                               <p className="text-sm text-gray-400 mt-1 flex items-center"><Clock className="w-3 h-3 mr-1" /> 10:00 AM - 6:00 PM (IST)</p>
                           </div>
                       </div>
@@ -36,7 +36,7 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold text-dark-grey mb-1">WhatsApp</h3>
-                              <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="text-medium-grey text-lg font-medium hover:text-[#25D366] transition-colors">+91 98765 43210</a>
+                              <a href="https://wa.me/919509610711" target="_blank" rel="noreferrer" className="text-medium-grey text-lg font-medium hover:text-[#25D366] transition-colors">+91 9509610711</a>
                               <p className="text-sm text-green-600 font-bold mt-1 tracking-wide uppercase text-xs">Fastest Response</p>
                           </div>
                       </div>
@@ -55,7 +55,7 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold text-dark-grey mb-1">Head Office</h3>
-                              <p className="text-medium-grey text-lg leading-relaxed">123 Cosmic Avenue, Vastu Vihar<br/>New Delhi, India 110001</p>
+                              <p className="text-medium-grey text-lg leading-relaxed">Hariram Beekrwar<br/>BHARATPUR 321001</p>
                           </div>
                       </div>
                   </div>
@@ -83,7 +83,6 @@ const Contact = () => (
                              <select className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg text-dark-grey">
                                 <option>General Enquiry</option>
                                 <option>Consultation Booking</option>
-                                <option>Shop / Gemstone Order</option>
                                 <option>Report Status</option>
                              </select>
                           </div>

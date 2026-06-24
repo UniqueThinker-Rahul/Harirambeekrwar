@@ -1,17 +1,17 @@
 import React from 'react';
-import { Calendar as CalendarIcon, ShoppingBag, ArrowRight, BookOpen, Download, User as UserIcon } from 'lucide-react';
+import { Calendar as CalendarIcon, ArrowRight, BookOpen, Download, User as UserIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const Dashboard = () => (
    <>
-     <SEO title="My Account Dashboard" description="Manage your consultations, reports, and shop orders." />
+     <SEO title="My Account Dashboard" description="Manage your consultations and reports." />
      <div className="min-h-screen bg-light-grey py-16 px-4">
        <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-12">
              <div>
                 <h1 className="text-4xl font-bold text-dark-grey mb-2 flex items-center gap-3"><UserIcon className="w-8 h-8 text-primary"/> My Account</h1>
-                <p className="text-medium-grey">Manage your spiritual journey, consultations, and orders.</p>
+                <p className="text-medium-grey">Manage your spiritual journey and consultations.</p>
              </div>
              <div className="px-6 py-3 bg-yellow-50 text-secondary border border-yellow-100 font-bold rounded-full text-sm shadow-sm">
                 Status: Guest User
@@ -33,23 +33,6 @@ const Dashboard = () => (
                         <p className="text-medium-grey text-lg mb-6">You don't have any upcoming or past consultations.</p>
                         <Link to="/booking" className="bg-dark-grey text-white px-8 py-4 rounded-full hover:bg-secondary transition-colors font-bold flex items-center shadow-md">
                            Book a Session Now <ArrowRight className="w-5 h-5 ml-2" />
-                        </Link>
-                     </div>
-                 </div>
-                 
-                 <div className="p-10 bg-white rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
-                     <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-50">
-                        <div className="flex items-center gap-4">
-                           <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center text-white shadow-inner">
-                              <ShoppingBag className="w-6 h-6"/>
-                           </div>
-                           <h3 className="font-bold text-2xl text-dark-grey">My Orders</h3>
-                        </div>
-                     </div>
-                     <div className="flex-grow flex flex-col items-center justify-center text-center py-10 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-                        <p className="text-medium-grey text-lg mb-6">You haven't ordered any physical tools or reports yet.</p>
-                        <Link to="/shop" className="bg-dark-grey text-white px-8 py-4 rounded-full hover:bg-secondary transition-colors font-bold flex items-center shadow-md">
-                           Browse the Shop <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                      </div>
                  </div>

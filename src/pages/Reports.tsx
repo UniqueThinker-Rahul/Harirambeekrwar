@@ -5,8 +5,8 @@ import SEO from '../components/SEO';
 const Reports = () => (
     <>
       <SEO 
-        title="In-Depth Astrology Reports | Arviend Sud" 
-        description="Get deeply researched, manually prepared astrology reports by Arviend Sud. Covering Marriage, Career, Wealth, and complete life blueprint."
+        title="In-Depth Astrology Reports | HARIRAM BEEKRWAR" 
+        description="Get deeply researched, manually prepared astrology reports by Hariram Beekrwar. Covering Marriage, Career, Wealth, and complete life blueprint."
       />
       <div className="min-h-screen py-24 px-4 bg-light-grey text-center pb-32">
           

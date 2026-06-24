@@ -9,8 +9,8 @@ const Home = () => {
     <>
       <SEO 
         title="Expert Vedic Astrology & Vastu Consultations" 
-        description="Transform your life with authentic Vedic astrology, Vastu Shastra, and Numerology by Arviend Sud. Get powerful remedies and spiritual guidance for a peaceful life."
-        keywords="Vedic astrology, Vastu Shastra, numerology, buy gemstones, astrology consultation, Arviend Sud"
+        description="Transform your life with authentic Vedic astrology, Vastu Shastra, and Numerology by Hariram Beekrwar. Get powerful remedies and spiritual guidance for a peaceful life."
+        keywords="Vedic astrology, Vastu Shastra, numerology, astrology consultation, Hariram Beekrwar"
       />
       <div>
         {/* Hero Section */}
@@ -53,9 +53,6 @@ const Home = () => {
               <Link to="/booking" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-primary text-dark-grey font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(255,215,0,0.4)] transform hover:-translate-y-1">
                 Book Your Consultation <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/shop" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-transparent text-white font-semibold hover:bg-white/10 transition-colors border border-gray-600 hover:border-gray-400">
-                Explore Healing Crystals
-              </Link>
             </motion.div>
             <motion.div
                initial={{ opacity: 0 }}
@@ -70,17 +67,17 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Quick About the Expert */}
+         {/* Quick About the Expert */}
         <section className="py-20 bg-white">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col md:flex-row items-center gap-12">
                  <div className="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1608670784260-84a1efd5c07c?auto=format&fit=crop&w=800&q=80" alt="Arviend Sud" className="rounded-3xl shadow-xl w-full object-cover aspect-square md:aspect-auto md:h-[500px]" />
+                    <img src="https://images.unsplash.com/photo-1608670784260-84a1efd5c07c?auto=format&fit=crop&w=800&q=80" alt="Hariram Beekrwar" className="rounded-3xl shadow-xl w-full object-cover aspect-square md:aspect-auto md:h-[500px]" />
                  </div>
                  <div className="md:w-1/2">
-                    <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-6">Meet Your Guide, Arviend Sud</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-6">Meet Your Guide, Hariram Beekrwar</h2>
                     <p className="text-medium-grey text-lg mb-6 leading-relaxed">
-                       With over two decades of dedicated practice in Vedic Astrology and Vastu Shastra, Arviend Sud has helped thousands of individuals break free from their limiting cycles. His approach is entirely pragmatic, logically sound, and designed to yield real-world results without relying on fear.
+                       With over two decades of dedicated practice in Vedic Astrology and Vastu Shastra, Hariram Beekrwar has helped thousands of individuals break free from their limiting cycles. His approach is entirely pragmatic, logically sound, and designed to yield real-world results without relying on fear.
                     </p>
                     <ul className="space-y-4 mb-8">
                        <li className="flex items-start"><CheckCircle className="w-6 h-6 text-primary mr-3 shrink-0" /> <span className="text-dark-grey font-medium">Over 20+ Years of direct consultation experience.</span></li>
@@ -139,7 +136,7 @@ const Home = () => {
                  <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -z-10 -translate-y-1/2"></div>
                  {[
                     { step: "01", icon: <Clock className="w-8 h-8" />, title: "Book a Slot", desc: "Choose a time that works best for you and securely book your 1-on-1 session." },
-                    { step: "02", icon: <Users className="w-8 h-8" />, title: "Private Consultation", desc: "Speak directly with Arviend Sud safely and confidentially via video or voice call." },
+                    { step: "02", icon: <Users className="w-8 h-8" />, title: "Private Consultation", desc: "Speak directly with Hariram Beekrwar safely and confidentially via video or voice call." },
                     { step: "03", icon: <BookOpen className="w-8 h-8" />, title: "Unlock Remedies", desc: "Receive logical, step-by-step remedies specifically tailored to your charts." },
                     { step: "04", icon: <Sparkles className="w-8 h-8" />, title: "Witness Growth", desc: "Execute the remedies and observe profound positive shifts in your career and life." },
                  ].map((item, idx) => (
@@ -153,52 +150,14 @@ const Home = () => {
                  ))}
               </div>
            </div>
-        </section>
-
-        {/* Featured Products */}
-        <section className="py-24 bg-light-grey">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">Cosmic Healing Tools</h2>
-              <p className="text-medium-grey max-w-2xl mx-auto text-lg">Ethically sourced, energized, and lab-certified gemstones and spiritual tools.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {[
-                 { id: "1", name: "Premium Yellow Sapphire", price: 150, image: "https://images.unsplash.com/photo-1599643478514-4a888c3a1e0b?auto=format&fit=crop&w=800", cat: "Gemstone" },
-                 { id: "2", name: "108 Bead Rudraksha Mala", price: 45, image: "https://images.unsplash.com/photo-1620021612051-77b5a864d4b3?auto=format&fit=crop&w=800", cat: "Mala" },
-                 { id: "3", name: "Copper Shree Yantra", price: 60, image: "https://images.unsplash.com/photo-1608670783478-f716d1f9cc18?auto=format&fit=crop&w=800", cat: "Yantra" },
-               ].map((prod) => (
-                  <Link to={`/shop/${prod.id}`} key={prod.id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-gray-100">
-                    <div className="relative h-72 overflow-hidden bg-gray-50 flex items-center justify-center">
-                      <img src={prod.image} alt={prod.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-multiply" />
-                      <div className="absolute top-4 right-4 bg-tertiary text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">{prod.cat}</div>
-                    </div>
-                    <div className="p-8">
-                      <h3 className="text-xl font-bold text-dark-grey mb-2 group-hover:text-primary transition-colors">{prod.name}</h3>
-                      <div className="flex items-center justify-between mt-6">
-                        <span className="text-3xl font-black text-dark-grey">${prod.price}</span>
-                        <div className="bg-dark-grey text-white p-4 rounded-full group-hover:bg-primary group-hover:text-dark-grey transition-colors shadow-md">
-                          <ArrowRight className="w-5 h-5" />
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-               ))}
-            </div>
-            <div className="text-center mt-16">
-               <Link to="/shop" className="inline-flex justify-center items-center px-10 py-5 rounded-full bg-dark-grey text-white font-bold hover:bg-secondary hover:shadow-lg transition-all transform hover:-translate-y-1">
-                 View All Authentic Products
-               </Link>
-            </div>
-          </div>
-        </section>
+         </section>
 
         {/* Why Choose Us */}
         <section className="py-24 bg-white border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                   <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-6 leading-tight">Why Thousands Trust Arviend Astrology?</h2>
+                   <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-6 leading-tight">Why Thousands Trust Hariram Beekrwar?</h2>
                    <p className="text-medium-grey text-xl mb-10 leading-relaxed">Finding an authentic astrologer can be overwhelming. We pride ourselves on pure accuracy, highly ethical practices, and actionable remedies that actually work in the real world.</p>
                    <ul className="space-y-8">
                       <li className="flex items-start bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -235,7 +194,7 @@ const Home = () => {
                           <div className="flex text-primary mb-4">
                             <Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/>
                           </div>
-                          <p className="text-gray-200 text-lg italic mb-6">"Arviend sir's Kundli analysis gave me the exact clarity I needed when I was facing a severe career block. I finally feel aligned with my true authentic purpose."</p>
+                          <p className="text-gray-200 text-lg italic mb-6">"Hariram sir's Kundli analysis gave me the exact clarity I needed when I was facing a severe career block. I finally feel aligned with my true authentic purpose."</p>
                           <p className="font-bold text-primary text-xl">- Neha R., Software Engineer</p>
                         </div>
                       </div>
@@ -255,9 +214,8 @@ const Home = () => {
               <div className="space-y-6">
                  {[
                     { q: "Is my consultation strictly confidential?", a: "Yes. All consultations and the data you provide are kept strictly private and highly secure. We respect your privacy heavily." },
-                    { q: "Do you recommend expensive pujas?", a: "Absolutely not. Arviend Sud's philosophy is rooted in logical, everyday remedies, name corrections, and minor Vastu shifts that do not require heavy investments." },
+                    { q: "Do you recommend expensive pujas?", a: "Absolutely not. Hariram Beekrwar's philosophy is rooted in logical, everyday remedies, name corrections, and minor Vastu shifts that do not require heavy investments." },
                     { q: "Can I do the consultation via phone/video?", a: "Yes, our consultations are available over secure voice or video call lines worldwide." },
-                    { q: "Are the gemstones lab-certified?", a: "Every single gemstone we provide comes with a rigorous, third-party laboratory certificate guaranteeing its unheated and untreated authenticity." },
                  ].map((faq, i) => (
                     <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                        <h3 className="text-xl font-bold text-dark-grey mb-3">{faq.q}</h3>

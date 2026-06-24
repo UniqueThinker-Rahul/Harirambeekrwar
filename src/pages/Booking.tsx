@@ -50,8 +50,8 @@ const Booking = () => {
   return (
     <>
       <SEO 
-        title="Book Your Consultation | Arviend Sud" 
-        description="Schedule a 1-on-1 personalized astrology or Vastu consultation with Arviend Sud. 100% confidential and secure booking."
+        title="Book Your Consultation | HARIRAM BEEKRWAR" 
+        description="Schedule a 1-on-1 personalized astrology or Vastu consultation with Hariram Beekrwar. 100% confidential and secure booking."
       />
       <div className="min-h-screen bg-light-grey py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +167,7 @@ const Booking = () => {
                         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-sm text-dark-grey shrink-0">4</div>
                         <div>
                            <h4 className="font-bold text-dark-grey">Get Your Call</h4>
-                           <p className="text-sm text-medium-grey">Consult directly with Arviend Sud.</p>
+                           <p className="text-sm text-medium-grey">Consult directly with Hariram Beekrwar.</p>
                         </div>
                      </li>
                   </ul>

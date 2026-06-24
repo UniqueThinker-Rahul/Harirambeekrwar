@@ -5,19 +5,17 @@ import { ArrowRight, CheckCircle, Sparkles, Star } from 'lucide-react';
 
 const Services = () => {
   const services = [
-    { slug: "kundli", name: "Deep Kundli & Birth Chart Reading", desc: "Unlock the mysteries of your life path. Discover the exact planetary forces shaping your career, wealth, and relationships, and learn how to navigate them successfully using our mathematical approach.", icon: "🌌" },
-    { slug: "vastu", name: "Premium Vastu Shastra Audit", desc: "Is your home or office secretly blocking your growth? We analyze spatial energies across 16 zones to bring harmony, health, and uninterrupted financial flow into your space without doing demolition.", icon: "🏡" },
-    { slug: "numerology", name: "Numerology & Name Correction", desc: "Every number vibrates with a specific cosmic energy. Find out if your current name is lucky for you and discover simple spelling corrections to align your destiny with ultimate massive success.", icon: "🔢" },
-    { slug: "gemstone", name: "Lab-Tested Gemstone Mapping", desc: "Not all gemstones are lucky. Wearing the wrong gem can be disastrous. Get expert advice on which exact authentic crystal will amplify your planetary strengths safely.", icon: "💎" },
-    { slug: "marriage", name: "Comprehensive Marriage Matchmaking", desc: "Ensure a blissful, legally and spiritually harmonious married life. We perform deep Ashtakoot Milan and analyze Mangal Dosha before you make the absolute biggest decision of your life.", icon: "❤️" },
-    { slug: "career", name: "Executive Career & Business Strategy", desc: "Stuck in a dead end job? Business facing unexplainable losses? Understand your 10th and 11th houses to make the precise right career moves and attract massive incoming wealth.", icon: "📈" },
+    { slug: "name-alignment", name: "Name Alignment", desc: "Align your name to optimal cosmic frequencies. Simple spelling adjustments that can unblock hidden potentials and invite ultimate success. Price: ₹599/-", icon: "✨" },
+    { slug: "perfect-wrist-watch", name: "Perfect Wrist Watch", desc: "Your watch is a constant companion vibrating energy into your life. Let us recommend the perfect dial and strap to boost your time and fortune. Price: ₹699/-", icon: "⌚" },
+    { slug: "mobile-number-alignment", name: "Mobile Number Alignment", desc: "Every number vibrates. Are the digits you use daily bringing you luck or losses? Discover the right mobile number sequence for you. Price: ₹599/-", icon: "📱" },
+    { slug: "complete-dob-analysis", name: "Complete DOB Analysis (1-on-1)", desc: "A comprehensive deep dive into your exact date of birth via private consultation. We decode your destiny and provide actionable remedies. Price: ₹3200/-", icon: "🗓️" },
   ];
 
   return (
     <>
       <SEO 
-        title="Premium Astrology & Vastu Services" 
-        description="Explore premium spiritual services including Kundli reading, Vastu Shastra consultation, numerology, and matchmaking by Arviend Sud."
+        title="Premium Astrology Services | HARIRAM BEEKRWAR" 
+        description="Explore premium spiritual services including name alignment, mobile number analysis, and complete DOB consultation by Hariram Beekrwar."
       />
       <div className="bg-light-grey min-h-screen pb-24">
         {/* Hero Section */}
@@ -34,7 +32,7 @@ const Services = () => {
 
         {/* Core Services Grid */}
         <section className="max-w-7xl mx-auto px-4 -mt-20 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
             {services.map(s => (
               <div key={s.slug} className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 flex flex-col group hover:-translate-y-3 transition-transform duration-500">
                 <div className="text-6xl mb-6">{s.icon}</div>
@@ -78,7 +76,7 @@ const Services = () => {
         <section className="py-24 bg-primary text-center px-4 mt-12 shadow-inner">
            <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-bold text-dark-grey mb-6">Stop Guessing. Start Growing.</h2>
-              <p className="text-dark-grey/80 text-xl md:text-2xl mb-12 font-medium">Book your 1-on-1 private consultation with Arviend Sud today and secure your spot.</p>
+              <p className="text-dark-grey/80 text-xl md:text-2xl mb-12 font-medium">Book your 1-on-1 private consultation with Hariram Beekrwar today and secure your spot.</p>
               <Link to="/booking" className="inline-flex justify-center items-center px-12 py-6 rounded-full bg-dark-grey text-white font-black text-xl hover:bg-black transition-all shadow-xl transform hover:-translate-y-1">
                 Book Your Consultation <Sparkles className="ml-3 w-6 h-6 text-primary" />
               </Link>

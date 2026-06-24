@@ -10,11 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
-import Shop from './pages/Shop';
-import ProductDetail from './pages/ProductDetail';
 import Booking from './pages/Booking';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
 import Dashboard from './pages/Dashboard';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
@@ -34,11 +30,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/:id" element={<ProductDetail />} />
             <Route path="/booking" element={<Booking />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
