@@ -72,7 +72,7 @@ const Home = () => {
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col md:flex-row items-center gap-12">
                  <div className="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1608670784260-84a1efd5c07c?auto=format&fit=crop&w=800&q=80" alt="Hariram Beekrwar" className="rounded-3xl shadow-xl w-full object-cover aspect-square md:aspect-auto md:h-[500px]" />
+                    <img src="/Resource/Hariram.jpeg" alt="Hariram Beekrwar" className="rounded-3xl shadow-xl w-full object-cover aspect-square md:aspect-auto md:h-[500px]" />
                  </div>
                  <div className="md:w-1/2">
                     <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-6">Meet Your Guide, Hariram Beekrwar</h2>
