@@ -26,7 +26,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="relative">
                 <div className="absolute -inset-4 bg-primary/20 rounded-3xl transform rotate-3"></div>
-                <img src="https://images.unsplash.com/photo-1608670784260-84a1efd5c07c?auto=format&fit=crop&w=800&q=80" alt="Hariram Beekrwar" className="rounded-3xl shadow-2xl border-4 border-white relative z-10 w-full object-cover h-[600px]" />
+                <img src="/Resource/Hariram.jpeg" className="rounded-3xl shadow-2xl border-4 border-white relative z-10 w-full object-cover h-[600px]" />
                 <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
                   <p className="text-5xl font-black text-secondary">20+</p>
                   <p className="text-dark-grey font-bold tracking-wide">Years of Mastery</p>
