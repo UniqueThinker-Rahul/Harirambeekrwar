@@ -6,11 +6,9 @@ const Booking = () => {
   const [formData, setFormData] = useState({
     name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '', time: ''
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [paymentSuccessData, setPaymentSuccessData] = useState<{ paymentId?: string }>({});
   const [todayString, setTodayString] = useState('');
-  const [isRedirecting, setIsRedirecting] = useState(false);
-
-  // 🔴 PASTE YOUR REAL RAZORPAY PAYMENT LINK HERE 🔴
-  const PAYMENT_LINK = "https://rzp.io/rzp/fTwN71M"; 
 
   // Lock dates: disable past dates for booking & future dates for birth date
   useEffect(() => {
@@ -21,65 +19,140 @@ const Booking = () => {
     setTodayString(`${year}-${month}-${day}`);
   }, []);
 
-  // AUTOMATIC WHATSAPP REDIRECT LOGIC
-  useEffect(() => {
-    // When the page loads, check if Razorpay sent the user back here after a successful payment
-    const urlParams = new URLSearchParams(window.location.search);
-    const paymentId = urlParams.get('razorpay_payment_id');
-    const paymentStatus = urlParams.get('razorpay_payment_link_status');
-
-    if (paymentId && paymentStatus === 'paid') {
-      setIsRedirecting(true); // Show loading screen
-      
-      // Grab the form details we secretly saved before they went to Razorpay
-      const savedData = localStorage.getItem('bookingFormData');
-      
-      if (savedData) {
-        const parsedData = JSON.parse(savedData);
-        const waUrl = `https://wa.me/919509610711?text=${encodeURIComponent(
-          `*🌟 NEW CONSULTATION BOOKING 🌟*\n\n` +
-          `*👤 Client Name:* ${parsedData.name}\n` +
-          `*📞 Phone:* ${parsedData.phone}\n` +
-          `*📧 Email:* ${parsedData.email}\n\n` +
-          `*📅 Date of Birth:* ${parsedData.dob}\n` +
-          `*⏰ Time of Birth:* ${parsedData.tob}\n` +
-          `*📍 City of Birth:* ${parsedData.pob}\n\n` +
-          `*🗓️ Preferred Date:* ${parsedData.date}\n` +
-          `*⏳ Preferred Slot:* ${parsedData.time}\n` +
-          `*📝 Concern:* ${parsedData.problemDesc}\n\n` +
-          `*💳 Payment Status:* Paid ₹3,200 successfully.\n` +
-          `*🆔 Payment ID:* ${paymentId}`
-        )}`;
-        localStorage.removeItem('bookingFormData'); // Clear memory
-        window.location.replace(waUrl); // INSTANTLY auto-redirect to WhatsApp
-      } else {
-        // Fallback just in case browser memory was blocked
-        window.location.replace(`https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20just%20paid%20for%20my%20consultation!%20My%20Payment%20ID%20is:%20${paymentId}`);
-      }
-    }
-  }, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // 1. Secretly save all form details into browser's local memory before leaving the page
-    localStorage.setItem('bookingFormData', JSON.stringify(formData));
-    
-    // 2. Redirect the user to your LIVE Razorpay link directly
-    window.location.href = PAYMENT_LINK;
+  // Dynamically load Razorpay SDK
+  const loadRazorpayScript = () => {
+    return new Promise((resolve) => {
+      if ((window as any).Razorpay) {
+        resolve(true);
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
   };
 
-  // If the user has just successfully paid, show this brief loading screen while they are bounced to WhatsApp
-  if (isRedirecting) {
+  // Formats all submitted details for WhatsApp delivery
+  const generateWhatsAppMessage = (paymentId: string) => {
+    return encodeURIComponent(
+      `*🌟 NEW CONSULTATION BOOKING & PAYMENT 🌟*\n\n` +
+      `*👤 Client Name:* ${formData.name}\n` +
+      `*📞 Phone:* ${formData.phone}\n` +
+      `*📧 Email:* ${formData.email}\n\n` +
+      `*📅 Date of Birth:* ${formData.dob}\n` +
+      `*⏰ Time of Birth:* ${formData.tob}\n` +
+      `*📍 City of Birth:* ${formData.pob}\n\n` +
+      `*🗓️ Preferred Date:* ${formData.date}\n` +
+      `*⏳ Preferred Slot:* ${formData.time}\n` +
+      `*📝 Concern:* ${formData.problemDesc}\n\n` +
+      `*💳 Paid Amount:* ₹3,200 (50% Off Special)\n` +
+      `*🆔 Payment ID:* ${paymentId}`
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      // 1. Load Razorpay Script
+      const isLoaded = await loadRazorpayScript();
+      if (!isLoaded) {
+        alert("Razorpay payment gateway failed to load. Please check your internet connection.");
+        setStatus("idle");
+        return;
+      }
+
+      // 2. Open Razorpay Checkout directly on the client (No backend required)
+      const options = {
+        key: (import.meta as any).env?.VITE_RAZORPAY_KEY_ID || "rzp_test_TRGYuSRktNf6i4",
+        amount: 3200 * 100, // 3200 INR in paise
+        currency: "INR",
+        name: "Hariram Beekrwar",
+        description: "Priority Consultation (50% Off Special)",
+        image: "/Resource/logo.jpeg",
+        handler: function (response: any) {
+          const paymentId = response.razorpay_payment_id || "PAY_" + Date.now();
+          setPaymentSuccessData({ paymentId });
+          setStatus("success");
+
+          // Open WhatsApp automatically with full details pre-filled
+          const waUrl = `https://wa.me/919509610711?text=${generateWhatsAppMessage(paymentId)}`;
+          window.open(waUrl, '_blank');
+        },
+        prefill: {
+          name: formData.name,
+          email: formData.email,
+          contact: formData.phone,
+        },
+        theme: {
+          color: "#FFD700",
+        },
+        modal: {
+          ondismiss: function () {
+            setStatus("idle");
+          }
+        }
+      };
+
+      const paymentObject = new (window as any).Razorpay(options);
+      paymentObject.on("payment.failed", function (response: any) {
+        alert("Payment was not completed: " + (response.error?.description || "Transaction cancelled"));
+        setStatus("idle");
+      });
+
+      paymentObject.open();
+
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    const paymentId = paymentSuccessData.paymentId || "CONFIRMED";
+    const waUrl = `https://wa.me/919509610711?text=${generateWhatsAppMessage(paymentId)}`;
+
     return (
-      <div className="min-h-screen bg-light-grey flex flex-col items-center justify-center p-4">
-        <div className="w-16 h-16 border-4 border-[#25D366] border-t-transparent rounded-full animate-spin mb-6"></div>
-        <h2 className="text-2xl font-bold text-dark-grey mb-2">Payment Successful!</h2>
-        <p className="text-medium-grey text-lg">Taking you directly to WhatsApp to send your details...</p>
+      <div className="min-h-screen bg-light-grey flex items-center justify-center p-4">
+        <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 text-center max-w-lg w-full">
+          <div className="w-24 h-24 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-100 shadow-inner">
+            <CheckCircle className="w-12 h-12" />
+          </div>
+          <h2 className="text-3xl font-bold text-dark-grey mb-3">Payment Successful!</h2>
+          <p className="text-medium-grey mb-6 text-lg">
+            Thank you, <strong className="text-dark-grey">{formData.name || 'Client'}</strong>. Your consultation is booked. Please send your details to our official WhatsApp to confirm your slot immediately.
+          </p>
+          
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 mb-6 text-sm text-gray-600">
+            Payment ID: <span className="font-mono font-bold text-dark-grey">{paymentId}</span>
+          </div>
+
+          <a 
+            href={waUrl}
+            target="_blank" 
+            rel="noreferrer"
+            className="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:bg-[#20ba59] transition-all w-full shadow-md flex items-center justify-center gap-2 mb-4"
+          >
+            <Send className="w-5 h-5" /> Send Details on WhatsApp
+          </a>
+
+          <button 
+            onClick={() => { 
+              setStatus("idle"); 
+              setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '', time: '' }); 
+            }} 
+            className="bg-dark-grey text-white px-8 py-3 rounded-full font-bold hover:bg-black transition-colors w-full"
+          >
+            Book Another Session
+          </button>
+        </div>
       </div>
     );
   }
@@ -181,10 +254,11 @@ const Booking = () => {
 
                   {/* Submission and Payment Button */}
                   <button 
+                    disabled={status === "loading"} 
                     type="submit" 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-5 rounded-full transition-all shadow-xl flex justify-center items-center transform hover:-translate-y-1 cursor-pointer"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-5 rounded-full transition-all shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center transform hover:-translate-y-1 cursor-pointer"
                   >
-                    <Lock className="w-5 h-5 mr-2" /> Pay ₹3200 & Book Consultation
+                    {status === "loading" ? 'Opening Secure Gateway...' : <><Lock className="w-5 h-5 mr-2" /> Pay ₹3200 & Book Consultation</>}
                   </button>
                 </form>
               </div>
