@@ -32,60 +32,60 @@ import FloatingWidgets from './components/FloatingWidgets';
 
 export default function App() {
   // --- ANTI-INSPECT & ANTI-COPY SCRIPT ---
-  useEffect(() => {
-    // 1. Block Right-Click (Context Menu)
-    const handleContextMenu = (e: MouseEvent) => {
-      e.preventDefault();
-    };
+  // useEffect(() => {
+  //   // 1. Block Right-Click (Context Menu)
+  //   const handleContextMenu = (e: MouseEvent) => {
+  //     e.preventDefault();
+  //   };
 
-    // // 2. Block Keyboard Shortcuts (F12, Inspect, View Source, Copy, Paste, Select All)
-    // const handleKeyDown = (e: KeyboardEvent) => {
-    //   // Prevent F12
-    //   if (e.key === 'F12') {
-    //     e.preventDefault();
-    //   }
-    //   // Prevent Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Select)
-    //   if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
-    //     e.preventDefault();
-    //   }
-    //   // Prevent Ctrl+U (View Source)
-    //   if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
-    //     e.preventDefault();
-    //   }
-    //   // Prevent Ctrl+C (Copy), Ctrl+V (Paste), Ctrl+X (Cut), Ctrl+A (Select All)
-    //   if (e.ctrlKey && (e.key === 'C' || e.key === 'c' || e.key === 'V' || e.key === 'v' || e.key === 'X' || e.key === 'x' || e.key === 'A' || e.key === 'a')) {
-    //     e.preventDefault();
-    //   }
-    // };
+  //   // 2. Block Keyboard Shortcuts (F12, Inspect, View Source, Copy, Paste, Select All)
+  //   const handleKeyDown = (e: KeyboardEvent) => {
+  //     // Prevent F12
+  //     if (e.key === 'F12') {
+  //       e.preventDefault();
+  //     }
+  //     // Prevent Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Select)
+  //     if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+  //       e.preventDefault();
+  //     }
+  //     // Prevent Ctrl+U (View Source)
+  //     if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+  //       e.preventDefault();
+  //     }
+  //     // Prevent Ctrl+C (Copy), Ctrl+V (Paste), Ctrl+X (Cut), Ctrl+A (Select All)
+  //     if (e.ctrlKey && (e.key === 'C' || e.key === 'c' || e.key === 'V' || e.key === 'v' || e.key === 'X' || e.key === 'x' || e.key === 'A' || e.key === 'a')) {
+  //       e.preventDefault();
+  //     }
+  //   };
 
-    // 3. Block Copy, Cut, and Paste Events directly
-    const handleClipboard = (e: ClipboardEvent) => {
-      e.preventDefault();
-    };
+  //   // 3. Block Copy, Cut, and Paste Events directly
+  //   const handleClipboard = (e: ClipboardEvent) => {
+  //     e.preventDefault();
+  //   };
 
-    // 4. Block Dragging Images/Text
-    const handleDrag = (e: Event) => {
-      e.preventDefault();
-    };
+  //   // 4. Block Dragging Images/Text
+  //   const handleDrag = (e: Event) => {
+  //     e.preventDefault();
+  //   };
 
-    // Attach Event Listeners
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('copy', handleClipboard);
-    document.addEventListener('cut', handleClipboard);
-    document.addEventListener('paste', handleClipboard);
-    document.addEventListener('dragstart', handleDrag);
+  //   // Attach Event Listeners
+  //   document.addEventListener('contextmenu', handleContextMenu);
+  //   document.addEventListener('keydown', handleKeyDown);
+  //   document.addEventListener('copy', handleClipboard);
+  //   document.addEventListener('cut', handleClipboard);
+  //   document.addEventListener('paste', handleClipboard);
+  //   document.addEventListener('dragstart', handleDrag);
 
-    // Cleanup Event Listeners on Component Unmount
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('copy', handleClipboard);
-      document.removeEventListener('cut', handleClipboard);
-      document.removeEventListener('paste', handleClipboard);
-      document.removeEventListener('dragstart', handleDrag);
-    };
-  }, []);
+  //   // Cleanup Event Listeners on Component Unmount
+  //   return () => {
+  //     document.removeEventListener('contextmenu', handleContextMenu);
+  //     document.removeEventListener('keydown', handleKeyDown);
+  //     document.removeEventListener('copy', handleClipboard);
+  //     document.removeEventListener('cut', handleClipboard);
+  //     document.removeEventListener('paste', handleClipboard);
+  //     document.removeEventListener('dragstart', handleDrag);
+  //   };
+  // }, []);
 
   return (
     <HelmetProvider>
