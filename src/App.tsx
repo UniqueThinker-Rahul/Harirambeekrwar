@@ -38,25 +38,25 @@ export default function App() {
       e.preventDefault();
     };
 
-    // 2. Block Keyboard Shortcuts (F12, Inspect, View Source, Copy, Paste, Select All)
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Prevent F12
-      if (e.key === 'F12') {
-        e.preventDefault();
-      }
-      // Prevent Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Select)
-      if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
-        e.preventDefault();
-      }
-      // Prevent Ctrl+U (View Source)
-      if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
-        e.preventDefault();
-      }
-      // Prevent Ctrl+C (Copy), Ctrl+V (Paste), Ctrl+X (Cut), Ctrl+A (Select All)
-      if (e.ctrlKey && (e.key === 'C' || e.key === 'c' || e.key === 'V' || e.key === 'v' || e.key === 'X' || e.key === 'x' || e.key === 'A' || e.key === 'a')) {
-        e.preventDefault();
-      }
-    };
+    // // 2. Block Keyboard Shortcuts (F12, Inspect, View Source, Copy, Paste, Select All)
+    // const handleKeyDown = (e: KeyboardEvent) => {
+    //   // Prevent F12
+    //   if (e.key === 'F12') {
+    //     e.preventDefault();
+    //   }
+    //   // Prevent Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Select)
+    //   if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+    //     e.preventDefault();
+    //   }
+    //   // Prevent Ctrl+U (View Source)
+    //   if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+    //     e.preventDefault();
+    //   }
+    //   // Prevent Ctrl+C (Copy), Ctrl+V (Paste), Ctrl+X (Cut), Ctrl+A (Select All)
+    //   if (e.ctrlKey && (e.key === 'C' || e.key === 'c' || e.key === 'V' || e.key === 'v' || e.key === 'X' || e.key === 'x' || e.key === 'A' || e.key === 'a')) {
+    //     e.preventDefault();
+    //   }
+    // };
 
     // 3. Block Copy, Cut, and Paste Events directly
     const handleClipboard = (e: ClipboardEvent) => {
