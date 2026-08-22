@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 
 const Booking = () => {
   const [formData, setFormData] = useState({
-    name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '', time: ''
+    name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: ''
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [paymentSuccessData, setPaymentSuccessData] = useState<{ paymentId?: string }>({});
@@ -46,10 +46,9 @@ const Booking = () => {
       `*📞 Phone:* ${formData.phone}\n` +
       `*📧 Email:* ${formData.email}\n\n` +
       `*📅 Date of Birth:* ${formData.dob}\n` +
-      `*⏰ Time of Birth:* ${formData.tob}\n` +
+      `*⏰ Time of Birth:* ${formData.tob || 'Not Provided'}\n` +
       `*📍 City of Birth:* ${formData.pob}\n\n` +
       `*🗓️ Preferred Date:* ${formData.date}\n` +
-      `*⏳ Preferred Slot:* ${formData.time}\n` +
       `*📝 Concern:* ${formData.problemDesc}\n\n` +
       `*💳 Paid Amount:* ₹3,200 (50% Off Special)\n` +
       `*🆔 Payment ID:* ${paymentId}`
@@ -88,7 +87,7 @@ const Booking = () => {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID, 
         amount: orderData.amount, 
         currency: orderData.currency,
-        name: "Hariram Beekrwar",
+        name: "Hari ram Beekrwar",
         description: "Priority Consultation (50% Off Special)",
         image: "/Resource/logo.jpeg",
         order_id: orderData.id,
@@ -186,7 +185,7 @@ const Booking = () => {
           <button 
             onClick={() => { 
               setStatus("idle"); 
-              setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '', time: '' }); 
+              setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '' }); 
             }} 
             className="bg-dark-grey text-white px-8 py-3 rounded-full font-bold hover:bg-black transition-colors w-full"
           >
@@ -200,8 +199,8 @@ const Booking = () => {
   return (
     <>
       <SEO 
-        title="Book Your Consultation | HARIRAM BEEKRWAR" 
-        description="Schedule a 1-on-1 personalized astrology or Vastu consultation with Hariram Beekrwar. 100% confidential and secure booking."
+        title="Book Your Consultation | HARI RAM BEEKRWAR" 
+        description="Schedule a 1-on-1 personalized numerology or Vastu consultation with Hari ram Beekrwar. 100% confidential and secure booking."
       />
       <div className="min-h-screen bg-light-grey py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,7 +212,7 @@ const Booking = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-dark-grey mb-4">Request Your Private Consultation</h1>
             <p className="text-medium-grey text-lg max-w-2xl mx-auto">
-              Join 10,000+ individuals who transformed their lives. Fill out your details below to lock your slot with Hariram Beekrwar.
+              Join 10,000+ individuals who transformed their lives. Fill out your details below to lock your slot with Hari ram Beekrwar.
             </p>
           </div>
 
@@ -253,8 +252,8 @@ const Booking = () => {
                         <input required name="dob" value={formData.dob} onChange={handleChange} max={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-dark-grey mb-2">Time of Birth *</label>
-                        <input required name="tob" value={formData.tob} onChange={handleChange} type="time" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
+                        <label className="block text-sm font-semibold text-dark-grey mb-2">Time of Birth (Optional)</label>
+                        <input name="tob" value={formData.tob} onChange={handleChange} type="time" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-dark-grey mb-2">City/Place of Birth *</label>
@@ -266,20 +265,9 @@ const Booking = () => {
                   {/* Slot & Problem Context */}
                   <div className="border-t border-gray-100 pt-8 mt-8">
                      <h3 className="text-xl font-bold text-dark-grey mb-6">Consultation Preferences</h3>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                          <label className="block text-sm font-semibold text-dark-grey mb-2">Preferred Date *</label>
-                          <input required name="date" value={formData.date} onChange={handleChange} min={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold text-dark-grey mb-2">Preferred Time Slot *</label>
-                          <select required name="time" value={formData.time} onChange={handleChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
-                            <option value="">Select Slot</option>
-                            <option value="Morning">Morning (10 AM - 1 PM)</option>
-                            <option value="Afternoon">Afternoon (2 PM - 5 PM)</option>
-                            <option value="Evening">Evening (6 PM - 8 PM)</option>
-                          </select>
-                        </div>
+                     <div className="mb-6">
+                        <label className="block text-sm font-semibold text-dark-grey mb-2">Preferred Date *</label>
+                        <input required name="date" value={formData.date} onChange={handleChange} min={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
                      </div>
                     <div>
                       <label className="block text-sm font-semibold text-dark-grey mb-2"><MessageSquare className="inline w-4 h-4 mr-1 text-primary"/> What is your core problem or concern? *</label>
@@ -313,7 +301,7 @@ const Booking = () => {
                     ⚡ 50% OFF SPECIAL OFFER
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Priority On-Call Consultation</h3>
-                  <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hariram Beekrwar</p>
+                  <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hari ram Beekrwar</p>
 
                   <div className="border-t border-b border-gray-700 py-4 mb-6">
                     <div className="flex justify-between items-center text-gray-400 mb-2">
@@ -368,7 +356,7 @@ const Booking = () => {
                         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-sm text-dark-grey shrink-0">3</div>
                         <div>
                            <h4 className="font-bold text-dark-grey">Personal Consultation</h4>
-                           <p className="text-sm text-medium-grey">Consult directly with Hariram Beekrwar & receive remedies.</p>
+                           <p className="text-sm text-medium-grey">Consult directly with Hari ram Beekrwar & receive remedies.</p>
                         </div>
                      </li>
                   </ul>

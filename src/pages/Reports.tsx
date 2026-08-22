@@ -5,14 +5,14 @@ import SEO from '../components/SEO';
 const Reports = () => (
     <>
       <SEO 
-        title="In-Depth Astrology Reports | HARIRAM BEEKRWAR" 
-        description="Get deeply researched, manually prepared astrology reports by Hariram Beekrwar. Covering Marriage, Career, Wealth, and complete life blueprint."
+        title="In-Depth Numerology Reports | HARI RAM BEEKRWAR" 
+        description="Get deeply researched, manually prepared numerology reports by Hari ram Beekrwar. Covering Marriage, Career, Wealth, and complete life blueprint."
       />
       <div className="min-h-screen py-24 px-4 bg-light-grey text-center pb-32">
           
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto mb-20">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-grey leading-tight">Premium Manual Astrology Reports</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-grey leading-tight">Premium Manual Numerology Reports</h1>
             <p className="max-w-3xl mx-auto text-medium-grey text-xl mb-12 leading-relaxed">
               Unlike generic, computer-generated PDFs taking 2 seconds to generate, these reports are meticulously crafted by our experts after spending <strong>hours</strong> mathematically analyzing your unique planetary alignments.
             </p>

@@ -8,13 +8,13 @@ const About = () => {
     <>
       <SEO 
         title="About | Numerology & Vastu Consultant" 
-        description="Learn more about Hariram Beekrwar. Transform Your Life Through the Power of Numerology & Vastu."
+        description="Learn more about Hari ram Beekrwar. Transform Your Life Through the Power of Numerology & Vastu."
       />
       <div className="bg-light-grey min-h-screen">
         {/* Hero Section - Solid yellow background with dark grey text */}
         <section className="bg-primary text-dark-grey py-24 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Hariram Beekrwar</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Hari ram Beekrwar</h1>
             <p className="text-xl md:text-2xl text-dark-grey max-w-3xl mx-auto leading-relaxed font-medium">
               Transform Your Life Through the Power of Numerology & Vastu
             </p>
@@ -29,12 +29,12 @@ const About = () => {
                 <div className="relative z-10 flex justify-center bg-gray-50 rounded-3xl p-4 border border-gray-100 shadow-sm bg-white">
                    <img 
                      src="/Resource/image_9e228d.jpg" 
-                     alt="Hariram Beekrwar Experience" 
+                     alt="Hari ram Beekrwar Experience" 
                      className="rounded-xl shadow-lg w-full h-auto max-h-[600px] object-contain" 
                    />
                 </div>
                 <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
-                  <p className="text-5xl font-black text-secondary">4+</p>
+                  <p className="text-5xl font-black text-secondary">5+</p>
                   <p className="text-dark-grey font-bold tracking-wide">Years of Mastery</p>
                 </div>
               </div>
@@ -43,7 +43,7 @@ const About = () => {
                 <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-8 leading-tight">Decoding The Hidden Patterns of Your Life</h2>
                 <h3 className="text-2xl font-bold text-dark-grey mb-4 flex items-center gap-2"><BookOpen className="w-6 h-6 text-primary"/> Welcome!</h3>
                 <p className="text-medium-grey text-lg leading-relaxed mb-8 italic border-l-4 border-primary pl-6 bg-gray-50 py-4 rounded-r-lg">
-                  "I am Hariram Beekrwar, a professional Numerology and Vastu Consultant dedicated to helping you align your life, career, and living spaces with prosperity, harmony, and success. I believes that every individual carries a unique energy, and when that energy is aligned with the right numbers and surroundings, extraordinary growth becomes possible." <br/><br/><span className="text-dark-grey font-bold">— Hariram Beekrwar</span>
+                  "I am Hari ram Beekrwar, a professional Numerology and Vastu Consultant dedicated to helping you align your life, career, and living spaces with prosperity, harmony, and success. I believes that every individual carries a unique energy, and when that energy is aligned with the right numbers and surroundings, extraordinary growth becomes possible." <br/><br/><span className="text-dark-grey font-bold">— Hari ram Beekrwar</span>
                 </p>
                 
                 <h3 className="text-2xl font-bold text-dark-grey mb-4 mt-8 flex items-center gap-2"><Target className="w-6 h-6 text-primary"/> What We Do</h3>
@@ -85,7 +85,7 @@ const About = () => {
         <section className="py-24 bg-light-grey">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-6">Why Choose Us?</h2>
-              <p className="text-xl text-medium-grey max-w-3xl mx-auto mb-16">Here is exactly why thousands of people choose Hariram Beekrwar for lasting prosperity.</p>
+              <p className="text-xl text-medium-grey max-w-3xl mx-auto mb-16">Here is exactly why thousands of people choose Hari ram Beekrwar for lasting prosperity.</p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                  <div className="bg-white p-10 rounded-3xl shadow-sm text-left">

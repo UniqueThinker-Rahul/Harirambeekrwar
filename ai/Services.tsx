@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Sparkles, Star } from 'lucide-react';
 
 const Services = () => {
   // This hook ensures the page automatically scrolls to the top when it loads
@@ -20,7 +20,13 @@ const Services = () => {
       slug: "vastu-consultation", 
       name: "2. Scientific & Traditional Vastu", 
       desc: "Your home or workplace heavily influences your mental peace and financial growth. I provide Vastu evaluations (Residential, Commercial, Remedial) using colors, elements, and simple placement shifts to fix existing Vastu Doshas.", 
-      icon: "🏡" 
+      icon: "🏠" 
+    },
+    { 
+      slug: "signature-mobile-numerology", 
+      name: "3. Signature & Mobile Numerology", 
+      desc: "Small changes can yield massive results. Your daily interactions can impact your subconscious growth. Includes crafting a progressive signature that attracts wealth and choosing a lucky mobile number combination.", 
+      icon: "📱" 
     }
   ];
 
@@ -44,9 +50,8 @@ const Services = () => {
         </section>
 
         {/* Core Services Grid */}
-        {/* Changed max-w-7xl to max-w-5xl to prevent the 2 cards from stretching too wide */}
-        <section className="max-w-5xl mx-auto px-4 -mt-20 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <section className="max-w-7xl mx-auto px-4 -mt-20 relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
             {services.map(s => (
               <div key={s.slug} className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 flex flex-col group hover:-translate-y-3 transition-transform duration-500">
                 <div className="text-6xl mb-6">{s.icon}</div>

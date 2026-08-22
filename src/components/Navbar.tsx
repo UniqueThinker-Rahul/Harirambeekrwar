@@ -13,10 +13,10 @@ const Navbar = () => {
             <Link to="/" className="flex-shrink-0 flex items-center gap-2 md:gap-3 hover:opacity-90 transition-opacity">
                <img 
                  src="/Resource/logo.jpeg" 
-                 alt="Hariram Beekrwar Logo" 
+                 alt="ANKO KA MAYAZAA Logo" 
                  className="h-10 md:h-12 w-auto object-contain scale-110 origin-left" 
                />
-              <span className="font-bold text-lg md:text-xl text-dark-grey tracking-tight hidden sm:block">HARIRAM BEEKRWAR</span>
+              <span className="font-bold text-lg md:text-xl text-dark-grey tracking-tight hidden sm:block">ANKO KA MAYAZAA</span>
             </Link>
           </div>
           

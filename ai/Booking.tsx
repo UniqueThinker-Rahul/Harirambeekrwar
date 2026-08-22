@@ -69,22 +69,61 @@ const Booking = () => {
         return;
       }
 
-      // 2. Open Razorpay Checkout directly on the client (No backend required)
+      // 2. Call backend to create order
+      const amountInPaise = 3200 * 100;
+      const orderResponse = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount: amountInPaise }),
+      });
+
+      if (!orderResponse.ok) {
+        throw new Error("Failed to create order. Server returned " + orderResponse.status);
+      }
+      
+      const orderData = await orderResponse.json();
+
+      // 3. Open Razorpay Checkout Modal
       const options = {
-        key: (import.meta as any).env?.VITE_RAZORPAY_KEY_ID || "rzp_test_TRGYuSRktNf6i4",
-        amount: 3200 * 100, // 3200 INR in paise
-        currency: "INR",
-        name: "Hariram Beekrwar",
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID, 
+        amount: orderData.amount, 
+        currency: orderData.currency,
+        name: "Hari ram Beekrwar",
         description: "Priority Consultation (50% Off Special)",
         image: "/Resource/logo.jpeg",
-        handler: function (response: any) {
-          const paymentId = response.razorpay_payment_id || "PAY_" + Date.now();
-          setPaymentSuccessData({ paymentId });
-          setStatus("success");
+        order_id: orderData.id,
+        handler: async function (response: any) {
+          try {
+            setStatus("loading");
+            // 4. Verify payment signature on backend
+            const verifyResponse = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+              }),
+            });
 
-          // Open WhatsApp automatically with full details pre-filled
-          const waUrl = `https://wa.me/919509610711?text=${generateWhatsAppMessage(paymentId)}`;
-          window.open(waUrl, '_blank');
+            const verifyData = await verifyResponse.json();
+
+            if (verifyResponse.ok && verifyData.success) {
+              setPaymentSuccessData({ paymentId: response.razorpay_payment_id });
+              setStatus("success");
+              
+              // Open WhatsApp automatically
+              const waUrl = `https://wa.me/919509610711?text=${generateWhatsAppMessage(response.razorpay_payment_id)}`;
+              window.open(waUrl, '_blank');
+            } else {
+              alert("Payment Verification Failed! " + (verifyData.error || ""));
+              setStatus("idle");
+            }
+          } catch (verifyError) {
+            console.error(verifyError);
+            alert("Error communicating with server during verification.");
+            setStatus("idle");
+          }
         },
         prefill: {
           name: formData.name,
@@ -111,6 +150,7 @@ const Booking = () => {
 
     } catch (err) {
       console.error(err);
+      alert("Something went wrong while initiating the payment.");
       setStatus("error");
     }
   };
@@ -160,8 +200,8 @@ const Booking = () => {
   return (
     <>
       <SEO 
-        title="Book Your Consultation | HARIRAM BEEKRWAR" 
-        description="Schedule a 1-on-1 personalized astrology or Vastu consultation with Hariram Beekrwar. 100% confidential and secure booking."
+        title="Book Your Consultation | HARI RAM BEEKRWAR" 
+        description="Schedule a 1-on-1 personalized numerology or Vastu consultation with Hari ram Beekrwar. 100% confidential and secure booking."
       />
       <div className="min-h-screen bg-light-grey py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +213,7 @@ const Booking = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-dark-grey mb-4">Request Your Private Consultation</h1>
             <p className="text-medium-grey text-lg max-w-2xl mx-auto">
-              Join 10,000+ individuals who transformed their lives. Fill out your details below to lock your slot with Hariram Beekrwar.
+              Join 10,000+ individuals who transformed their lives. Fill out your details below to lock your slot with Hari ram Beekrwar.
             </p>
           </div>
 
@@ -254,9 +294,9 @@ const Booking = () => {
 
                   {/* Submission and Payment Button */}
                   <button 
-                    disabled={status === "loading"} 
+                    disabled={status === "loading"}
                     type="submit" 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-5 rounded-full transition-all shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center transform hover:-translate-y-1 cursor-pointer"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-5 rounded-full transition-all shadow-xl flex justify-center items-center transform hover:-translate-y-1 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? 'Opening Secure Gateway...' : <><Lock className="w-5 h-5 mr-2" /> Pay ₹3200 & Book Consultation</>}
                   </button>
@@ -273,7 +313,7 @@ const Booking = () => {
                     ⚡ 50% OFF SPECIAL OFFER
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Priority On-Call Consultation</h3>
-                  <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hariram Beekrwar</p>
+                  <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hari ram Beekrwar</p>
 
                   <div className="border-t border-b border-gray-700 py-4 mb-6">
                     <div className="flex justify-between items-center text-gray-400 mb-2">
@@ -318,31 +358,21 @@ const Booking = () => {
                         </div>
                      </li>
                      <li className="flex items-start gap-4">
-                        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-sm text-dark-grey shrink-0">2</div>
+                        <div className="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">2</div>
                         <div>
-                           <h4 className="font-bold text-dark-grey">Slot Confirmation</h4>
-                           <p className="text-sm text-medium-grey">Our team contacts you with your confirmed session timing.</p>
+                           <h4 className="font-bold text-dark-grey">Auto WhatsApp Send</h4>
+                           <p className="text-sm text-medium-grey">Upon successful payment, you are automatically redirected to WhatsApp to send your details.</p>
                         </div>
                      </li>
                      <li className="flex items-start gap-4">
                         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-sm text-dark-grey shrink-0">3</div>
                         <div>
                            <h4 className="font-bold text-dark-grey">Personal Consultation</h4>
-                           <p className="text-sm text-medium-grey">Consult directly with Hariram Beekrwar & receive remedies.</p>
+                           <p className="text-sm text-medium-grey">Consult directly with Hari ram Beekrwar & receive remedies.</p>
                         </div>
                      </li>
                   </ul>
                </div>
-
-               {/* Review */}
-               <div className="bg-dark-grey p-8 rounded-[2rem] shadow-lg">
-                  <div className="flex items-center gap-1 text-primary mb-3">
-                     <Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/><Star className="w-5 h-5 fill-current"/>
-                  </div>
-                  <p className="text-white text-lg italic mb-4 leading-relaxed">"One session cleared up years of confusion for my career and marriage. The remedies were simple yet deeply effective. Highly recommended!"</p>
-                  <p className="text-primary font-bold">- Priya M., Verified Client</p>
-               </div>
-
             </div>
           </div>
         </div>

@@ -5,8 +5,8 @@ import SEO from '../components/SEO';
 const Contact = () => (
     <>
       <SEO 
-        title="Contact Us | Support & Enquiries | HARIRAM BEEKRWAR" 
-        description="Get in touch with Hariram Beekrwar's team for consultation bookings, or general support. We are here to guide you securely."
+        title="Contact Us | Support & Enquiries | HARI RAM BEEKRWAR" 
+        description="Get in touch with Hari ram Beekrwar's team for consultation bookings, or general support. We are here to guide you securely."
       />
       <div className="min-h-screen py-24 px-4 bg-light-grey block relative pb-32">
           {/* Background Map Placeholder Pattern */}
@@ -56,7 +56,7 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold text-dark-grey mb-1">Head Office</h3>
-                              <p className="text-medium-grey text-lg leading-relaxed">Hariram Beekrwar<br/>BHARATPUR 321001</p>
+                              <p className="text-medium-grey text-lg leading-relaxed">Hari ram Beekrwar<br/>BHARATPUR 321001</p>
                           </div>
                       </div>
                   </div>

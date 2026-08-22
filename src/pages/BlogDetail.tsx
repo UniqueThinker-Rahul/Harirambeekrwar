@@ -5,13 +5,13 @@ import SEO from '../components/SEO';
 
 const BlogDetail = () => {
     const { slug } = useParams();
-    const title = slug?.replace('-', ' ') || 'Astrology Insight';
+    const title = slug?.replace('-', ' ') || 'Numerology Insight';
     
     return (
         <>
             <SEO 
-                title={`${title} - Cosmic Wisdom Blog | HARIRAM BEEKRWAR`} 
-                description={`Read our detailed insights on ${title}. Learn about Vedic astrology, Vastu, and spiritual remedies to improve your cosmic alignment.`}
+                title={`${title} - Cosmic Wisdom Blog | HARI RAM BEEKRWAR`} 
+                description={`Read our detailed insights on ${title}. Learn about Vedic numerology, Vastu, and spiritual remedies to improve your cosmic alignment.`}
             />
             <div className="min-h-screen py-20 px-4 bg-white">
                 <div className="max-w-3xl mx-auto">
@@ -24,7 +24,7 @@ const BlogDetail = () => {
                           <p className="text-secondary font-bold tracking-widest uppercase text-sm mb-4">Cosmic Insights</p>
                           <h1 className="text-4xl md:text-6xl font-bold text-dark-grey capitalize leading-tight mb-6">{title}</h1>
                           <div className="flex items-center text-medium-grey text-sm">
-                              <span>By Master Hariram Beekrwar</span>
+                              <span>By Master Hari ram Beekrwar</span>
                               <span className="mx-3">•</span>
                               <span>5 min read</span>
                           </div>
@@ -39,7 +39,7 @@ const BlogDetail = () => {
                            <p className="mb-6 leading-relaxed">Most people search for quick fixes. But authentic Vedic wisdom requires us to perform specific actions—donations, wearing specific frequencies (gemstones), or directional alignments (Vastu)—to balance the exact dosha causing friction.</p>
                            
                            <div className="bg-yellow-50 border-l-4 border-primary p-6 my-10 rounded-r-xl">
-                               <p className="font-semibold text-dark-grey text-lg italic">"Your destiny is a roadmap, not a locked room. Astrology simply gives you the flashlight to see the turns before you hit them."</p>
+                               <p className="font-semibold text-dark-grey text-lg italic">"Your destiny is a roadmap, not a locked room. Numerology simply gives you the flashlight to see the turns before you hit them."</p>
                            </div>
                            
                            <p className="mb-6 leading-relaxed">By embracing these deeply logical principles, we can align ourselves with the flow of nature, clear obstacles before they fully manifest, and attract sustainable abundance.</p>

@@ -12,15 +12,15 @@ const Footer = () => {
                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-dark-grey font-bold shadow-sm">
                    H
                  </div>
-                <span className="font-bold text-xl text-white tracking-tight">HARIRAM BEEKRWAR</span>
+                <span className="font-bold text-xl text-white tracking-tight">HARI RAM BEEKRWAR</span>
               </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Guiding you through the cosmic journey of life with authentic astrology and vastu consultations.
+              Guiding you through the cosmic journey of life with authentic numerology and vastu consultations.
             </p>
             <div className="flex space-x-4 pt-2">
                <a href="https://www.instagram.com/harirambeekrwar/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors"><Instagram className="w-5 h-5"/></a>
                <a href="https://facebook.com/profile.php?id=61571128232956&sk=about" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors"><Facebook className="w-5 h-5"/></a>
-               <a href="https://youtu.be/DIE9JEGge8k" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors"><Youtube className="w-5 h-5"/></a>
+               <a href="https://www.youtube.com/@HariRamBeekrwar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors"><Youtube className="w-5 h-5"/></a>
             </div>
           </div>
           
@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Hariram Beekrwar BHARATPUR 321001</span>
+                <span>Hari ram Beekrwar BHARATPUR 321001</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} HARIRAM BEEKRWAR. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HARI RAM BEEKRWAR. All rights reserved.</p>
         </div>
       </div>
     </footer>

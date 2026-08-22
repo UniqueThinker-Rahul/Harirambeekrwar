@@ -7,7 +7,7 @@ const UrgentLovePlan = () => {
   return (
     <>
       <SEO 
-        title="Urgent Love Karna Hai Plan | Hariram Beekrwar" 
+        title="Urgent Love Karna Hai Plan | Hari ram Beekrwar" 
         description="Priority Numerology & Vastu consultation for love, relationships, and marriage. Get fast-tracked remedies for your love life."
       />
       
