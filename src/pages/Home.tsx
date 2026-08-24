@@ -74,7 +74,7 @@ const Home = () => {
                  <div className="md:w-1/2 flex justify-center bg-gray-50 rounded-3xl p-4 border border-gray-100 shadow-sm">
                     {/* Image edges are now 'little rounded' (rounded-xl) */}
                     <img 
-                      src="/Resource/image_9e224f.jpg" 
+                      src="/Resource/2.png" 
                       alt="Hari ram Beekrwar" 
                       className="rounded-xl shadow-lg w-full h-auto max-h-[600px] object-contain" 
                     />

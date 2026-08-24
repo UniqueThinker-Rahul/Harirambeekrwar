@@ -71,7 +71,7 @@ const Services = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-16 text-center">What You Get With Every Session</h2>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                  <div className="lg:col-span-5">
-                    <img src="/Resource/image_9e22c5.jpg" alt="Session Benefits" className="rounded-3xl shadow-2xl w-full object-cover h-full min-h-[450px]" />
+                    <img src="/Resource/3.png" alt="Session Benefits" className="rounded-3xl shadow-2xl w-full object-cover h-full min-h-[450px]" />
                  </div>
                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {[

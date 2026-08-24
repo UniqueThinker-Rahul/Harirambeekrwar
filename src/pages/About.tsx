@@ -28,7 +28,7 @@ const About = () => {
                 <div className="absolute -inset-4 bg-primary/20 rounded-3xl transform rotate-3"></div>
                 <div className="relative z-10 flex justify-center bg-gray-50 rounded-3xl p-4 border border-gray-100 shadow-sm bg-white">
                    <img 
-                     src="/Resource/image_9e228d.jpg" 
+                     src="/Resource/1.png" 
                      alt="Hari ram Beekrwar Experience" 
                      className="rounded-xl shadow-lg w-full h-auto max-h-[600px] object-contain" 
                    />
