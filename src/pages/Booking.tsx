@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 
 const Booking = () => {
   const [formData, setFormData] = useState({
-    name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: ''
+    name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: ''
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [paymentSuccessData, setPaymentSuccessData] = useState<{ paymentId?: string }>({});
@@ -48,7 +48,6 @@ const Booking = () => {
       `*📅 Date of Birth:* ${formData.dob}\n` +
       `*⏰ Time of Birth:* ${formData.tob || 'Not Provided'}\n` +
       `*📍 City of Birth:* ${formData.pob}\n\n` +
-      `*🗓️ Preferred Date:* ${formData.date}\n` +
       `*📝 Concern:* ${formData.problemDesc}\n\n` +
       `*💳 Paid Amount:* ₹3,200 (50% Off Special)\n` +
       `*🆔 Payment ID:* ${paymentId}`
@@ -185,7 +184,7 @@ const Booking = () => {
           <button 
             onClick={() => { 
               setStatus("idle"); 
-              setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '', date: '' }); 
+              setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '' }); 
             }} 
             className="bg-dark-grey text-white px-8 py-3 rounded-full font-bold hover:bg-black transition-colors w-full"
           >
@@ -262,13 +261,8 @@ const Booking = () => {
                     </div>
                   </div>
 
-                  {/* Slot & Problem Context */}
+                  {/* Problem Context */}
                   <div className="border-t border-gray-100 pt-8 mt-8">
-                     <h3 className="text-xl font-bold text-dark-grey mb-6">Consultation Preferences</h3>
-                     <div className="mb-6">
-                        <label className="block text-sm font-semibold text-dark-grey mb-2">Preferred Date *</label>
-                        <input required name="date" value={formData.date} onChange={handleChange} min={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" />
-                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-dark-grey mb-2"><MessageSquare className="inline w-4 h-4 mr-1 text-primary"/> What is your core problem or concern? *</label>
                       <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400" placeholder="Please describe briefly (Relationship/Love hurdles, Career/Business delays, Vastu defects, Health/Money issues etc.)"></textarea>
