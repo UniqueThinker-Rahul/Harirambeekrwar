@@ -36,7 +36,6 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold text-dark-grey mb-1">WhatsApp</h3>
-                              {/* ADDED: URL text parameter for WhatsApp auto text message */}
                               <a href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="text-medium-grey text-lg font-medium hover:text-[#25D366] transition-colors">+91 9509610711</a>
                               <p className="text-sm text-green-600 font-bold mt-1 tracking-wide uppercase text-xs">Fastest Response</p>
                           </div>
@@ -68,20 +67,34 @@ const Contact = () => (
                       <h2 className="text-4xl font-bold mb-4 text-dark-grey">Send a Message</h2>
                       <p className="text-medium-grey text-lg mb-10">All communications are completely secure and strictly confidential. We usually respond within 24 hours to all enquiries.</p>
                       
-                      <form className="space-y-8" onSubmit={(e) => { e.preventDefault(); alert("Message sent successfully!"); }}>
+                      <form 
+                        className="space-y-8" 
+                        onSubmit={(e) => { 
+                          e.preventDefault(); 
+                          const fd = new FormData(e.currentTarget);
+                          const waText = encodeURIComponent(
+                            `*New Website Enquiry*\n\n` +
+                            `*Name:* ${fd.get("fullName")}\n` +
+                            `*Email:* ${fd.get("email")}\n` +
+                            `*Subject:* ${fd.get("subject")}\n\n` +
+                            `*Message:*\n${fd.get("message")}`
+                          );
+                          window.open(`https://wa.me/919509610711?text=${waText}`, '_blank');
+                        }}
+                      >
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                              <div>
                                <label className="block text-sm font-bold text-dark-grey mb-3">Full Name</label>
-                               <input required type="text" placeholder="Your Name" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg placeholder:text-gray-400" />
+                               <input required name="fullName" type="text" placeholder="Your Name" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg placeholder:text-gray-400" />
                              </div>
                              <div>
                                <label className="block text-sm font-bold text-dark-grey mb-3">Email Address</label>
-                               <input required type="email" placeholder="Your Email" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg placeholder:text-gray-400" />
+                               <input required name="email" type="email" placeholder="Your Email" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg placeholder:text-gray-400" />
                              </div>
                           </div>
                           <div>
                              <label className="block text-sm font-bold text-dark-grey mb-3">Subject</label>
-                             <select className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg text-dark-grey">
+                             <select name="subject" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-lg text-dark-grey">
                                 <option>General Enquiry</option>
                                 <option>Consultation Booking</option>
                                 <option>Report Status</option>
@@ -89,7 +102,7 @@ const Contact = () => (
                           </div>
                           <div>
                             <label className="block text-sm font-bold text-dark-grey mb-3">Your Message</label>
-                            <textarea required rows={5} placeholder="How can we help you?" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none bg-gray-50 text-lg placeholder:text-gray-400"></textarea>
+                            <textarea required name="message" rows={5} placeholder="How can we help you?" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none bg-gray-50 text-lg placeholder:text-gray-400"></textarea>
                           </div>
                           <button type="submit" className="w-full bg-green-600 text-white py-6 rounded-full hover:bg-green-700 transition-all font-bold text-xl shadow-xl hover:-translate-y-1 transform flex justify-center items-center gap-2">
                              Send Secure Message
