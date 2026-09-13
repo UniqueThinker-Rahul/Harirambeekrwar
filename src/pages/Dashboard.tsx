@@ -40,7 +40,7 @@ const Dashboard = () => (
              </div>
 
              <div className="lg:col-span-1 space-y-8">
-                 <div className="bg-dark-grey p-8 rounded-3xl shadow-xl text-white">
+                 <div className="bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 p-8 rounded-3xl shadow-xl text-white border border-indigo-800/60">
                     <h3 className="font-bold text-2xl mb-6 flex items-center gap-2"><BookOpen className="w-6 h-6 text-primary"/> Free Resources</h3>
                     <div className="space-y-4">
                        <a href="#" className="block p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors border border-white/10 group">

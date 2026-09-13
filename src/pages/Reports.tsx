@@ -112,14 +112,14 @@ const Reports = () => (
              </div>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-dark-grey rounded-[3rem] p-12 text-center shadow-2xl relative overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 rounded-[3rem] p-12 text-center shadow-2xl relative overflow-hidden border border-indigo-800/60">
              <div className="absolute top-0 right-0 p-8 opacity-10 text-primary">
                  <ShieldCheck className="w-48 h-48" />
              </div>
              <div className="relative z-10">
                 <h3 className="text-3xl font-bold text-white mb-6">Not sure which report to get?</h3>
-                <p className="text-gray-300 text-xl mb-10 max-w-2xl mx-auto font-light">Reports are great, but sometimes you need to talk. Book a personalized consultation session to ask unlimited direct questions.</p>
-                <a href="/booking" className="inline-block bg-white text-dark-grey font-bold py-5 px-12 rounded-full hover:bg-gray-100 transition-colors text-lg shadow-lg hover:-translate-y-1 transform">
+                <p className="text-blue-100 text-xl mb-10 max-w-2xl mx-auto font-light">Reports are great, but sometimes you need to talk. Book a personalized consultation session to ask unlimited direct questions.</p>
+                <a href="/booking" className="inline-block bg-white text-indigo-950 font-black py-5 px-12 rounded-full hover:bg-amber-50 transition-colors text-lg shadow-lg hover:-translate-y-1 transform">
                   Book a Consultation Call Instead
                 </a>
              </div>

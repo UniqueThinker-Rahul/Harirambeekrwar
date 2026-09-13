@@ -14,10 +14,10 @@ const Home = () => {
       />
       <div>
         {/* Hero Section */}
-        <section className="relative bg-dark-grey text-white overflow-hidden py-24 sm:py-32 layout-section">
+        <section className="relative bg-gradient-to-br from-indigo-950 via-blue-900 to-indigo-900 text-white overflow-hidden py-24 sm:py-32 layout-section">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary opacity-20 rounded-full blur-3xl"></div>
-            <div className="absolute top-40 -left-20 w-72 h-72 bg-secondary opacity-20 rounded-full blur-[100px]"></div>
+            <div className="absolute top-40 -left-20 w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-[100px]"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <motion.div
@@ -50,7 +50,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <Link to="/booking" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-primary text-dark-grey font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(255,215,0,0.4)] transform hover:-translate-y-1">
+              <Link to="/booking" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-primary text-slate-950 font-black hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(255,215,0,0.4)] transform hover:-translate-y-1">
                 Book Your Consultation NOW <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </motion.div>
@@ -126,7 +126,7 @@ const Home = () => {
                ))}
             </div>
             <div className="text-center mt-12">
-               <Link to="/services" className="inline-flex justify-center items-center px-8 py-4 rounded-full border-2 border-dark-grey text-dark-grey font-bold hover:bg-dark-grey hover:text-white transition-all">
+               <Link to="/services" className="inline-flex justify-center items-center px-8 py-4 rounded-full border-2 border-indigo-900 text-indigo-900 font-bold hover:bg-indigo-900 hover:text-white transition-all">
                  Browse All Services
                </Link>
             </div>
@@ -149,7 +149,7 @@ const Home = () => {
                     { step: "04", icon: <Sparkles className="w-8 h-8" />, title: "Witness Growth", desc: "Execute the remedies and observe profound positive shifts in your life." },
                  ].map((item, idx) => (
                     <div key={idx} className="bg-white border text-center border-gray-100 p-8 rounded-3xl relative">
-                       <div className="w-16 h-16 bg-dark-grey text-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg border-4 border-white absolute -top-8 left-1/2 -translate-x-1/2">
+                       <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-indigo-900 text-amber-300 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/20 border-4 border-white absolute -top-8 left-1/2 -translate-x-1/2">
                           {item.icon}
                        </div>
                        <h3 className="text-xl font-bold text-dark-grey mt-4 mb-3">{item.step}. {item.title}</h3>
@@ -184,7 +184,7 @@ const Home = () => {
                       </li>
                    </ul>
                 </div>
-                <div className="bg-dark-grey rounded-[3rem] p-10 relative overflow-hidden shadow-2xl">
+                <div className="bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 rounded-[3rem] p-10 relative overflow-hidden shadow-2xl border border-indigo-800/50">
                    <div className="absolute top-0 right-0 p-8 opacity-5 text-primary">
                       <Star className="w-48 h-48" />
                    </div>
@@ -236,21 +236,27 @@ const Home = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-dark-grey text-center px-4 relative overflow-hidden block">
-           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-dark-grey to-dark-grey z-0"></div>
-           <div className="max-w-4xl mx-auto relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Are You Ready to Transform Your Life?</h2>
-              <p className="text-gray-300 text-xl mb-6 max-w-2xl mx-auto">Don't let hidden energies hold you back from achieving your true potential. Take the first step toward a balanced and prosperous future today.</p>
-              <p className="text-primary font-bold text-xl mb-12">Your journey toward a balanced and successful life begins today.</p>
-              <Link to="/booking" className="inline-flex justify-center items-center px-12 py-6 rounded-full bg-primary text-dark-grey font-black text-xl hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(255,215,0,0.5)] transform hover:-translate-y-1">
-                Book Your Consultation NOW <ArrowRight className="ml-3 w-6 h-6" />
-              </Link>
-              <div className="mt-8">
-                 <div className="inline-block bg-red-600/30 text-red-100 border border-red-500/50 px-6 py-3 rounded-full font-bold text-sm tracking-wide animate-pulse">
-                   🔥 HURRY UP: Only 3 consultation slots remaining today!
+        <section className="py-20 bg-light-grey px-4 sm:px-6 lg:px-8">
+           <div className="max-w-5xl mx-auto rounded-[3rem] bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-10 sm:p-16 text-center text-slate-950 shadow-2xl relative overflow-hidden border border-amber-300">
+              <div className="absolute -top-24 -right-24 w-72 h-72 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-amber-700/20 rounded-full blur-2xl pointer-events-none"></div>
+              
+              <div className="relative z-10 max-w-3xl mx-auto">
+                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 mb-6 tracking-tight">Are You Ready to Transform Your Life?</h2>
+                 <p className="text-slate-900/90 text-lg sm:text-xl mb-6 font-medium leading-relaxed">Don't let hidden energies hold you back from achieving your true potential. Take the first step toward a balanced and prosperous future today.</p>
+                 <p className="text-indigo-950 font-bold text-lg sm:text-xl mb-10 bg-white/40 backdrop-blur-sm py-2 px-6 rounded-full inline-block border border-white/50 shadow-sm">Your journey toward a balanced and successful life begins today.</p>
+                 <div>
+                   <Link to="/booking" className="inline-flex justify-center items-center px-10 sm:px-12 py-5 sm:py-6 rounded-full bg-slate-950 text-amber-300 font-black text-lg sm:text-xl hover:bg-slate-900 hover:text-amber-200 transition-all shadow-2xl transform hover:-translate-y-1">
+                     Book Your Consultation NOW <ArrowRight className="ml-3 w-6 h-6" />
+                   </Link>
                  </div>
+                 <div className="mt-8">
+                    <div className="inline-block bg-white text-rose-700 font-bold px-6 py-2.5 rounded-full text-sm shadow-md border border-rose-200/80 animate-pulse">
+                      🔥 HURRY UP: Only 3 consultation slots remaining today!
+                    </div>
+                 </div>
+                 <p className="text-slate-800 text-sm mt-6 flex items-center justify-center gap-2 font-medium"><LockIcon /> 100% Secure Payment & Encrypted Booking Flow</p>
               </div>
-              <p className="text-gray-400 text-sm mt-8 flex items-center justify-center gap-2"><LockIcon /> 100% Secure Payment & Encrypted Booking Flow</p>
            </div>
         </section>
 
@@ -262,7 +268,7 @@ const Home = () => {
               <form className="flex flex-col sm:flex-row gap-4 justify-center" onSubmit={(e) => { e.preventDefault(); alert("Success! Your free customized report is on the way to your inbox."); }}>
                  <input type="text" placeholder="Your First Name" required className="px-8 py-5 rounded-full border-none w-full sm:w-auto outline-none focus:ring-4 focus:ring-white/50 text-lg shadow-sm" />
                  <input type="email" placeholder="Your Best Email Address" required className="px-8 py-5 rounded-full border-none w-full sm:w-96 outline-none focus:ring-4 focus:ring-white/50 text-lg shadow-sm" />
-                 <button type="submit" className="bg-dark-grey text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-black transition-colors shrink-0 shadow-lg hover:-translate-y-1 transform">Send My Free Report</button>
+                 <button type="submit" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 px-10 py-5 rounded-full font-bold text-lg transition-colors shrink-0 shadow-lg hover:-translate-y-1 transform">Send My Free Report</button>
               </form>
            </div>
         </section> */}

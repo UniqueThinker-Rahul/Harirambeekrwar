@@ -51,7 +51,7 @@ const BlogDetail = () => {
                            <h3 className="text-2xl font-bold text-dark-grey mb-2">Need personal guidance?</h3>
                            <p className="text-medium-grey">Book a 1-on-1 session to discuss your chart.</p>
                        </div>
-                       <Link to="/booking" className="bg-dark-grey text-white px-8 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-md shrink-0">
+                       <Link to="/booking" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 px-8 py-4 rounded-full font-bold transition-all shadow-md shrink-0">
                            Book Consultation
                        </Link>
                    </div>

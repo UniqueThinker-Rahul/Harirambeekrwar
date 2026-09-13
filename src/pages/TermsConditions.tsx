@@ -28,8 +28,8 @@ const TermsConditions = () => {
       
       <div className="bg-light-grey min-h-screen pb-24 text-dark-grey">
         {/* Animated Hero Section */}
-        <section className="bg-dark-grey py-24 text-center px-4 relative overflow-hidden">
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-dark-grey to-dark-grey"></div>
+        <section className="bg-gradient-to-br from-indigo-950 via-blue-900 to-indigo-900 py-24 text-center px-4 relative overflow-hidden text-white">
+           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-400/15 via-indigo-950/80 to-transparent"></div>
            <motion.div 
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}

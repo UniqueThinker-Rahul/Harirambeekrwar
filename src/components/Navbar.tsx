@@ -70,7 +70,7 @@ const Navbar = () => {
           </span>
         </Link>
         
-        <div className="w-full bg-dark-grey text-primary py-1.5 overflow-hidden flex items-center shadow-inner">
+        <div className="w-full bg-gradient-to-r from-indigo-950 via-blue-900 to-indigo-950 text-amber-300 py-1.5 overflow-hidden flex items-center shadow-inner border-b border-indigo-800/80">
           <marquee direction="left" scrollamount="6" className="text-sm font-bold tracking-widest uppercase">
              📞 For Consultations, Call/WhatsApp: +91 9509610711 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📞 For Consultations, Call/WhatsApp: +91 9509610711 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 📞 FAST RESPONSE VIA WHATSAPP: +91 9509610711
           </marquee>

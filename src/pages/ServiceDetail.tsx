@@ -15,7 +15,7 @@ const ServiceDetail = () => {
         description={`Book a personalized ${title} session. Discover absolute clarity and get practical remedies tailored specifically for your life's challenges.`}
       />
       <div className="min-h-[70vh] bg-light-grey pb-24 text-dark-grey">
-        <section className="bg-dark-grey text-white py-20 px-4 text-center">
+        <section className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-950 text-white py-20 px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 capitalize">{title}</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">Absolute clarity begins here. Uncover the root cause of your obstacles and get actionable remedies.</p>
         </section>

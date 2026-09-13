@@ -50,7 +50,7 @@ const Contact = () => (
                           </div>
                       </div>
                       <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-center gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">
-                          <div className="w-16 h-16 bg-dark-grey text-white rounded-full flex items-center justify-center shrink-0 shadow-inner">
+                          <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-blue-700 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-indigo-500/20">
                              <MapPin className="w-8 h-8" />
                           </div>
                           <div>

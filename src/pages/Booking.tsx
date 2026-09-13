@@ -186,7 +186,7 @@ const Booking = () => {
               setStatus("idle"); 
               setFormData({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '' }); 
             }} 
-            className="bg-dark-grey text-white px-8 py-3 rounded-full font-bold hover:bg-black transition-colors w-full"
+            className="bg-indigo-950 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-900 transition-colors w-full shadow-md"
           >
             Book Another Session
           </button>
@@ -290,25 +290,25 @@ const Booking = () => {
             <div className="lg:col-span-1 space-y-8">
                
                {/* 50% Off Plan Summary Card */}
-               <div className="bg-dark-grey text-white p-8 rounded-[2rem] shadow-xl border border-gray-800 relative overflow-hidden">
+               <div className="bg-gradient-to-br from-indigo-950 via-blue-900 to-indigo-950 text-white p-8 rounded-[2rem] shadow-xl border border-indigo-800/80 relative overflow-hidden">
                   <div className="inline-block bg-red-600 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full mb-4 animate-pulse">
                     ⚡ 50% OFF SPECIAL OFFER
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Priority On-Call Consultation</h3>
                   <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hari ram Beekrwar</p>
 
-                  <div className="border-t border-b border-gray-700 py-4 mb-6">
-                    <div className="flex justify-between items-center text-gray-400 mb-2">
+                  <div className="border-t border-b border-indigo-800/80 py-4 mb-6">
+                    <div className="flex justify-between items-center text-gray-300 mb-2">
                        <span>Standard Fee:</span>
-                       <span className="line-through text-lg">₹6,400</span>
+                       <span className="line-through text-lg text-gray-400">₹6,400</span>
                     </div>
-                    <div className="flex justify-between items-center text-green-400 mb-2 text-sm">
+                    <div className="flex justify-between items-center text-emerald-400 mb-2 text-sm font-bold">
                        <span>Discount (50%):</span>
                        <span>- ₹3,200</span>
                     </div>
-                    <div className="flex justify-between items-center text-white font-bold text-xl pt-2 border-t border-gray-700">
+                    <div className="flex justify-between items-center text-white font-bold text-xl pt-2 border-t border-indigo-800/80">
                        <span>Total Payable:</span>
-                       <span className="text-3xl text-primary font-black">₹3,200/-</span>
+                       <span className="text-3xl text-amber-300 font-black">₹3,200/-</span>
                     </div>
                   </div>
 

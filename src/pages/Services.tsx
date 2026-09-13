@@ -32,8 +32,8 @@ const Services = () => {
       />
       <div className="bg-light-grey text-dark-grey min-h-screen pb-24">
         {/* Hero Section */}
-        <section className="bg-dark-grey py-32 text-center px-4 relative overflow-hidden">
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-yellow-900/40 via-dark-grey to-dark-grey"></div>
+        <section className="bg-gradient-to-br from-indigo-950 via-blue-900 to-indigo-950 py-32 text-center px-4 relative overflow-hidden">
+           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/25 via-indigo-950/80 to-transparent"></div>
            <div className="relative z-10 max-w-5xl mx-auto">
              <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-primary px-6 py-2 rounded-full font-bold mb-6 text-sm tracking-widest uppercase">Services Offered</div>
              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">Specialized, Data-Driven Consultations</h1>
@@ -96,7 +96,7 @@ const Services = () => {
            <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-bold text-dark-grey mb-6">Are You Ready to Transform Your Life?</h2>
               <p className="text-dark-grey/80 text-xl md:text-2xl mb-12 font-medium">Don't let hidden energies hold you back from achieving your true potential. Take the first step toward a balanced and prosperous future today.</p>
-              <Link to="/booking" className="inline-flex justify-center items-center px-12 py-6 rounded-full bg-dark-grey text-white font-extrabold text-xl hover:bg-gray-900 transition-all shadow-xl transform hover:-translate-y-1">
+              <Link to="/booking" className="inline-flex justify-center items-center px-12 py-6 rounded-full bg-gradient-to-r from-indigo-950 via-blue-900 to-indigo-900 text-white font-extrabold text-xl hover:from-indigo-900 hover:to-blue-800 transition-all shadow-xl transform hover:-translate-y-1">
                 Book Your Consultation NOW <Sparkles className="ml-3 w-6 h-6 text-primary" />
               </Link>
            </div>

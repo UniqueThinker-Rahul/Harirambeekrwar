@@ -13,7 +13,7 @@ const UrgentLovePlan = () => {
       
       <div className="bg-light-grey min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-dark-grey text-white overflow-hidden py-24">
+        <section className="relative bg-gradient-to-r from-rose-900 via-indigo-950 to-blue-950 text-white overflow-hidden py-24">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-red-500 opacity-20 rounded-full blur-3xl"></div>
             <div className="absolute top-40 -left-20 w-72 h-72 bg-primary opacity-10 rounded-full blur-[100px]"></div>
@@ -107,7 +107,7 @@ const UrgentLovePlan = () => {
               </div>
 
               {/* Pricing Box */}
-              <div className="lg:w-2/5 bg-dark-grey text-white p-10 md:p-14 flex flex-col justify-center relative overflow-hidden">
+              <div className="lg:w-2/5 bg-gradient-to-br from-indigo-900 via-blue-900 to-indigo-950 text-white p-10 md:p-14 flex flex-col justify-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10 text-primary">
                   <Heart className="w-48 h-48" />
                 </div>
@@ -115,14 +115,14 @@ const UrgentLovePlan = () => {
                   <h3 className="text-2xl font-bold mb-2">Consultation Fee</h3>
                   <div className="mb-4">
                      <span className="line-through text-gray-400 text-2xl mr-2">₹6400/-</span>
-                     <span className="bg-yellow-400 text-dark-grey font-black px-3 py-1 rounded-md text-sm uppercase animate-pulse inline-block mb-2">50% Discount</span>
+                     <span className="bg-yellow-400 text-slate-950 font-black px-3 py-1 rounded-md text-sm uppercase animate-pulse inline-block mb-2">50% Discount</span>
                   </div>
                   <div className="text-6xl font-black text-primary mb-2 shadow-sm">
                     ₹3200<span className="text-2xl text-gray-300">/-</span>
                   </div>
                   <p className="text-gray-300 text-sm mb-8">One-on-One Voice/Video Call Consultation</p>
                   
-                  <Link to="/booking" className="w-full inline-flex justify-center items-center px-8 py-4 rounded-full bg-primary text-dark-grey font-black text-lg hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(255,215,0,0.4)] transform hover:-translate-y-1 mb-4">
+                  <Link to="/booking" className="w-full inline-flex justify-center items-center px-8 py-4 rounded-full bg-primary text-slate-950 font-black text-lg hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(255,215,0,0.4)] transform hover:-translate-y-1 mb-4">
                     Book Priority Call Now
                   </Link>
 
