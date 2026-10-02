@@ -29,6 +29,7 @@ import TermsConditions from './pages/TermsConditions';
 import UrgentLovePlan from './pages/UrgentLovePlan';
 
 import FloatingWidgets from './components/FloatingWidgets';
+import EnquiryModal from './components/EnquiryModal';
 
 export default function App() {
   // --- ANTI-INSPECT & ANTI-COPY SCRIPT ---
@@ -113,6 +114,7 @@ export default function App() {
             <Route path="/terms" element={<TermsConditions />} />
           </Routes>
           <FloatingWidgets />
+          <EnquiryModal />
         </Layout>
       </Router>
     </HelmetProvider>

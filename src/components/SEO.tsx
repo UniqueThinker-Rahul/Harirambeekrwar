@@ -11,7 +11,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description, keywords, url, image }) => {
   const siteUrl = "https://harirambeekrwar.com";
-  const defaultImage = `${siteUrl}/default-og-image.jpg`; // Placeholder
+  const defaultImage = `${siteUrl}/Resource/logo.jpeg`;
 
   return (
     <Helmet>

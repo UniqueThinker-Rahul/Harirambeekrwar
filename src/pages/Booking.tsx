@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, Star, CheckCircle, Zap, MessageCircle, Send } from 'lucide-react';
+import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, CheckCircle, Zap, MessageCircle, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Booking = () => {
@@ -41,7 +41,7 @@ const Booking = () => {
   // Formats all submitted details for WhatsApp delivery
   const generateWhatsAppMessage = (paymentId: string) => {
     return encodeURIComponent(
-      `*🌟 NEW CONSULTATION BOOKING & PAYMENT 🌟*\n\n` +
+      `*🌟 NEW NUMEROLOGY CONSULTATION & PAYMENT 🌟*\n\n` +
       `*👤 Client Name:* ${formData.name}\n` +
       `*📞 Phone:* ${formData.phone}\n` +
       `*📧 Email:* ${formData.email}\n\n` +
@@ -49,7 +49,7 @@ const Booking = () => {
       `*⏰ Time of Birth:* ${formData.tob || 'Not Provided'}\n` +
       `*📍 City of Birth:* ${formData.pob}\n\n` +
       `*📝 Concern:* ${formData.problemDesc}\n\n` +
-      `*💳 Paid Amount:* ₹3,200 (50% Off Special)\n` +
+      `*💳 Paid Amount:* ₹3,200 (Numerology Only Special)\n` +
       `*🆔 Payment ID:* ${paymentId}`
     );
   };
@@ -87,7 +87,7 @@ const Booking = () => {
         amount: orderData.amount, 
         currency: orderData.currency,
         name: "Hari ram Beekrwar",
-        description: "Priority Consultation (50% Off Special)",
+        description: "Numerology Consultation (₹3,200 Only)",
         image: "/Resource/logo.jpeg",
         order_id: orderData.id,
         handler: async function (response: any) {
@@ -198,8 +198,8 @@ const Booking = () => {
   return (
     <>
       <SEO 
-        title="Book Your Consultation | HARI RAM BEEKRWAR" 
-        description="Schedule a 1-on-1 personalized numerology or Vastu consultation with Hari ram Beekrwar. 100% confidential and secure booking."
+        title="Book Numerology Consultation | HARI RAM BEEKRWAR" 
+        description="Schedule a 1-on-1 personalized full numerology consultation with Hari ram Beekrwar. 100% confidential and secure booking."
       />
       <div className="min-h-screen bg-light-grey py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,7 +211,7 @@ const Booking = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-dark-grey mb-4">Request Your Private Consultation</h1>
             <p className="text-medium-grey text-lg max-w-2xl mx-auto">
-              Join 10,000+ individuals who transformed their lives. Fill out your details below to lock your slot with Hari ram Beekrwar.
+              Join 2,200+ individuals who transformed their lives. Fill out your details below to lock your slot with Hari ram Beekrwar.
             </p>
           </div>
 
@@ -243,7 +243,7 @@ const Booking = () => {
                   <div className="border-t border-gray-100 pt-8 mt-8">
                     <h3 className="text-xl font-bold text-dark-grey mb-6 flex items-center gap-2"><Calendar className="text-secondary"/> Exact Birth Details</h3>
                     <div className="p-4 bg-yellow-50/50 rounded-xl border border-yellow-100 mb-6 text-sm text-medium-grey">
-                      <span className="font-semibold text-dark-grey">Why is this needed?</span> Accurate birth details are crucial for precise Numerology and Kundli calculations.
+                      <span className="font-semibold text-dark-grey">Why is this needed?</span> Accurate birth details are crucial for calculating your Life Path, Destiny Number, and personal cosmic vibrations.
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
@@ -265,7 +265,7 @@ const Booking = () => {
                   <div className="border-t border-gray-100 pt-8 mt-8">
                     <div>
                       <label className="block text-sm font-semibold text-dark-grey mb-2"><MessageSquare className="inline w-4 h-4 mr-1 text-primary"/> What is your core problem or concern? *</label>
-                      <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400" placeholder="Please describe briefly (Relationship/Love hurdles, Career/Business delays, Vastu defects, Health/Money issues etc.)"></textarea>
+                      <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400" placeholder="Please describe briefly (Relationship/Love hurdles, Career/Business delays, Health/Money issues etc.)"></textarea>
                     </div>
                   </div>
 
@@ -294,7 +294,8 @@ const Booking = () => {
                   <div className="inline-block bg-red-600 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full mb-4 animate-pulse">
                     ⚡ 50% OFF SPECIAL OFFER
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Priority On-Call Consultation</h3>
+                  <h3 className="text-2xl font-bold mb-1">Numerology Consultation</h3>
+                  <p className="text-amber-300 font-semibold text-xs mb-3 uppercase tracking-wider">3200 INR Only For Numerology</p>
                   <p className="text-gray-300 text-sm mb-6">One-on-One Voice / Video Call directly with Hari ram Beekrwar</p>
 
                   <div className="border-t border-b border-indigo-800/80 py-4 mb-6">
@@ -313,10 +314,14 @@ const Booking = () => {
                   </div>
 
                   <ul className="space-y-3 text-sm text-gray-300 mb-6">
-                     <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> Full Numerology & Vastu Analysis</li>
+                     <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> Full Numerology Analysis</li>
                      <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> Instant Remedies & Guidance</li>
                      <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> Priority 24-Hour Slot Allocation</li>
                   </ul>
+
+                  <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-3 mb-6 text-xs text-amber-200/90 leading-relaxed">
+                    📌 <strong>Vastu Consultation:</strong> Starting from ₹20,000/- (Separate service for property & home layouts).
+                  </div>
 
                   <a 
                     href="https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20want%20to%20book%20a%20consultation%20for%20₹3200" 
