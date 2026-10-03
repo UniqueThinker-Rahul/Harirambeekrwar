@@ -113,13 +113,13 @@ const Booking = () => {
             <div className="bg-white border border-amber-200 rounded-2xl p-3.5 sm:p-4 flex items-center gap-3 sm:gap-4 shadow-sm">
               <span className="w-3 h-3 rounded-full bg-green-500 inline-block animate-pulse shrink-0" />
               <div className="flex-1">
-                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-medium-grey mb-1">Today's Available Slots</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-medium-grey mb-1">Today's Available Slots</p>
                 <div className="flex gap-1 sm:gap-1.5">
                   {[1,2,3].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-green-400 rounded-sm" />)}
                   {[4,5,6,7,8].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-gray-200 rounded-sm" />)}
                 </div>
               </div>
-              <div className="text-right shrink-0"><p className="font-black text-xl sm:text-2xl text-secondary">3</p><p className="text-[11px] sm:text-xs text-medium-grey">Remaining</p></div>
+              <div className="text-right shrink-0"><p className="font-black text-xl sm:text-2xl text-secondary">3</p><p className="text-xs text-medium-grey">Remaining</p></div>
             </div>
           </div>
 
@@ -153,7 +153,7 @@ const Booking = () => {
                     {status === "loading" ? <><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Opening Secure Gateway...</> : <><Lock className="w-4 h-4 sm:w-5 sm:h-5" /> Pay ₹3,200 & Book Consultation</>}
                   </button>
                   <div className="flex flex-col items-center gap-2 pt-1">
-                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-[11px] sm:text-xs text-medium-grey">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-xs text-medium-grey">
                       <span className="flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Lock className="w-3 h-3 text-green-600" /> SSL Encrypted</span>
                       <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><CreditCard className="w-3 h-3 text-blue-500" /> Cards &amp; Net Banking</span>
                       <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Smartphone className="w-3 h-3 text-indigo-500" /> UPI &amp; Wallets</span>

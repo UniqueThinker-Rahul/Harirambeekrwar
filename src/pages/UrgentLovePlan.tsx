@@ -100,9 +100,9 @@ const UrgentLovePlan = () => (
       {/* Final CTA */}
       <section className="py-20 bg-white text-center px-4">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">Don't Wait Any Longer</h2>
-          <p className="text-medium-grey text-lg mb-8 leading-relaxed">Love delayed is love denied. Take action today — every day you wait is a day without the relationship you deserve.</p>
-          <Link to="/booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-rose-600 text-white font-black px-10 py-5 rounded-full text-lg hover:from-red-600 hover:to-rose-700 transition-all shadow-xl hover:-translate-y-1">Book Priority Slot NOW <ArrowRight className="w-5 h-5" /></Link>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4">Don't Wait Any Longer</h2>
+          <p className="text-medium-grey text-base sm:text-lg mb-8 leading-relaxed">Love delayed is love denied. Take action today — every day you wait is a day without the relationship you deserve.</p>
+          <Link to="/booking" className="btn-sweep inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-rose-600 text-white font-black px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg hover:from-red-600 hover:to-rose-700 transition-all shadow-xl hover:-translate-y-1">Book Priority Slot NOW <ArrowRight className="w-5 h-5" /></Link>
         </div>
       </section>
     </div>

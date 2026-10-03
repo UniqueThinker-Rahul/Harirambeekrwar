@@ -38,7 +38,7 @@ const Contact = () => (
                           <div>
                               <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">WhatsApp</h3>
                               <a href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="text-medium-grey text-base sm:text-lg font-medium hover:text-[#25D366] transition-colors">+91 9509610711</a>
-                              <p className="text-green-600 font-bold tracking-wide uppercase text-[11px] sm:text-xs">Fastest Response</p>
+                              <p className="text-green-600 font-bold tracking-wide uppercase text-xs">Fastest Response</p>
                           </div>
                       </div>
                       <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">

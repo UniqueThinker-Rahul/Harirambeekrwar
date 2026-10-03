@@ -228,7 +228,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
                   >
                     <option value="Numerology Consultation (₹3,200)">Numerology Consultation (₹3,200)</option>
                     <option value="Scientific Vastu Consultation (Starts ₹20,000)">Scientific Vastu (Starts ₹20,000)</option>
@@ -246,7 +246,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleChange}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
                   >
                     <option value="Any Time (ASAP)">Any Time (ASAP)</option>
                     <option value="Morning (10 AM - 1 PM)">Morning (10 AM - 1 PM)</option>
@@ -289,7 +289,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
                 )}
               </button>
 
-              <p className="text-[11px] text-center text-gray-500">
+              <p className="text-xs text-center text-gray-500">
                 Free callback from our support team. Numerology is ₹3,200 | Vastu starts from ₹20,000.
               </p>
             </form>

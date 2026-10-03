@@ -118,7 +118,7 @@ const Reports = () => (
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-3">
             Process
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-grey">How It Works</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey">How It Works</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
           {[
@@ -147,7 +147,7 @@ const Reports = () => (
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-400/20 border border-amber-400/30 px-4 py-1.5 rounded-full mb-4">
               Need Live Clarity?
             </span>
-            <h3 className="text-2xl sm:text-4xl font-bold text-white mb-4">Not Sure Which Report to Get?</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Not Sure Which Report to Get?</h3>
             <p className="text-gray-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto font-light leading-relaxed">
               Written reports provide deep reference, but a direct 1-on-1 consultation lets you ask unlimited personal questions in real-time.
             </p>

@@ -100,7 +100,7 @@ const Home = () => {
                     <div className="absolute bottom-5 left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3.5 py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80 flex items-center gap-1.5">
                       <Users className="w-3.5 h-3.5 text-amber-400" /> 2,200+ Clients
                     </div>
-                    <div className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg text-[11px] sm:text-xs hidden sm:flex items-center gap-1.5">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg text-xs hidden sm:flex items-center gap-1.5">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />100% Confidential
                     </div>
                   </div>

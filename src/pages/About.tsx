@@ -65,12 +65,12 @@ const About = () => {
                   <div className="bg-white p-4 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
                     <Users className="w-8 h-8 sm:w-10 sm:h-10 text-secondary mx-auto mb-2 sm:mb-4" />
                     <h4 className="text-xl sm:text-3xl md:text-4xl font-black text-dark-grey mb-1">2,200+</h4>
-                    <p className="text-[11px] sm:text-sm text-medium-grey font-bold uppercase tracking-widest">Lives Transformed</p>
+                    <p className="text-xs sm:text-sm text-medium-grey font-bold uppercase tracking-wider">Lives Transformed</p>
                   </div>
                   <div className="bg-white p-4 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
                     <Award className="w-8 h-8 sm:w-10 sm:h-10 text-tertiary mx-auto mb-2 sm:mb-4" />
                     <h4 className="text-xl sm:text-3xl md:text-4xl font-black text-dark-grey mb-1">100%</h4>
-                    <p className="text-[11px] sm:text-sm text-medium-grey font-bold uppercase tracking-widest">Confidential</p>
+                    <p className="text-xs sm:text-sm text-medium-grey font-bold uppercase tracking-wider">Confidential</p>
                   </div>
                 </div>
                 
