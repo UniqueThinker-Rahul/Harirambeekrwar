@@ -18,8 +18,11 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem("userInfo");
-    return saved ? JSON.parse(saved) : null;
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("userInfo");
+      return saved ? JSON.parse(saved) : null;
+    }
+    return null;
   });
 
   const login = (userData: User) => {

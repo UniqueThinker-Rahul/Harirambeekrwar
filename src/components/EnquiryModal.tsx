@@ -109,18 +109,18 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-md animate-fadeIn">
       <div 
-        className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 max-w-lg w-full overflow-hidden relative max-h-[92vh] flex flex-col"
+        className="bg-white rounded-[2rem] shadow-2xl border border-amber-200/40 ring-1 ring-amber-400/20 max-w-lg w-full overflow-hidden relative max-h-[92vh] flex flex-col"
         onClick={e => e.stopPropagation()}
       >
         {/* Header Bar */}
-        <div className="bg-gradient-to-r from-indigo-950 via-blue-900 to-indigo-950 text-white p-6 relative flex items-start justify-between">
-          <div className="pr-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold mb-2">
+        <div className="bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-950 text-white p-6 relative flex items-start justify-between border-b border-indigo-900/60">
+          <div className="pr-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-amber-400/30">
               <Sparkles className="w-3.5 h-3.5" /> Free Consultation Guidance
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug">
               Request a Callback
             </h3>
             <p className="text-xs md:text-sm text-gray-300 mt-1 leading-relaxed">
@@ -129,10 +129,10 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
           </div>
           <button 
             onClick={handleClose} 
-            className="text-gray-400 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
+            className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white shrink-0 mt-0.5"
             aria-label="Close"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5" />
           </button>
         </div>
 
@@ -143,8 +143,8 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
               <div className="w-20 h-20 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-100 shadow-inner">
                 <CheckCircle className="w-10 h-10" />
               </div>
-              <h4 className="text-2xl font-bold text-dark-grey mb-2">Enquiry Received!</h4>
-              <p className="text-medium-grey text-sm md:text-base leading-relaxed mb-6">
+              <h4 className="text-xl sm:text-2xl font-bold text-dark-grey mb-2 leading-tight">Enquiry Received!</h4>
+              <p className="text-medium-grey text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                 Thank you, <strong className="text-dark-grey">{formData.name}</strong>. Our team has received your enquiry and will call you on <strong className="text-dark-grey">{formData.phone}</strong> ({formData.preferredTime}) to assist you.
               </p>
 
@@ -159,14 +159,14 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
                   href={generateWhatsAppUrl()}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3.5 px-6 rounded-full text-sm transition-all shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3.5 px-6 rounded-full text-xs sm:text-sm transition-all shadow-md hover:-translate-y-0.5"
                 >
                   <Send className="w-4 h-4" /> Connect Directly on WhatsApp
                 </a>
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="w-full py-3 px-6 rounded-full bg-gray-100 hover:bg-gray-200 text-dark-grey font-bold text-sm transition-colors"
+                  className="w-full py-3 px-6 rounded-full bg-gray-100 hover:bg-gray-200 text-dark-grey font-bold text-xs sm:text-sm transition-colors"
                 >
                   Close
                 </button>
@@ -175,60 +175,64 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                <label htmlFor="enquiry-name" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                   <User className="inline w-3.5 h-3.5 mr-1 text-primary" /> Full Name *
                 </label>
                 <input
                   required
+                  id="enquiry-name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   type="text"
                   placeholder="e.g. Rahul Sharma"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                  className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-4 py-2.5 text-base outline-none transition-all placeholder:text-gray-400 font-medium"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                  <label htmlFor="enquiry-phone" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                     <Phone className="inline w-3.5 h-3.5 mr-1 text-primary" /> Phone (WhatsApp) *
                   </label>
                   <input
                     required
+                    id="enquiry-phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     type="tel"
                     placeholder="+91 95096 10711"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                    className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-4 py-2.5 text-base outline-none transition-all placeholder:text-gray-400 font-medium"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                  <label htmlFor="enquiry-city" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                     <MapPin className="inline w-3.5 h-3.5 mr-1 text-primary" /> City / Location
                   </label>
                   <input
+                    id="enquiry-city"
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
                     type="text"
                     placeholder="e.g. Delhi, Jaipur"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                    className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-4 py-2.5 text-base outline-none transition-all placeholder:text-gray-400 font-medium"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                  <label htmlFor="enquiry-service" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                     Interested In
                   </label>
                   <select
+                    id="enquiry-service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
+                    className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-3 py-2.5 text-base font-medium text-dark-grey outline-none transition-all cursor-pointer"
                   >
                     <option value="Numerology Consultation (₹3,200)">Numerology Consultation (₹3,200)</option>
                     <option value="Scientific Vastu Consultation (Starts ₹20,000)">Scientific Vastu (Starts ₹20,000)</option>
@@ -239,14 +243,15 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                  <label htmlFor="enquiry-time" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                     <Clock className="inline w-3.5 h-3.5 mr-1 text-primary" /> Best Time to Call
                   </label>
                   <select
+                    id="enquiry-time"
                     name="preferredTime"
                     value={formData.preferredTime}
                     onChange={handleChange}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-medium text-dark-grey focus:ring-2 focus:ring-primary outline-none transition-all"
+                    className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-3 py-2.5 text-base font-medium text-dark-grey outline-none transition-all cursor-pointer"
                   >
                     <option value="Any Time (ASAP)">Any Time (ASAP)</option>
                     <option value="Morning (10 AM - 1 PM)">Morning (10 AM - 1 PM)</option>
@@ -257,28 +262,29 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen: controlledIsOpen, o
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5">
+                <label htmlFor="enquiry-message" className="block text-xs font-bold uppercase tracking-wider text-dark-grey mb-1.5 cursor-pointer">
                   <MessageSquare className="inline w-3.5 h-3.5 mr-1 text-primary" /> Tell us what you need guidance on (Optional)
                 </label>
                 <textarea
+                  id="enquiry-message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={2}
                   placeholder="e.g. Career roadblocks / Life guidance / Name & date alignment..."
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400"
+                  className="w-full bg-gray-50/80 hover:bg-white focus:bg-white border border-gray-200 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 rounded-xl px-4 py-2 text-base outline-none transition-all resize-none placeholder:text-gray-400 font-medium"
                 />
               </div>
 
               <div className="flex items-center gap-2 text-xs text-medium-grey bg-green-50 p-2.5 rounded-xl border border-green-100">
                 <ShieldCheck className="w-4 h-4 text-green-600 shrink-0" />
-                <span>100% Secure & Confidential. Your number is only used to arrange this guidance call.</span>
+                <span>100% Secure &amp; Confidential. Your number is only used to arrange this guidance call.</span>
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full py-4 rounded-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-base transition-all shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
+                className="btn-sweep w-full py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black text-sm sm:text-base transition-all shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
               >
                 {status === 'submitting' ? (
                   <span>Submitting Enquiry...</span>

@@ -11,7 +11,7 @@ const POSTS = [
     desc: 'Discover how Saturn (Shani Dev) cycles influence your work, money, and personal karmic milestones. Learn practical, non-destructive remedies to align with the energy.',
     readTime: '5 min read',
     date: 'Oct 2026',
-    author: 'Hari ram Beekrwar',
+    author: 'Hari Ram Beekrwar',
     color: 'from-amber-500 to-orange-500',
     icon: Sparkles,
   },
@@ -22,7 +22,7 @@ const POSTS = [
     desc: 'Enhance productivity and clear financial blockages in your office or workspace with directional corrections, desk placement, and elemental balance — zero demolition needed.',
     readTime: '6 min read',
     date: 'Sep 2026',
-    author: 'Hari ram Beekrwar',
+    author: 'Hari Ram Beekrwar',
     color: 'from-indigo-500 to-blue-600',
     icon: Compass,
   },
@@ -33,7 +33,7 @@ const POSTS = [
     desc: 'Every letter carries a distinct planetary frequency. Discover why altering a single alphabet can bring harmony between your birth date and societal identity.',
     readTime: '4 min read',
     date: 'Aug 2026',
-    author: 'Hari ram Beekrwar',
+    author: 'Hari Ram Beekrwar',
     color: 'from-emerald-500 to-teal-600',
     icon: BookOpen,
   },
@@ -44,7 +44,7 @@ const POSTS = [
     desc: 'Your wristwatch is in constant contact with your pulse and meridian lines. Learn how dial shapes, metal colors, and straps attract financial clarity.',
     readTime: '5 min read',
     date: 'Jul 2026',
-    author: 'Hari ram Beekrwar',
+    author: 'Hari Ram Beekrwar',
     color: 'from-rose-500 to-amber-500',
     icon: Sparkles,
   },
@@ -52,24 +52,47 @@ const POSTS = [
 
 const Blog = () => (
   <>
-    <SEO
-      title="Cosmic Wisdom Blog | Numerology & Vastu Insights — Hari ram Beekrwar"
-      description="Read authentic, researched articles on Vedic numerology, Vastu Shastra tips, name correction, and cosmic energy alignment by Hari ram Beekrwar."
-    />
+    <SEO />
     <div className="min-h-screen bg-light-grey pb-28">
       {/* Cosmic Hero */}
-      <section className="bg-hero-dark text-white py-14 sm:py-24 md:py-32 px-4 text-center relative overflow-hidden starfield" style={{ backgroundColor: '#0F172A' }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-cosmic-navy/80 to-transparent pointer-events-none" />
+      <section className="bg-hero-dark text-white pt-10 pb-12 sm:pt-20 sm:pb-20 md:pt-24 md:pb-24 px-4 text-center relative overflow-hidden starfield" style={{ backgroundColor: '#0F172A' }}>
+        {/* Ambient Lighting Orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 sm:-top-40 sm:-right-40 w-56 sm:w-96 h-56 sm:h-96 bg-amber-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-28 -left-16 sm:top-40 sm:-left-20 w-48 sm:w-72 h-48 sm:h-72 bg-indigo-600/15 rounded-full blur-[80px] sm:blur-[100px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.08),rgba(255,255,255,0))]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+        </div>
+
         <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 px-5 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold mb-5 text-xs sm:text-sm tracking-widest uppercase">
-            <BookOpen className="w-4 h-4 text-amber-400" /> Cosmic Wisdom Journal
+          {/* Eyebrow Badge */}
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-1 sm:py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3.5 sm:mb-6 text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.15)] max-w-full">
+            <span className="relative flex h-2 w-2 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+            </span>
+            <BookOpen className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+            <span className="truncate">Cosmic Wisdom Journal</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
-            Numerology &amp; Vastu<br />Insights &amp; Remedies
+
+          {/* Fluid Heading */}
+          <h1 className="text-[1.75rem] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-5 text-white leading-[1.2] sm:leading-[1.15] tracking-tight">
+            Numerology &amp; Vastu{' '}
+            <span className="text-shimmer inline-block">Insights &amp; Remedies</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
-            Practical knowledge, planetary shifts, and logical spiritual guides to help you master your surrounding energy and life path.
+
+          {/* Subtitle */}
+          <p className="max-w-xl mx-auto text-slate-300/90 text-xs sm:text-sm md:text-base font-normal leading-relaxed mb-5 sm:mb-6 px-1 sm:px-0">
+            Actionable Vedic wisdom, planetary shifts, and non-destructive remedies for career and personal prosperity.
           </p>
+
+          {/* Category Chips */}
+          <div className="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-medium text-slate-300">
+            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Numerology</span>
+            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Vastu Shastra</span>
+            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Wristwatch Therapy</span>
+            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Planetary Remedies</span>
+          </div>
         </div>
       </section>
 
@@ -81,27 +104,30 @@ const Blog = () => (
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col group"
+                data-reveal="fade-up"
+                data-delay={idx * 150}
+                className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col group border border-gray-100 hover:border-amber-200/80 relative overflow-hidden"
               >
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${post.color}`} />
                 <div className="flex items-center justify-between gap-3 mb-4 sm:mb-5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-secondary border border-amber-200">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-amber-50 text-secondary border border-amber-200 shadow-sm">
                     <PostIcon className="w-3.5 h-3.5 text-primary" /> {post.category}
                   </span>
-                  <span className="text-xs text-medium-grey flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5" /> {post.readTime}
+                  <span className="text-xs text-medium-grey flex items-center gap-1.5 font-medium">
+                    <Clock className="w-3.5 h-3.5 text-primary" /> {post.readTime}
                   </span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-dark-grey mb-2.5 sm:mb-3 group-hover:text-secondary transition-colors leading-snug">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-dark-grey mb-2.5 sm:mb-3 group-hover:text-secondary transition-colors leading-snug">
                   {post.title}
                 </h2>
 
-                <p className="text-medium-grey text-sm sm:text-base leading-relaxed mb-5 sm:mb-6 flex-grow">
+                <p className="text-xs sm:text-sm md:text-base text-medium-grey leading-relaxed mb-6 flex-grow">
                   {post.desc}
                 </p>
 
                 <div className="pt-4 sm:pt-6 border-t border-gray-100 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-medium-grey font-medium">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm text-medium-grey font-medium">
                     <User className="w-3.5 h-3.5 text-amber-500" />
                     <span>{post.author}</span>
                   </div>
@@ -110,7 +136,7 @@ const Blog = () => (
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center text-xs sm:text-sm font-bold text-secondary group-hover:text-amber-600 transition-colors"
                   >
-                    Read Article <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                    Read Full Article <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1.5 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -119,15 +145,18 @@ const Blog = () => (
         </div>
 
         {/* Advisory Banner */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-br from-cosmic-navy via-dark-grey to-cosmic-navy rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 text-white text-center shadow-xl border border-indigo-800/60 relative overflow-hidden">
+        <div data-reveal="scale-up" className="mt-12 sm:mt-16 bg-gradient-to-br from-cosmic-navy via-slate-950 to-cosmic-navy rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-white text-center shadow-2xl border border-indigo-800/80 relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h3 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-3">Looking for Personalized Life Answers?</h3>
-            <p className="text-gray-300 text-xs sm:text-base mb-5 sm:mb-6 leading-relaxed">
+            <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/10 border border-amber-400/20 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4">Personal Guidance</span>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2.5 sm:mb-3 text-white leading-tight">Looking for Personalized Life Answers?</h3>
+            <p className="text-slate-300 text-xs sm:text-sm md:text-base mb-6 leading-relaxed max-w-xl mx-auto">
               Articles give foundational knowledge, but your birth chart is 100% unique. Book a private 1-on-1 session to decode your destiny.
             </p>
             <Link
               to="/booking"
-              className="btn-sweep inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs sm:text-sm hover:from-amber-500 hover:to-amber-600 transition-all shadow-lg hover:-translate-y-0.5"
+              className="btn-sweep inline-flex justify-center items-center px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-slate-950 font-black text-xs sm:text-sm hover:from-amber-500 hover:to-amber-700 transition-all shadow-xl hover:-translate-y-0.5"
             >
               Book 1-on-1 Consultation (₹3,200) <ArrowRight className="w-4 h-4 ml-2" />
             </Link>

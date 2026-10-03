@@ -45,7 +45,7 @@ const Booking = () => {
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: orderData.amount, currency: orderData.currency,
-        name: "Hari ram Beekrwar", description: "Numerology Consultation (₹3,200 Only)",
+        name: "Hari Ram Beekrwar", description: "Numerology Consultation (₹3,200 Only)",
         image: "/Resource/logo.jpeg", order_id: orderData.id,
         handler: async function (response: any) {
           try {
@@ -99,61 +99,199 @@ const Booking = () => {
 
   return (
     <>
-      <SEO title="Book Numerology Consultation | HARI RAM BEEKRWAR" description="Schedule a 1-on-1 personalized full numerology consultation with Hari ram Beekrwar. 100% confidential and secure booking." />
-      <div className="min-h-screen bg-light-grey py-10 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm font-bold mb-4 shadow-sm animate-pulse"><Zap className="w-4 h-4" /> LIMITED TIME — 50% DISCOUNT ACTIVE</div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-grey mb-3 sm:mb-4">Request Your Private Consultation</h1>
-            <p className="text-medium-grey text-base sm:text-lg max-w-2xl mx-auto">Join 2,200+ individuals who transformed their lives. Fill in your details and pay securely to lock your slot.</p>
+      <SEO />
+      <div className="min-h-screen bg-light-grey pb-24">
+        {/* Cosmic Hero Section */}
+        <section className="bg-hero-dark text-white pt-10 pb-12 sm:pt-16 sm:pb-20 px-4 text-center relative overflow-hidden starfield" style={{ backgroundColor: '#0F172A' }}>
+          {/* Ambient Lighting Orbs */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-32 -right-32 sm:-top-40 sm:-right-40 w-72 sm:w-96 h-72 sm:h-96 bg-amber-500/10 rounded-full blur-3xl" />
+            <div className="absolute top-36 -left-20 sm:top-40 sm:-left-20 w-64 sm:w-72 h-64 sm:h-72 bg-indigo-600/15 rounded-full blur-[100px]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.08),rgba(255,255,255,0))]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
           </div>
 
-          {/* Slot Indicator */}
-          <div className="max-w-xl mx-auto mb-8 sm:mb-10">
-            <div className="bg-white border border-amber-200 rounded-2xl p-3.5 sm:p-4 flex items-center gap-3 sm:gap-4 shadow-sm">
-              <span className="w-3 h-3 rounded-full bg-green-500 inline-block animate-pulse shrink-0" />
-              <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-medium-grey mb-1">Today's Available Slots</p>
-                <div className="flex gap-1 sm:gap-1.5">
-                  {[1,2,3].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-green-400 rounded-sm" />)}
-                  {[4,5,6,7,8].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-gray-200 rounded-sm" />)}
+          <div className="relative z-10 max-w-4xl mx-auto">
+            {/* Promo Pill */}
+            <div className="inline-flex items-center gap-2 px-3.5 sm:px-5 py-1 sm:py-1.5 rounded-full bg-red-500/20 border border-red-400/40 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-5 text-red-300 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-400"></span>
+              </span>
+              <Zap className="w-3.5 h-3.5 text-amber-300" />
+              <span>Limited Time — 50% Discount Active</span>
+            </div>
+
+            {/* Fluid Heading */}
+            <h1 className="text-[1.75rem] xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight leading-[1.15]">
+              Request Your Private <span className="text-shimmer inline-block">Consultation</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xs sm:text-sm md:text-base text-slate-300/90 max-w-xl mx-auto leading-relaxed font-normal mb-4 sm:mb-5">
+              Join 2,200+ clients with a private, 100% confidential consultation with <strong className="text-white font-medium">Hari Ram Beekrwar</strong>.
+            </p>
+
+            {/* Slot Indicator inside Hero */}
+            <div className="max-w-md mx-auto bg-slate-900/80 border border-slate-700/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 shadow-lg">
+              <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 inline-block animate-pulse shrink-0" />
+              <div className="flex-1 text-left min-w-0">
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 mb-1 truncate">Today's Available Slots</p>
+                <div className="flex gap-1 sm:gap-1.5 w-full">
+                  {[1,2,3].map(i => <div key={i} className="flex-1 max-w-[28px] h-2 sm:h-2.5 bg-emerald-400 rounded-sm" />)}
+                  {[4,5,6,7,8].map(i => <div key={i} className="flex-1 max-w-[28px] h-2 sm:h-2.5 bg-slate-700 rounded-sm" />)}
                 </div>
               </div>
-              <div className="text-right shrink-0"><p className="font-black text-xl sm:text-2xl text-secondary">3</p><p className="text-xs text-medium-grey">Remaining</p></div>
+              <div className="text-right shrink-0">
+                <p className="font-black text-lg sm:text-2xl text-amber-400 leading-none">3</p>
+                <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Remaining</p>
+              </div>
             </div>
           </div>
+        </section>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
             {/* Form — on mobile appears second (after price sidebar) */}
-            <div className="lg:col-span-2 bg-white rounded-2xl sm:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden order-last lg:order-first">
+            <div data-reveal="fade-right" className="lg:col-span-2 bg-white rounded-2xl sm:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden order-last lg:order-first relative">
+              {/* Top Luxury Gradient Bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-200/40" />
+
               <div className="p-5 sm:p-8 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><User className="inline w-3.5 h-3.5 mr-1 text-primary" /> Full Name *</label><input required name="name" value={formData.name} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="e.g. Rahul Sharma" /></div>
-                    <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><Mail className="inline w-3.5 h-3.5 mr-1 text-primary" /> Email Address *</label><input required name="email" value={formData.email} onChange={handleChange} type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="rahul@example.com" /></div>
+                    <div>
+                      <label htmlFor="booking-name" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">
+                        <User className="inline w-3.5 h-3.5 mr-1 text-primary" /> Full Name *
+                      </label>
+                      <input
+                        id="booking-name"
+                        required
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        type="text"
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-gray-400 font-medium text-base shadow-inner"
+                        placeholder="e.g. Rahul Sharma"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="booking-email" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">
+                        <Mail className="inline w-3.5 h-3.5 mr-1 text-primary" /> Email Address *
+                      </label>
+                      <input
+                        id="booking-email"
+                        required
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        type="email"
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-gray-400 font-medium text-base shadow-inner"
+                        placeholder="rahul@example.com"
+                      />
+                    </div>
                   </div>
-                  <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><Phone className="inline w-3.5 h-3.5 mr-1 text-primary" /> WhatsApp Number *</label><input required name="phone" value={formData.phone} onChange={handleChange} type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="+91 95096 10711" /></div>
+                  <div>
+                    <label htmlFor="booking-phone" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">
+                      <Phone className="inline w-3.5 h-3.5 mr-1 text-primary" /> WhatsApp Number *
+                    </label>
+                    <input
+                      id="booking-phone"
+                      required
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      type="tel"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-gray-400 font-medium text-base shadow-inner"
+                      placeholder="+91 95096 10711"
+                    />
+                  </div>
                   <div className="border-t border-gray-100 pt-6 sm:pt-8">
-                    <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 flex items-center gap-2"><Calendar className="text-secondary w-5 h-5" /> Exact Birth Details</h3>
-                    <div className="p-3.5 sm:p-4 bg-amber-50/60 rounded-xl border border-amber-100 mb-5 text-xs sm:text-sm text-medium-grey"><span className="font-bold text-dark-grey">Why needed?</span> Accurate birth details are crucial for calculating your Life Path and personal cosmic vibrations.</div>
+                    <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 flex items-center gap-2">
+                      <Calendar className="text-secondary w-5 h-5" /> Exact Birth Details
+                    </h3>
+                    <div className="p-3.5 sm:p-4 bg-amber-50/70 rounded-xl border border-amber-200/80 mb-5 text-xs sm:text-sm text-medium-grey shadow-xs">
+                      <span className="font-bold text-dark-grey">Why needed?</span> Accurate birth details are crucial for calculating your Life Path and personal cosmic vibrations.
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Date of Birth *</label><input required name="dob" value={formData.dob} onChange={handleChange} max={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-base" /></div>
-                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Time of Birth <span className="text-gray-400 font-normal">(Optional)</span></label><input name="tob" value={formData.tob} onChange={handleChange} type="time" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-base" /></div>
-                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">City of Birth *</label><input required name="pob" value={formData.pob} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="e.g. Bharatpur" /></div>
+                      <div>
+                        <label htmlFor="booking-dob" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Date of Birth *</label>
+                        <input
+                          id="booking-dob"
+                          required
+                          name="dob"
+                          value={formData.dob}
+                          onChange={handleChange}
+                          max={todayString}
+                          type="date"
+                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all font-medium text-base shadow-inner"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="booking-tob" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">
+                          Time of Birth <span className="text-gray-400 font-normal">(Optional)</span>
+                        </label>
+                        <input
+                          id="booking-tob"
+                          name="tob"
+                          value={formData.tob}
+                          onChange={handleChange}
+                          type="time"
+                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all text-base shadow-inner"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="booking-pob" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">City of Birth *</label>
+                        <input
+                          id="booking-pob"
+                          required
+                          name="pob"
+                          value={formData.pob}
+                          onChange={handleChange}
+                          type="text"
+                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-gray-400 font-medium text-base shadow-inner"
+                          placeholder="e.g. Bharatpur"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="border-t border-gray-100 pt-6 sm:pt-8">
-                    <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><MessageSquare className="inline w-3.5 h-3.5 mr-1 text-primary" /> What is your core problem or concern? *</label>
-                    <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400 font-medium text-base" placeholder="Describe briefly — Relationship/Love hurdles, Career/Business delays, Health/Money issues etc." />
+                    <label htmlFor="booking-problem" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">
+                      <MessageSquare className="inline w-3.5 h-3.5 mr-1 text-primary" /> What is your core problem or concern? *
+                    </label>
+                    <textarea
+                      id="booking-problem"
+                      required
+                      name="problemDesc"
+                      value={formData.problemDesc}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all resize-none placeholder:text-gray-400 font-medium text-base shadow-inner"
+                      placeholder="Describe briefly — Relationship/Love hurdles, Career/Business delays, Health/Money issues etc."
+                    />
                   </div>
-                  <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-medium-grey my-2 bg-green-50 p-3.5 sm:p-4 rounded-xl border border-green-100">
-                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-tertiary shrink-0" /><span>Your data is <strong className="text-dark-grey">सुरक्षित (Secure)</strong> & 100% Confidential.</span>
+                  <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-medium-grey my-2 bg-emerald-50/80 p-3.5 sm:p-4 rounded-xl border border-emerald-200/80">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                    <span>Your data is <strong className="text-dark-grey">सुरक्षित (Secure)</strong> &amp; 100% Confidential.</span>
                   </div>
-                  <button disabled={status === "loading"} type="submit" className="btn-sweep w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-black text-base sm:text-xl py-4 sm:py-5 rounded-full transition-all shadow-xl flex justify-center items-center gap-2 transform hover:-translate-y-1 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed">
-                    {status === "loading" ? <><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Opening Secure Gateway...</> : <><Lock className="w-4 h-4 sm:w-5 sm:h-5" /> Pay ₹3,200 & Book Consultation</>}
+                  <button
+                    disabled={status === "loading"}
+                    type="submit"
+                    className="btn-sweep w-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-black text-sm sm:text-base md:text-lg py-4 sm:py-5 rounded-full transition-all shadow-xl flex justify-center items-center gap-2 transform hover:-translate-y-1 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? (
+                      <>
+                        <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Opening Secure Gateway...
+                      </>
+                    ) : (
+                      <>
+                        <Lock className="w-4 h-4 sm:w-5 sm:h-5" /> Pay ₹3,200 &amp; Book Consultation
+                      </>
+                    )}
                   </button>
                   <div className="flex flex-col items-center gap-2 pt-1">
-                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-xs text-medium-grey">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-[11px] sm:text-xs text-medium-grey">
                       <span className="flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Lock className="w-3 h-3 text-green-600" /> SSL Encrypted</span>
                       <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><CreditCard className="w-3 h-3 text-blue-500" /> Cards &amp; Net Banking</span>
                       <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Smartphone className="w-3 h-3 text-indigo-500" /> UPI &amp; Wallets</span>
@@ -165,45 +303,64 @@ const Booking = () => {
             </div>
 
             {/* Sidebar — shows FIRST on mobile (order-first), right column on desktop */}
-            <div className="lg:col-span-1 space-y-7 order-first lg:order-last">
-              <div className="bg-gradient-to-br from-cosmic-navy via-dark-grey to-cosmic-navy text-white p-8 rounded-[2rem] shadow-xl border border-indigo-800/80 relative overflow-hidden">
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-400/5 rounded-full blur-2xl pointer-events-none" />
-                <div className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full mb-5 animate-pulse"><Flame className="w-3.5 h-3.5 fill-amber-300 text-amber-300" /> 50% OFF SPECIAL OFFER</div>
-                <h3 className="text-2xl font-bold mb-1">Numerology Consultation</h3>
+            <div className="lg:col-span-1 space-y-7 order-first lg:order-last" data-reveal="fade-left">
+              <div className="bg-gradient-to-br from-cosmic-navy via-slate-900 to-cosmic-navy text-white p-6 sm:p-8 rounded-[2rem] shadow-xl border border-indigo-800/80 relative overflow-hidden">
+                {/* Top Luxury Gradient Bar */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-200/40" />
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-400/10 rounded-full blur-2xl pointer-events-none" />
+                
+                <div className="inline-flex items-center gap-1.5 bg-red-600 text-white text-[11px] sm:text-xs uppercase font-extrabold tracking-wider px-3 py-1 rounded-full mb-4 sm:mb-5 shadow-sm animate-pulse">
+                  <Flame className="w-3.5 h-3.5 fill-amber-300 text-amber-300" /> 50% OFF SPECIAL OFFER
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-1 leading-snug text-white">Numerology Consultation</h3>
                 <p className="text-amber-300 font-semibold text-xs mb-4 uppercase tracking-wider">Voice / Video Call · 1-on-1</p>
                 <div className="border-t border-b border-indigo-800/80 py-4 mb-5">
-                  <div className="flex justify-between items-center text-gray-400 mb-2 text-sm"><span>Standard Fee:</span><span className="line-through text-lg">₹6,400</span></div>
-                  <div className="flex justify-between items-center text-emerald-400 mb-2 text-sm font-bold"><span>Discount (50%):</span><span>− ₹3,200</span></div>
-                  <div className="flex justify-between items-center text-white font-bold text-xl pt-2 border-t border-indigo-800/80"><span>Total Payable:</span><span className="text-3xl text-amber-300 font-black">₹3,200/-</span></div>
+                  <div className="flex justify-between items-center text-gray-400 mb-2 text-xs sm:text-sm"><span>Standard Fee:</span><span className="line-through text-base sm:text-lg">₹6,400</span></div>
+                  <div className="flex justify-between items-center text-emerald-400 mb-2 text-xs sm:text-sm font-bold"><span>Discount (50%):</span><span>− ₹3,200</span></div>
+                  <div className="flex justify-between items-center text-white font-bold text-base sm:text-lg pt-2 border-t border-indigo-800/80"><span>Total Payable:</span><span className="text-2xl sm:text-3xl text-amber-300 font-black">₹3,200/-</span></div>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-300 mb-5">
+                <ul className="space-y-3 text-xs sm:text-sm text-gray-300 mb-5">
                   {['Full Numerology Analysis', 'Instant Remedies & Guidance', 'Priority 24-Hour Slot Allocation', 'Dedicated Q&A Segment'].map((f, i) => (
-                    <li key={i} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> {f}</li>
+                    <li key={i} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /> {f}</li>
                   ))}
                 </ul>
                 <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-3 mb-5 text-xs text-amber-200/90 leading-relaxed flex items-start gap-2">
                   <HomeIcon className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <span><strong>Vastu Consultation:</strong> Starting ₹20,000/- (Separate service).</span>
                 </div>
-                <a href="https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20want%20to%20book%20a%20consultation%20for%20₹3200" target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 px-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-[#20b858] transition-colors">
+                <a
+                  href="https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20want%20to%20book%20a%20consultation%20for%20₹3200"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full bg-[#25D366] text-white py-3.5 px-4 rounded-full font-bold text-xs sm:text-sm flex items-center justify-center gap-2 hover:bg-[#20b858] transition-all shadow-md hover:-translate-y-0.5"
+                >
                   <MessageCircle className="w-4 h-4" /> Need Help? Chat on WhatsApp
                 </a>
               </div>
-              <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-gray-100">
-                <h3 className="text-xl font-bold text-dark-grey mb-6">Booking Process</h3>
+              <div className="bg-white p-6 sm:p-8 rounded-[2rem] shadow-lg border border-gray-100 relative overflow-hidden">
+                {/* Top Subtle Accent Bar */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-amber-500" />
+                <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-5 leading-snug">Booking Process</h3>
                 <ul className="space-y-5">
-                  {[{ n: '1', color: 'bg-amber-400 text-slate-950', title: 'Submit & Pay', desc: 'Fill your exact birth details and pay ₹3,200 securely via Razorpay.' }, { n: '2', color: 'bg-[#25D366] text-white', title: 'Auto WhatsApp Send', desc: 'After payment, you are auto-redirected to WhatsApp to confirm your details.' }, { n: '3', color: 'bg-dark-grey text-white', title: 'Personal Consultation', desc: 'Consult directly with Hari ram Beekrwar & receive tailored remedies.' }].map(s => (
+                  {[
+                    { n: '1', color: 'bg-amber-400 text-slate-950', title: 'Submit & Pay', desc: 'Fill your exact birth details and pay ₹3,200 securely via Razorpay.' },
+                    { n: '2', color: 'bg-[#25D366] text-white', title: 'Auto WhatsApp Send', desc: 'After payment, you are auto-redirected to WhatsApp to confirm your details.' },
+                    { n: '3', color: 'bg-dark-grey text-white', title: 'Personal Consultation', desc: 'Consult directly with Hari Ram Beekrwar & receive tailored remedies.' }
+                  ].map(s => (
                     <li key={s.n} className="flex items-start gap-4">
-                      <div className={`w-8 h-8 rounded-full ${s.color} flex items-center justify-center font-black text-sm shrink-0`}>{s.n}</div>
-                      <div><h4 className="font-bold text-dark-grey">{s.title}</h4><p className="text-sm text-medium-grey mt-0.5 leading-relaxed">{s.desc}</p></div>
+                      <div className={`w-8 h-8 rounded-full ${s.color} flex items-center justify-center font-black text-sm shrink-0 shadow-xs`}>{s.n}</div>
+                      <div>
+                        <h4 className="font-bold text-sm sm:text-base text-dark-grey">{s.title}</h4>
+                        <p className="text-xs sm:text-sm text-medium-grey mt-0.5 leading-relaxed">{s.desc}</p>
+                      </div>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-5 text-center">
-                <ShieldCheck className="w-8 h-8 text-tertiary mx-auto mb-2" />
-                <p className="font-bold text-dark-grey text-sm">100% Secure & Confidential</p>
-                <p className="text-xs text-medium-grey mt-1">Your personal data is encrypted and never shared with any third party.</p>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-5 text-center shadow-xs">
+                <ShieldCheck className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
+                <p className="font-bold text-dark-grey text-xs sm:text-sm">100% Secure &amp; Confidential</p>
+                <p className="text-[11px] sm:text-xs text-medium-grey mt-1 leading-relaxed">Your personal data is encrypted and never shared with any third party.</p>
               </div>
             </div>
           </div>

@@ -4,72 +4,125 @@ import SEO from '../components/SEO';
 
 const Contact = () => (
     <>
-      <SEO 
-        title="Contact Us | Support & Enquiries | HARI RAM BEEKRWAR" 
-        description="Get in touch with Hari ram Beekrwar's team for consultation bookings, or general support. We are here to guide you securely."
-      />
+      <SEO />
       {/* ─── Hero Banner ─── */}
-      <section className="bg-hero-dark py-14 sm:py-24 px-4 text-center starfield" style={{ backgroundColor: '#0F172A' }}>
-        <div className="max-w-3xl mx-auto">
-          <div className="inline-block bg-white/10 border border-white/20 text-amber-300 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Support Center</div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">Get in Touch</h1>
-          <p className="text-base sm:text-xl text-gray-300 leading-relaxed font-light">Have questions about our services or booking? Our dedicated team is here to assist you — fastest response on WhatsApp.</p>
+      <section className="bg-hero-dark pt-10 pb-12 sm:pt-16 sm:pb-20 px-4 text-center relative overflow-hidden starfield" style={{ backgroundColor: '#0F172A' }}>
+        {/* Ambient Lighting Orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-32 -right-32 sm:-top-40 sm:-right-40 w-72 sm:w-96 h-72 sm:h-96 bg-amber-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-36 -left-20 sm:top-40 sm:-left-20 w-64 sm:w-72 h-64 sm:h-72 bg-indigo-600/15 rounded-full blur-[100px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.08),rgba(255,255,255,0))]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto">
+          {/* Eyebrow Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-5 py-1 sm:py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 sm:mb-6 text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.15)]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+            </span>
+            <MessageCircle className="w-3.5 h-3.5 text-amber-300" />
+            <span>Direct Client Support</span>
+          </div>
+
+          {/* Fluid Heading */}
+          <h1 className="text-[1.75rem] xs:text-3xl sm:text-5xl md:text-6xl font-extrabold mb-3 sm:mb-5 text-white leading-[1.15] tracking-tight">
+            Contact <span className="text-shimmer inline-block">Hari Ram Beekrwar</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xs sm:text-sm md:text-base text-slate-300/90 leading-relaxed font-normal mb-5 sm:mb-6 max-w-xl mx-auto">
+            Questions about your birth chart or consultation booking? Reach out directly — expect a response within hours.
+          </p>
+
+          {/* Support Badges */}
+          <div className="inline-flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-medium text-slate-300">
+            <span className="flex items-center gap-1.5 bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-full">
+              <Clock className="w-3.5 h-3.5 text-amber-400" /> 10:00 AM – 6:00 PM IST
+            </span>
+            <span className="flex items-center gap-1.5 bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-full text-emerald-400">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> WhatsApp Priority Reply
+            </span>
+          </div>
         </div>
       </section>
 
       <div className="min-h-screen py-10 sm:py-16 px-4 bg-light-grey pb-32">
           <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16 items-start">
-                  <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-                      <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-50 text-primary rounded-2xl sm:rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                             <Phone className="w-6 h-6 sm:w-8 sm:h-8" />
+                  <div className="lg:col-span-2 space-y-4 sm:space-y-5" data-reveal="fade-right">
+                      <a 
+                        href="tel:+919509610711"
+                        className="bg-white p-5 sm:p-7 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-amber-200 flex items-center gap-4 sm:gap-5 hover:-translate-y-1 block group"
+                      >
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-amber-50 border border-amber-200/80 text-primary rounded-2xl flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 group-hover:bg-amber-100 transition-all">
+                             <Phone className="w-6 h-6 text-primary" />
                           </div>
-                          <div>
-                              <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">Call Us</h3>
-                              <p className="text-medium-grey text-base sm:text-lg font-medium">+91 9509610711</p>
-                              <p className="text-xs text-gray-400 mt-0.5 flex items-center"><Clock className="w-3 h-3 mr-1" /> 10:00 AM - 6:00 PM (IST)</p>
+                          <div className="flex-1 min-w-0">
+                              <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-0.5 leading-snug group-hover:text-secondary transition-colors">Call Direct</h3>
+                              <p className="text-dark-grey text-sm sm:text-base font-bold">+91 9509610711</p>
+                              <p className="text-xs text-medium-grey mt-0.5 flex items-center"><Clock className="w-3 h-3 mr-1 text-amber-500" /> 10:00 AM – 6:00 PM (IST)</p>
                           </div>
-                      </div>
-                      <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1 relative overflow-hidden group">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-50 text-[#25D366] rounded-2xl sm:rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                             <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
+                      </a>
+
+                      <a 
+                        href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation." 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="bg-white p-5 sm:p-7 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 flex items-center gap-4 sm:gap-5 hover:-translate-y-1 block group relative overflow-hidden"
+                      >
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-green-500/5 rounded-full blur-xl pointer-events-none" />
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-50 border border-green-200/80 text-[#25D366] rounded-2xl flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 group-hover:bg-green-100 transition-all">
+                             <MessageCircle className="w-6 h-6 text-[#25D366]" />
                           </div>
-                          <div>
-                              <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">WhatsApp</h3>
-                              <a href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="text-medium-grey text-base sm:text-lg font-medium hover:text-[#25D366] transition-colors">+91 9509610711</a>
-                              <p className="text-green-600 font-bold tracking-wide uppercase text-xs">Fastest Response</p>
+                          <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-2">
+                                <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-0.5 leading-snug group-hover:text-green-600 transition-colors">WhatsApp</h3>
+                                <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded-full uppercase tracking-wider">Fastest</span>
+                              </div>
+                              <p className="text-dark-grey text-sm sm:text-base font-bold">+91 9509610711</p>
+                              <p className="text-emerald-600 font-semibold text-xs mt-0.5 flex items-center gap-1">
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Active Response Team
+                              </p>
                           </div>
-                      </div>
-                      <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-50 text-primary rounded-2xl sm:rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                             <Mail className="w-6 h-6 sm:w-8 sm:h-8" />
+                      </a>
+
+                      <a 
+                        href="mailto:harirambeekrwar@gmail.com"
+                        className="bg-white p-5 sm:p-7 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-amber-200 flex items-center gap-4 sm:gap-5 hover:-translate-y-1 block group"
+                      >
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-amber-50 border border-amber-200/80 text-primary rounded-2xl flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 group-hover:bg-amber-100 transition-all">
+                             <Mail className="w-6 h-6 text-primary" />
                           </div>
-                          <div>
-                              <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">Email</h3>
-                              <a href="mailto:harirambeekrwar@gmail.com" className="text-medium-grey text-base sm:text-lg font-medium hover:text-primary transition-colors break-all">harirambeekrwar@gmail.com</a>
+                          <div className="flex-1 min-w-0">
+                              <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-0.5 leading-snug group-hover:text-secondary transition-colors">Official Email</h3>
+                              <p className="text-medium-grey text-xs sm:text-sm font-semibold hover:text-primary transition-colors break-all">harirambeekrwar@gmail.com</p>
+                              <p className="text-xs text-medium-grey mt-0.5">Written queries &amp; document submissions</p>
                           </div>
-                      </div>
-                      <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-600 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-indigo-500/20">
-                             <MapPin className="w-6 h-6 sm:w-8 sm:h-8" />
+                      </a>
+
+                      <div className="bg-white p-5 sm:p-7 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex items-center gap-4 sm:gap-5 hover:-translate-y-1">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-indigo-600 to-blue-700 text-white rounded-2xl flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/20">
+                             <MapPin className="w-6 h-6 text-white" />
                           </div>
-                          <div>
-                              <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">Head Office</h3>
-                              <p className="text-medium-grey text-sm sm:text-base leading-relaxed">Hari ram Beekrwar<br/>BHARATPUR 321001</p>
+                          <div className="flex-1 min-w-0">
+                              <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-0.5 leading-snug">Head Office</h3>
+                              <p className="text-medium-grey text-xs sm:text-sm leading-relaxed">Hari Ram Beekrwar<br/>Bharatpur, Rajasthan 321001, India</p>
                           </div>
                       </div>
                   </div>
                   
-                  <div className="lg:col-span-3 bg-white p-6 sm:p-10 md:p-14 rounded-3xl sm:rounded-[3rem] shadow-2xl border border-gray-100">
-                      <div className="flex items-center gap-2 text-primary mb-3 font-bold tracking-widest uppercase text-xs sm:text-sm">
+                  <div className="lg:col-span-3 bg-white p-6 sm:p-10 md:p-12 rounded-3xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all border border-gray-100 relative overflow-hidden" data-reveal="fade-left">
+                      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-400" />
+                      <div className="flex items-center gap-2 text-secondary mb-2 sm:mb-3 font-bold tracking-wider uppercase text-[11px] sm:text-xs">
                          <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5"/> Secure Messaging
                       </div>
-                      <h2 className="text-2xl sm:text-4xl font-bold mb-3 text-dark-grey">Send a Message</h2>
-                      <p className="text-medium-grey text-sm sm:text-base mb-6 sm:mb-8">All communications are completely secure and strictly confidential. We usually respond within 24 hours to all enquiries.</p>
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2.5 sm:mb-3 text-dark-grey leading-tight">Send a Message</h2>
+                      <p className="text-medium-grey text-xs sm:text-sm md:text-base mb-6 sm:mb-8 leading-relaxed">All communications are completely secure and strictly confidential. We usually respond within 24 hours to all enquiries.</p>
                       
                       <form 
-                        className="space-y-4 sm:space-y-6" 
+                        className="space-y-4 sm:space-y-5" 
                         onSubmit={(e) => { 
                           e.preventDefault(); 
                           const fd = new FormData(e.currentTarget);
@@ -83,30 +136,32 @@ const Contact = () => (
                           window.open(`https://wa.me/919509610711?text=${waText}`, '_blank');
                         }}
                       >
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                              <div>
-                               <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-2">Full Name</label>
-                               <input required name="fullName" type="text" placeholder="Your Name" className="w-full px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-base placeholder:text-gray-400 font-medium" />
+                               <label htmlFor="contact-name" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Full Name *</label>
+                               <input id="contact-name" required name="fullName" type="text" placeholder="Your Name" className="w-full px-4 sm:px-5 py-3.5 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all bg-gray-50/70 hover:bg-white text-base placeholder:text-gray-400 font-medium" />
                              </div>
                              <div>
-                               <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-2">Email Address</label>
-                               <input required name="email" type="email" placeholder="Your Email" className="w-full px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-base placeholder:text-gray-400 font-medium" />
+                               <label htmlFor="contact-email" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Email Address *</label>
+                               <input id="contact-email" required name="email" type="email" placeholder="Your Email" className="w-full px-4 sm:px-5 py-3.5 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all bg-gray-50/70 hover:bg-white text-base placeholder:text-gray-400 font-medium" />
                              </div>
                           </div>
                           <div>
-                             <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-2">Subject</label>
-                             <select name="subject" className="w-full px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all bg-gray-50 text-base text-dark-grey font-medium">
-                                <option>General Enquiry</option>
-                                <option>Consultation Booking</option>
-                                <option>Report Status</option>
+                             <label htmlFor="contact-subject" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Subject *</label>
+                             <select id="contact-subject" name="subject" className="w-full px-4 sm:px-5 py-3.5 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all bg-gray-50/70 hover:bg-white text-base text-dark-grey font-medium cursor-pointer">
+                                <option>General Consultation Enquiry</option>
+                                <option>1-on-1 Numerology Session (₹3,200)</option>
+                                <option>Vastu Consultation (Home / Office)</option>
+                                <option>Urgent Love Plan Consultation</option>
+                                <option>Report Status or Existing Booking</option>
                              </select>
                           </div>
                           <div>
-                            <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-2">Your Message</label>
-                            <textarea required name="message" rows={4} placeholder="How can we help you?" className="w-full px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none bg-gray-50 text-base placeholder:text-gray-400 font-medium"></textarea>
+                            <label htmlFor="contact-message" className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Your Message *</label>
+                            <textarea id="contact-message" required name="message" rows={4} placeholder="How can Hari Ram Ji assist you? Describe your question or requirement..." className="w-full px-4 sm:px-5 py-3.5 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all resize-none bg-gray-50/70 hover:bg-white text-base placeholder:text-gray-400 font-medium"></textarea>
                           </div>
-                          <button type="submit" className="btn-sweep w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-primary-deep text-slate-950 py-4 sm:py-5 rounded-full transition-all font-black text-base sm:text-xl shadow-xl hover:-translate-y-1 transform flex justify-center items-center gap-2">
-                             <ShieldCheck className="w-5 h-5" /> Send Secure Message via WhatsApp
+                          <button type="submit" className="btn-sweep w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 py-4 sm:py-4.5 rounded-full transition-all font-black text-sm sm:text-base md:text-lg shadow-xl hover:-translate-y-1 transform flex justify-center items-center gap-2 cursor-pointer">
+                             <ShieldCheck className="w-5 h-5 text-slate-950" /> Send Secure Message via WhatsApp
                           </button>
                       </form>
                   </div>

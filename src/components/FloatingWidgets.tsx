@@ -10,12 +10,12 @@ export default function FloatingWidgets() {
     <div className={`fixed z-50 flex flex-col gap-3 items-end transition-all ${
       isServiceDetail 
         ? "bottom-20 right-5 sm:bottom-6 sm:right-6 hidden lg:flex" 
-        : "bottom-5 right-5 sm:bottom-6 sm:right-6"
+        : "bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-5 sm:bottom-6 sm:right-6"
     }`}>
       {/* Calendar Booking Button - visible on sm+ screens to preserve mobile viewport */}
       <Link
         to="/booking"
-        className="hidden sm:inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black py-2.5 px-5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm border border-amber-300/40"
+        className="btn-sweep hidden sm:inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-2.5 px-5 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all text-sm border border-amber-300/60"
       >
         <Calendar className="w-4 h-4" /> Let's Talk!
       </Link>
@@ -25,9 +25,15 @@ export default function FloatingWidgets() {
         href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation%20with%20Hari%20Ram%20Ji."
         target="_blank"
         rel="noreferrer"
-        aria-label="Chat on WhatsApp with Hari ram Beekrwar"
-        className="flex items-center justify-center bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_25px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group"
+        aria-label="Chat on WhatsApp with Hari Ram Beekrwar"
+        className="relative flex items-center justify-center bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_25px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group"
       >
+        {/* Live Active Pulse Indicator */}
+        <span className="absolute top-0 right-0 flex h-3.5 w-3.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 border-2 border-white shadow-xs"></span>
+        </span>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-7 h-7 sm:w-8 sm:h-8"
