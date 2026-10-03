@@ -47,7 +47,7 @@ const Contact = () => (
                           </div>
                           <div>
                               <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-0.5">Email</h3>
-                              <a href="mailto:contact@harirambeekrwar.com" className="text-medium-grey text-base sm:text-lg font-medium hover:text-primary transition-colors break-all">contact@harirambeekrwar.com</a>
+                              <a href="mailto:harirambeekrwar@gmail.com" className="text-medium-grey text-base sm:text-lg font-medium hover:text-primary transition-colors break-all">harirambeekrwar@gmail.com</a>
                           </div>
                       </div>
                       <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex items-center gap-4 sm:gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">

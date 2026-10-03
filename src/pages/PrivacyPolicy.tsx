@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
               { 
                 icon: <Mail className="w-6 h-6 text-primary" />, 
                 title: "Contact Us", 
-                content: "If you have questions regarding your data privacy, reach out to contact@harirambeekrwar.com or message us on WhatsApp at +91 9509610711." 
+                content: "If you have questions regarding your data privacy, reach out to harirambeekrwar@gmail.com or message us on WhatsApp at +91 9509610711." 
               }
             ].map((section, index) => (
               <div 

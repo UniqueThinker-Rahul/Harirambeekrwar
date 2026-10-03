@@ -65,7 +65,7 @@ const Footer = () => {
               <li className="flex items-start gap-3"><MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" /><span>Hari ram Beekrwar<br />Bharatpur, Rajasthan 321001</span></li>
               <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-amber-400 shrink-0" /><a href="tel:+919509610711" className="hover:text-amber-300 transition-colors">+91 9509610711</a></li>
               <li className="flex items-center gap-3"><MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" /><a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="hover:text-[#25D366] transition-colors">WhatsApp (Fastest)</a></li>
-              <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-amber-400 shrink-0" /><a href="mailto:contact@harirambeekrwar.com" className="hover:text-amber-300 transition-colors break-all">contact@harirambeekrwar.com</a></li>
+              <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-amber-400 shrink-0" /><a href="mailto:harirambeekrwar@gmail.com" className="hover:text-amber-300 transition-colors break-all">harirambeekrwar@gmail.com</a></li>
             </ul>
             <div className="mt-5 bg-white/5 border border-white/10 rounded-xl px-3 py-3 text-xs text-slate-400">
               <Clock className="w-3.5 h-3.5 inline mr-1 text-amber-400" /> <strong className="text-white">Consultation Hours:</strong><br/>Mon–Sat: 10:00 AM – 6:00 PM IST
