@@ -77,7 +77,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
       },
       {
         threshold,
-        rootMargin: '0px 0px -40px 0px',
+        rootMargin: '0px 0px 120px 0px',
       }
     );
 
@@ -139,32 +139,25 @@ export const GlobalScrollObserver: React.FC = () => {
           });
         },
         {
-          threshold: 0.08,
-          rootMargin: '0px 0px -50px 0px',
+          threshold: 0,
+          rootMargin: '0px 0px 120px 0px',
         }
       );
 
       elements.forEach((el) => {
         if (!el.classList.contains('revealed')) {
-          const anim = el.dataset.reveal || 'fade-up';
-          el.classList.add('reveal-init', `reveal-${anim}`);
-
-          // If already visible in the viewport, reveal smoothly
           const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            const delayStr = el.dataset.delay;
-            const delay = delayStr ? parseInt(delayStr, 10) : 0;
-            if (delay > 0) {
-              setTimeout(() => el.classList.add('revealed'), delay);
-            } else {
-              el.classList.add('revealed');
-            }
+          // Proactive viewport check: if already in or near viewport, reveal immediately without hiding
+          if (rect.top <= window.innerHeight + 150 && rect.bottom >= -50) {
+            el.classList.add('revealed');
           } else {
+            const anim = el.dataset.reveal || 'fade-up';
+            el.classList.add('reveal-init', `reveal-${anim}`);
             observer?.observe(el);
           }
         }
       });
-    }, 30);
+    }, 20);
 
     return () => {
       clearTimeout(timer);

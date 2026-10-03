@@ -139,27 +139,34 @@ const Home = () => {
         <section className="py-12 sm:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12">
-              <div className="md:w-1/2 flex justify-center" data-reveal="fade-right">
+              <div className="md:w-1/2 flex justify-center w-full" data-reveal="fade-up">
                 <div className="relative max-w-md w-full p-2 sm:p-3">
-                  <div className="relative rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.18)] border border-amber-200/50 bg-gray-50 p-2.5">
-                    <picture>
+                  <div className="relative rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.18)] border border-amber-200/50 bg-gradient-to-b from-amber-50/50 via-slate-50 to-amber-50/20 p-2.5 min-h-[360px] sm:min-h-[460px] md:min-h-[500px] flex items-center justify-center">
+                    <picture className="w-full flex items-center justify-center">
                       <source type="image/webp" srcSet="/Resource/2.webp" />
+                      <source type="image/jpeg" srcSet="/Resource/2.jpg" />
                       <img
-                        src="/Resource/2.png"
+                        src="/Resource/2.jpg"
                         alt="Hari Ram Beekrwar — Numerology & Vastu Expert"
                         width="500"
                         height="540"
-                        fetchPriority="high"
+                        loading="eager"
                         decoding="async"
-                        className="rounded-2xl w-full h-auto max-h-[540px] object-contain block"
+                        className="rounded-2xl w-full h-auto max-h-[540px] object-contain block transition-opacity duration-300"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.src.includes('Hariram.webp')) {
+                            target.src = '/Resource/Hariram.webp';
+                          }
+                        }}
                       />
                     </picture>
                     
                     {/* Floating Badges cleanly positioned inside the card */}
-                    <div className="absolute top-4 sm:top-5 right-4 sm:right-5 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-xl shadow-xl text-xs sm:text-sm flex items-center gap-1.5">
+                    <div className="absolute top-3 sm:top-5 right-3 sm:right-5 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-xl shadow-xl text-xs sm:text-sm flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5 text-slate-950" /> 5+ Years
                     </div>
-                    <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80 flex items-center gap-1.5">
+                    <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80 flex items-center gap-1.5">
                       <Users className="w-3.5 h-3.5 text-amber-400" /> 2,200+ Clients
                     </div>
                     <div className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg text-xs hidden sm:flex items-center gap-1.5">
@@ -168,7 +175,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/2" data-reveal="fade-left">
+              <div className="md:w-1/2 w-full" data-reveal="fade-up" data-delay="100">
                 <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-amber-50 border border-amber-200 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4">About the Expert</span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">Meet Hari Ram Beekrwar</h2>
                 <p className="text-medium-grey text-sm sm:text-base md:text-lg mb-6 leading-relaxed">With over <strong className="text-dark-grey font-semibold">5 years of rich experience</strong> in the science of energies, I have successfully guided more than <strong className="text-dark-grey font-semibold">2,200 clients worldwide</strong>. My mission is to decode the hidden patterns of your life using numbers and optimize your surroundings using the ancient wisdom of Vastu Shastra.</p>

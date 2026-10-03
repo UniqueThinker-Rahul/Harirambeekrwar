@@ -23,10 +23,27 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           <div className="space-y-4 sm:space-y-5 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-slate-950 font-black text-lg shadow-md shadow-amber-500/20">H</div>
-              <span className="font-extrabold text-base sm:text-lg text-white tracking-tight leading-tight">HARI RAM<br/>BEEKRWAR</span>
-            </div>
+            <Link to="/" className="flex items-center gap-3 group shrink-0">
+              <picture className="shrink-0">
+                <source type="image/webp" srcSet="/Resource/logo.webp" />
+                <img
+                  src="/Resource/logo.jpeg"
+                  alt="ANKO KA MAYAZAAL — Hari Ram Beekrwar Logo"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  className="h-11 sm:h-12 w-auto object-contain rounded-xl shadow-md border border-amber-400/40 group-hover:scale-105 transition-transform duration-300 bg-slate-900/80 p-0.5"
+                />
+              </picture>
+              <div className="flex flex-col">
+                <span className="font-extrabold text-base sm:text-lg text-white tracking-tight leading-tight group-hover:text-amber-300 transition-colors">
+                  ANKO KA MAYAZAAL
+                </span>
+                <span className="text-[11px] sm:text-xs text-amber-400 font-semibold tracking-wide">
+                  Hari Ram Beekrwar
+                </span>
+              </div>
+            </Link>
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Guiding you through the cosmic journey of life with authentic numerology and Vastu consultations. Trusted by 2,200+ clients across India and worldwide.</p>
             <div className="flex items-center gap-4 pt-1">
               <a href="https://www.instagram.com/harirambeekrwar/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-md" aria-label="Instagram"><Instagram className="w-4 h-4 text-white" /></a>

@@ -56,28 +56,35 @@ const About = () => {
         <section className="py-14 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 items-center">
-              <div className="relative px-2 sm:px-4 pb-4 sm:pb-8" data-reveal="fade-right">
+              <div className="relative px-2 sm:px-4 pb-4 sm:pb-8 w-full" data-reveal="fade-up">
                 <div className="absolute -inset-2 sm:-inset-4 bg-primary/20 rounded-3xl transform rotate-2 sm:rotate-3"></div>
-                <div className="relative z-10 flex justify-center bg-gray-50 rounded-2xl sm:rounded-3xl p-3 sm:p-4 border border-gray-100 shadow-sm bg-white">
-                  <picture>
+                <div className="relative z-10 flex justify-center bg-gradient-to-b from-amber-50/50 via-slate-50 to-amber-50/20 rounded-2xl sm:rounded-3xl p-3 sm:p-4 border border-amber-200/50 shadow-md min-h-[360px] sm:min-h-[460px] md:min-h-[500px] items-center">
+                  <picture className="w-full flex items-center justify-center">
                     <source type="image/webp" srcSet="/Resource/1.webp" />
+                    <source type="image/jpeg" srcSet="/Resource/1.jpg" />
                     <img 
-                      src="/Resource/1.png" 
+                      src="/Resource/1.jpg" 
                       alt="Hari Ram Beekrwar — Numerology & Vastu Consultant Profile" 
                       width="500"
                       height="500"
-                      loading="lazy"
+                      loading="eager"
                       decoding="async"
-                      className="rounded-xl shadow-lg w-full h-auto max-h-[500px] object-contain" 
+                      className="rounded-xl shadow-lg w-full h-auto max-h-[500px] object-contain transition-opacity duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.src.includes('Hariram.webp')) {
+                          target.src = '/Resource/Hariram.webp';
+                        }
+                      }}
                     />
                   </picture>
                 </div>
-                <div className="absolute bottom-2 left-2 bg-white p-4 rounded-xl shadow-xl z-20 hidden lg:block">
+                <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl z-20 border border-amber-200/60 hidden lg:block">
                   <p className="text-3xl font-black text-secondary">5+</p>
                   <p className="text-dark-grey font-bold tracking-wide text-xs">Years of Mastery</p>
                 </div>
               </div>
-              <div data-reveal="fade-left">
+              <div className="w-full" data-reveal="fade-up" data-delay="100">
                 <div className="inline-block bg-yellow-50 text-secondary font-bold px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4 tracking-wider uppercase text-[11px] sm:text-xs">Meet Your Consultant</div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">Decoding The Hidden Patterns of Your Life</h2>
                 <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 sm:mb-3 flex items-center gap-2"><BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-primary"/> Welcome!</h3>
