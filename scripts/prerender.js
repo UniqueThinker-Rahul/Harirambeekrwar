@@ -90,17 +90,22 @@ async function prerender() {
 ${jsonLdTags}
 `;
 
-    // Replace fallback title/meta in template head
+    // Extract Vite-generated assets from template to guarantee they are never stripped
+    const viteAssetsMatch = template.match(/<!-- End Fallback Meta -->([\s\S]*?)<\/head>/i);
+    const viteAssets = viteAssetsMatch ? viteAssetsMatch[1].trim() : '';
+
     let pageHtml = template;
 
-    // Clean out existing default title, meta description, and og/twitter tags
+    // Clean out existing default title, meta description, and fallback og/twitter tags
     pageHtml = pageHtml.replace(/<title>[\s\S]*?<\/title>/i, '');
     pageHtml = pageHtml.replace(/<meta\s+name=["']description["'][\s\S]*?>/i, '');
     pageHtml = pageHtml.replace(/<!-- Fallback Title and Description -->[\s\S]*?<!-- Favicon/i, '<!-- Favicon');
-    pageHtml = pageHtml.replace(/<!-- Open Graph Default Fallback -->[\s\S]*?<\/head>/i, '</head>');
+    pageHtml = pageHtml.replace(/<!-- Open Graph Default Fallback -->[\s\S]*?<!-- End Fallback Meta -->/i, metaTags);
 
-    // Inject route-specific meta tags before </head>
-    pageHtml = pageHtml.replace('</head>', `${metaTags}\n  </head>`);
+    // Guarantee Vite CSS and JS module bundles are present before </head>
+    if (viteAssets && !pageHtml.includes('/assets/index-')) {
+      pageHtml = pageHtml.replace('</head>', `\n    ${viteAssets}\n  </head>`);
+    }
 
     // Inject rendered application markup inside #root
     pageHtml = pageHtml.replace(
@@ -127,11 +132,18 @@ ${jsonLdTags}
     <meta name="robots" content="noindex, nofollow" />
 `;
   let notFoundPage = template;
+  const viteAssetsMatch = template.match(/<!-- End Fallback Meta -->([\s\S]*?)<\/head>/i);
+  const viteAssets = viteAssetsMatch ? viteAssetsMatch[1].trim() : '';
+
   notFoundPage = notFoundPage.replace(/<title>[\s\S]*?<\/title>/i, '');
   notFoundPage = notFoundPage.replace(/<meta\s+name=["']description["'][\s\S]*?>/i, '');
   notFoundPage = notFoundPage.replace(/<!-- Fallback Title and Description -->[\s\S]*?<!-- Favicon/i, '<!-- Favicon');
-  notFoundPage = notFoundPage.replace(/<!-- Open Graph Default Fallback -->[\s\S]*?<\/head>/i, '</head>');
-  notFoundPage = notFoundPage.replace('</head>', `${notFoundMeta}\n  </head>`);
+  notFoundPage = notFoundPage.replace(/<!-- Open Graph Default Fallback -->[\s\S]*?<!-- End Fallback Meta -->/i, notFoundMeta);
+
+  if (viteAssets && !notFoundPage.includes('/assets/index-')) {
+    notFoundPage = notFoundPage.replace('</head>', `\n    ${viteAssets}\n  </head>`);
+  }
+
   notFoundPage = notFoundPage.replace(
     '<div id="root"></div>',
     `<div id="root">${notFoundHtml}</div>`
