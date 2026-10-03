@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, MessageCircle, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, MessageCircle, ShieldCheck, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -68,7 +68,7 @@ const Footer = () => {
               <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-amber-400 shrink-0" /><a href="mailto:contact@harirambeekrwar.com" className="hover:text-amber-300 transition-colors break-all">contact@harirambeekrwar.com</a></li>
             </ul>
             <div className="mt-5 bg-white/5 border border-white/10 rounded-xl px-3 py-3 text-xs text-slate-400">
-              🕐 <strong className="text-white">Consultation Hours:</strong><br/>Mon–Sat: 10:00 AM – 6:00 PM IST
+              <Clock className="w-3.5 h-3.5 inline mr-1 text-amber-400" /> <strong className="text-white">Consultation Hours:</strong><br/>Mon–Sat: 10:00 AM – 6:00 PM IST
             </div>
           </div>
         </div>

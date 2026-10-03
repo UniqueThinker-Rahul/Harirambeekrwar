@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, CheckCircle, Zap, MessageCircle, Send, CreditCard, Smartphone } from 'lucide-react';
+import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, CheckCircle, Zap, MessageCircle, Send, CreditCard, Smartphone, Flame, Home as HomeIcon, Sparkles } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Booking = () => {
@@ -100,75 +100,75 @@ const Booking = () => {
   return (
     <>
       <SEO title="Book Numerology Consultation | HARI RAM BEEKRWAR" description="Schedule a 1-on-1 personalized full numerology consultation with Hari ram Beekrwar. 100% confidential and secure booking." />
-      <div className="min-h-screen bg-light-grey py-16">
+      <div className="min-h-screen bg-light-grey py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-50 border border-red-200 text-red-600 text-sm font-bold mb-4 shadow-sm animate-pulse"><Zap className="w-4 h-4" /> LIMITED TIME — 50% DISCOUNT ACTIVE</div>
-            <h1 className="text-4xl md:text-5xl font-bold text-dark-grey mb-4">Request Your Private Consultation</h1>
-            <p className="text-medium-grey text-lg max-w-2xl mx-auto">Join 2,200+ individuals who transformed their lives. Fill in your details and pay securely to lock your slot.</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm font-bold mb-4 shadow-sm animate-pulse"><Zap className="w-4 h-4" /> LIMITED TIME — 50% DISCOUNT ACTIVE</div>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-dark-grey mb-3 sm:mb-4">Request Your Private Consultation</h1>
+            <p className="text-medium-grey text-sm sm:text-lg max-w-2xl mx-auto">Join 2,200+ individuals who transformed their lives. Fill in your details and pay securely to lock your slot.</p>
           </div>
 
           {/* Slot Indicator */}
-          <div className="max-w-xl mx-auto mb-10">
-            <div className="bg-white border border-amber-200 rounded-2xl p-4 flex items-center gap-4 shadow-sm">
+          <div className="max-w-xl mx-auto mb-8 sm:mb-10">
+            <div className="bg-white border border-amber-200 rounded-2xl p-3.5 sm:p-4 flex items-center gap-3 sm:gap-4 shadow-sm">
               <span className="w-3 h-3 rounded-full bg-green-500 inline-block animate-pulse shrink-0" />
               <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-medium-grey mb-1.5">Today's Available Slots</p>
-                <div className="flex gap-1.5">
-                  {[1,2,3].map(i => <div key={i} className="w-8 h-3 bg-green-400 rounded-sm" />)}
-                  {[4,5,6,7,8].map(i => <div key={i} className="w-8 h-3 bg-gray-200 rounded-sm" />)}
+                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-medium-grey mb-1">Today's Available Slots</p>
+                <div className="flex gap-1 sm:gap-1.5">
+                  {[1,2,3].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-green-400 rounded-sm" />)}
+                  {[4,5,6,7,8].map(i => <div key={i} className="w-7 sm:w-8 h-2.5 sm:h-3 bg-gray-200 rounded-sm" />)}
                 </div>
               </div>
-              <div className="text-right shrink-0"><p className="font-black text-2xl text-secondary">3</p><p className="text-xs text-medium-grey">Remaining</p></div>
+              <div className="text-right shrink-0"><p className="font-black text-xl sm:text-2xl text-secondary">3</p><p className="text-[11px] sm:text-xs text-medium-grey">Remaining</p></div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-            {/* Form */}
-            <div className="lg:col-span-2 bg-white rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden">
-              <div className="p-8 md:p-12">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div><label className="block text-sm font-bold text-dark-grey mb-2"><User className="inline w-4 h-4 mr-1 text-primary" /> Full Name *</label><input required name="name" value={formData.name} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium" placeholder="e.g. Rahul Sharma" /></div>
-                    <div><label className="block text-sm font-bold text-dark-grey mb-2"><Mail className="inline w-4 h-4 mr-1 text-primary" /> Email Address *</label><input required name="email" value={formData.email} onChange={handleChange} type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium" placeholder="rahul@example.com" /></div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
+            {/* Form — on mobile appears second (after price sidebar) */}
+            <div className="lg:col-span-2 bg-white rounded-2xl sm:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden order-last lg:order-first">
+              <div className="p-5 sm:p-8 md:p-12">
+                <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><User className="inline w-3.5 h-3.5 mr-1 text-primary" /> Full Name *</label><input required name="name" value={formData.name} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="e.g. Rahul Sharma" /></div>
+                    <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><Mail className="inline w-3.5 h-3.5 mr-1 text-primary" /> Email Address *</label><input required name="email" value={formData.email} onChange={handleChange} type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="rahul@example.com" /></div>
                   </div>
-                  <div><label className="block text-sm font-bold text-dark-grey mb-2"><Phone className="inline w-4 h-4 mr-1 text-primary" /> WhatsApp Number *</label><input required name="phone" value={formData.phone} onChange={handleChange} type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium" placeholder="+91 95096 10711" /></div>
-                  <div className="border-t border-gray-100 pt-8">
-                    <h3 className="text-xl font-bold text-dark-grey mb-2 flex items-center gap-2"><Calendar className="text-secondary w-5 h-5" /> Exact Birth Details</h3>
-                    <div className="p-4 bg-amber-50/60 rounded-xl border border-amber-100 mb-6 text-sm text-medium-grey"><span className="font-bold text-dark-grey">Why needed?</span> Accurate birth details are crucial for calculating your Life Path and personal cosmic vibrations.</div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div><label className="block text-sm font-bold text-dark-grey mb-2">Date of Birth *</label><input required name="dob" value={formData.dob} onChange={handleChange} max={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium" /></div>
-                      <div><label className="block text-sm font-bold text-dark-grey mb-2">Time of Birth <span className="text-gray-400 font-normal">(Optional)</span></label><input name="tob" value={formData.tob} onChange={handleChange} type="time" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" /></div>
-                      <div><label className="block text-sm font-bold text-dark-grey mb-2">City of Birth *</label><input required name="pob" value={formData.pob} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium" placeholder="e.g. Bharatpur" /></div>
+                  <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><Phone className="inline w-3.5 h-3.5 mr-1 text-primary" /> WhatsApp Number *</label><input required name="phone" value={formData.phone} onChange={handleChange} type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="+91 95096 10711" /></div>
+                  <div className="border-t border-gray-100 pt-6 sm:pt-8">
+                    <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 flex items-center gap-2"><Calendar className="text-secondary w-5 h-5" /> Exact Birth Details</h3>
+                    <div className="p-3.5 sm:p-4 bg-amber-50/60 rounded-xl border border-amber-100 mb-5 text-xs sm:text-sm text-medium-grey"><span className="font-bold text-dark-grey">Why needed?</span> Accurate birth details are crucial for calculating your Life Path and personal cosmic vibrations.</div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Date of Birth *</label><input required name="dob" value={formData.dob} onChange={handleChange} max={todayString} type="date" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-base" /></div>
+                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">Time of Birth <span className="text-gray-400 font-normal">(Optional)</span></label><input name="tob" value={formData.tob} onChange={handleChange} type="time" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-base" /></div>
+                      <div><label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5">City of Birth *</label><input required name="pob" value={formData.pob} onChange={handleChange} type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400 font-medium text-base" placeholder="e.g. Bharatpur" /></div>
                     </div>
                   </div>
-                  <div className="border-t border-gray-100 pt-8">
-                    <label className="block text-sm font-bold text-dark-grey mb-2"><MessageSquare className="inline w-4 h-4 mr-1 text-primary" /> What is your core problem or concern? *</label>
-                    <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400 font-medium" placeholder="Describe briefly — Relationship/Love hurdles, Career/Business delays, Health/Money issues etc." />
+                  <div className="border-t border-gray-100 pt-6 sm:pt-8">
+                    <label className="block text-xs sm:text-sm font-bold text-dark-grey mb-1.5"><MessageSquare className="inline w-3.5 h-3.5 mr-1 text-primary" /> What is your core problem or concern? *</label>
+                    <textarea required name="problemDesc" value={formData.problemDesc} onChange={handleChange} rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-400 font-medium text-base" placeholder="Describe briefly — Relationship/Love hurdles, Career/Business delays, Health/Money issues etc." />
                   </div>
-                  <div className="flex items-center justify-center gap-2 text-sm text-medium-grey my-2 bg-green-50 p-4 rounded-xl border border-green-100">
-                    <ShieldCheck className="w-5 h-5 text-tertiary" /><span>Your data is <strong className="text-dark-grey">सुरक्षित (Secure)</strong> & 100% Confidential.</span>
+                  <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-medium-grey my-2 bg-green-50 p-3.5 sm:p-4 rounded-xl border border-green-100">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-tertiary shrink-0" /><span>Your data is <strong className="text-dark-grey">सुरक्षित (Secure)</strong> & 100% Confidential.</span>
                   </div>
-                  <button disabled={status === "loading"} type="submit" className="btn-sweep w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-black text-xl py-5 rounded-full transition-all shadow-xl flex justify-center items-center gap-2 transform hover:-translate-y-1 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed">
-                    {status === "loading" ? <><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Opening Secure Gateway...</> : <><Lock className="w-5 h-5" /> Pay ₹3,200 & Book Consultation</>}
+                  <button disabled={status === "loading"} type="submit" className="btn-sweep w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-black text-base sm:text-xl py-4 sm:py-5 rounded-full transition-all shadow-xl flex justify-center items-center gap-2 transform hover:-translate-y-1 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed">
+                    {status === "loading" ? <><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Opening Secure Gateway...</> : <><Lock className="w-4 h-4 sm:w-5 sm:h-5" /> Pay ₹3,200 & Book Consultation</>}
                   </button>
-                  <div className="flex flex-col items-center gap-3 pt-1">
-                    <div className="flex items-center gap-4 flex-wrap justify-center text-xs text-medium-grey">
-                      <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><Lock className="w-3.5 h-3.5 text-green-600" /> SSL Encrypted</span>
-                      <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><CreditCard className="w-3.5 h-3.5 text-blue-500" /> Cards / Net Banking</span>
-                      <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><Smartphone className="w-3.5 h-3.5 text-indigo-500" /> UPI / Wallets</span>
-                      <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full"><ShieldCheck className="w-3.5 h-3.5 text-amber-500" /> Powered by Razorpay</span>
+                  <div className="flex flex-col items-center gap-2 pt-1">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center text-[11px] sm:text-xs text-medium-grey">
+                      <span className="flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Lock className="w-3 h-3 text-green-600" /> SSL Encrypted</span>
+                      <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><CreditCard className="w-3 h-3 text-blue-500" /> Cards &amp; Net Banking</span>
+                      <span className="hidden sm:flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><Smartphone className="w-3 h-3 text-indigo-500" /> UPI &amp; Wallets</span>
+                      <span className="flex items-center gap-1 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full"><ShieldCheck className="w-3 h-3 text-amber-500" /> Razorpay</span>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1 space-y-7">
+            {/* Sidebar — shows FIRST on mobile (order-first), right column on desktop */}
+            <div className="lg:col-span-1 space-y-7 order-first lg:order-last">
               <div className="bg-gradient-to-br from-cosmic-navy via-dark-grey to-cosmic-navy text-white p-8 rounded-[2rem] shadow-xl border border-indigo-800/80 relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-400/5 rounded-full blur-2xl pointer-events-none" />
-                <div className="inline-block bg-red-600 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full mb-5 animate-pulse">⚡ 50% OFF SPECIAL OFFER</div>
+                <div className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full mb-5 animate-pulse"><Flame className="w-3.5 h-3.5 fill-amber-300 text-amber-300" /> 50% OFF SPECIAL OFFER</div>
                 <h3 className="text-2xl font-bold mb-1">Numerology Consultation</h3>
                 <p className="text-amber-300 font-semibold text-xs mb-4 uppercase tracking-wider">Voice / Video Call · 1-on-1</p>
                 <div className="border-t border-b border-indigo-800/80 py-4 mb-5">
@@ -181,7 +181,10 @@ const Booking = () => {
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary shrink-0" /> {f}</li>
                   ))}
                 </ul>
-                <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-3 mb-5 text-xs text-amber-200/90 leading-relaxed">📌 <strong>Vastu Consultation:</strong> Starting ₹20,000/- (Separate service).</div>
+                <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-3 mb-5 text-xs text-amber-200/90 leading-relaxed flex items-start gap-2">
+                  <HomeIcon className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <span><strong>Vastu Consultation:</strong> Starting ₹20,000/- (Separate service).</span>
+                </div>
                 <a href="https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20want%20to%20book%20a%20consultation%20for%20₹3200" target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white py-3 px-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-[#20b858] transition-colors">
                   <MessageCircle className="w-4 h-4" /> Need Help? Chat on WhatsApp
                 </a>

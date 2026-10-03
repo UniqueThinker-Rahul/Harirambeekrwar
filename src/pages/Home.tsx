@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, ShieldCheck, Heart, Sparkles, CheckCircle, Clock, Users, BookOpen, ChevronDown, ChevronUp, Send, Lock } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Heart, Sparkles, CheckCircle, Clock, Users, BookOpen, ChevronDown, ChevronUp, Send, Lock, MessageCircle, Home as HomeIcon } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const FAQS = [
@@ -50,8 +50,8 @@ const Home = () => {
       <SEO title="Numerology & Vastu Consultant | Hari ram Beekrwar" description="Transform Your Life Through the Power of Numerology & Vastu. Discover clarity, success, and lasting prosperity with personalized guidance from Hari ram Beekrwar — trusted by 2,200+ clients." keywords="Numerology, Vastu Shastra, Hari ram Beekrwar, numerology consultation, vastu consultant India" />
       <div>
         {/* HERO */}
-        <section className="relative bg-hero-dark text-white overflow-hidden py-24 sm:py-32 starfield" style={{ backgroundColor: '#0F172A' }}>
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <section className="relative bg-hero-dark text-white overflow-hidden py-14 sm:py-32 starfield" style={{ backgroundColor: '#0F172A' }}>
+          <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-amber-500 opacity-10 rounded-full blur-3xl" />
             <div className="absolute top-40 -left-20 w-72 h-72 bg-indigo-600 opacity-15 rounded-full blur-[100px]" />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-32 bg-primary opacity-5 blur-3xl rounded-full" />
@@ -60,9 +60,9 @@ const Home = () => {
             <div className="animate-fadeInUp ring-pulse inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-amber-400/30 backdrop-blur-sm text-sm font-semibold mb-8 text-amber-300">
               <Sparkles className="w-4 h-4" /> Numerology & Vastu Consultant
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight animate-fadeInUp">
-              Transform Your Life Through<br className="hidden md:block" /> the Power of{' '}
-              <span className="text-shimmer">Numerology & Vastu</span>
+            <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-snug sm:leading-tight animate-fadeInUp">
+              Transform Your Life Through the Power of{' '}
+              <span className="text-shimmer inline-block">Numerology & Vastu</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
               Welcome! I am <strong className="text-white">Hari ram Beekrwar</strong>. Every individual carries a unique energy — when aligned with the right numbers and surroundings, extraordinary growth becomes possible.
@@ -72,14 +72,14 @@ const Home = () => {
                 Book Your Consultation NOW <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a href="https://wa.me/919509610711?text=Hello%20Hari%20Ram%20Ji,%20I%20want%20to%20know%20more%20about%20your%20consultation%20services." target="_blank" rel="noreferrer" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white font-bold hover:bg-white/20 transition-all text-base">
-                <span className="mr-2">💬</span> Chat on WhatsApp
+                <MessageCircle className="w-5 h-5 mr-2 text-[#25D366]" /> Chat on WhatsApp
               </a>
             </div>
-            <div className="mt-14 flex flex-wrap justify-center items-center gap-6 text-gray-400 text-sm">
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"><Star className="w-4 h-4 text-primary" /> 2,200+ Lives Transformed</div>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"><ShieldCheck className="w-4 h-4 text-primary" /> 100% Confidentiality</div>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"><CheckCircle className="w-4 h-4 text-primary" /> Practical Remedies</div>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"><Heart className="w-4 h-4 text-primary" /> 5+ Years Experience</div>
+            <div className="mt-10 sm:mt-14 flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm">
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full"><Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" /> 2,200+ Lives Transformed</div>
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full"><ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" /> 100% Confidentiality</div>
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full"><CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" /> Practical Remedies</div>
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/5 border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full"><Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" /> 5+ Years Experience</div>
             </div>
           </div>
         </section>
@@ -94,13 +94,13 @@ const Home = () => {
                     <img src="/Resource/2.png" alt="Hari ram Beekrwar — Numerology & Vastu Expert" className="rounded-2xl w-full h-auto max-h-[540px] object-contain block" />
                     
                     {/* Floating Badges cleanly positioned inside the card */}
-                    <div className="absolute top-5 right-5 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black px-3.5 py-1.5 rounded-xl shadow-xl text-xs sm:text-sm">
-                      5+ Years ✨
+                    <div className="absolute top-5 right-5 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black px-3.5 py-1.5 rounded-xl shadow-xl text-xs sm:text-sm flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-slate-950" /> 5+ Years
                     </div>
-                    <div className="absolute bottom-5 left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3.5 py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80">
-                      🌟 2,200+ Clients
+                    <div className="absolute bottom-5 left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3.5 py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5 text-amber-400" /> 2,200+ Clients
                     </div>
-                    <div className="absolute top-1/2 -translate-y-1/2 right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-3 py-1.5 rounded-xl shadow-lg text-xs flex items-center gap-1.5">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg text-[11px] sm:text-xs hidden sm:flex items-center gap-1.5">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />100% Confidential
                     </div>
                   </div>
@@ -136,26 +136,31 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { title: 'Advanced Numerology', price: '₹3,200', offer: '50% Off', emoji: '✨', desc: 'Deep analysis of your birth date and name to uncover your Life Path, strengths, future cycles, name correction, and career-business guidance.', link: '/services/advanced-numerology', color: 'from-amber-500 to-orange-500' },
-                { title: 'Scientific & Traditional Vastu', price: '₹20,000+', offer: 'Custom', emoji: '🏡', desc: 'Vastu evaluations for your home or workplace using colours, elements, and placement corrections — no major demolition required.', link: '/services/vastu-consultation', color: 'from-indigo-500 to-blue-600' },
-              ].map((service, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group hover:-translate-y-2">
-                  <div className={`h-1.5 -mx-8 -mt-8 mb-8 rounded-t-3xl bg-gradient-to-r ${service.color}`} />
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl">{service.emoji}</div>
-                    <div className="text-right">
-                      <div className="text-2xl font-black text-dark-grey">{service.price}</div>
-                      <div className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">{service.offer}</div>
+                { title: 'Advanced Numerology', price: '₹3,200', offer: '50% Off', icon: Sparkles, iconBg: 'bg-amber-50 text-amber-600 border-amber-200/80', desc: 'Deep analysis of your birth date and name to uncover your Life Path, strengths, future cycles, name correction, and career-business guidance.', link: '/services/advanced-numerology', color: 'from-amber-500 to-orange-500' },
+                { title: 'Scientific & Traditional Vastu', price: '₹20,000+', offer: 'Custom', icon: HomeIcon, iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200/80', desc: 'Vastu evaluations for your home or workplace using colours, elements, and placement corrections — no major demolition required.', link: '/services/vastu-consultation', color: 'from-indigo-500 to-blue-600' },
+              ].map((service, idx) => {
+                const Icon = service.icon;
+                return (
+                  <div key={idx} className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group hover:-translate-y-2">
+                    <div className={`h-1.5 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 mb-6 sm:mb-8 rounded-t-2xl sm:rounded-t-3xl bg-gradient-to-r ${service.color}`} />
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform ${service.iconBg}`}>
+                        <Icon className="w-7 h-7" />
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-dark-grey">{service.price}</div>
+                        <div className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">{service.offer}</div>
+                      </div>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-3">{service.title}</h3>
+                    <p className="text-medium-grey text-sm sm:text-base mb-6 flex-grow leading-relaxed">{service.desc}</p>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Link to="/booking" className="flex-1 text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold px-4 py-3 rounded-full hover:from-amber-500 hover:to-amber-600 transition-all shadow-sm text-sm">Book Now</Link>
+                      <Link to={service.link} className="flex-1 text-center border-2 border-gray-200 text-dark-grey font-bold px-4 py-3 rounded-full hover:border-amber-400 hover:text-secondary transition-all text-sm">Learn More</Link>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-dark-grey mb-3">{service.title}</h3>
-                  <p className="text-medium-grey mb-6 flex-grow leading-relaxed">{service.desc}</p>
-                  <div className="flex gap-3">
-                    <Link to="/booking" className="flex-1 text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold px-4 py-3 rounded-full hover:from-amber-500 hover:to-amber-600 transition-all shadow-sm text-sm">Book Now</Link>
-                    <Link to={service.link} className="flex-1 text-center border-2 border-gray-200 text-dark-grey font-bold px-4 py-3 rounded-full hover:border-amber-400 hover:text-secondary transition-all text-sm">Learn More</Link>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className="text-center mt-10">
               <Link to="/services" className="inline-flex justify-center items-center px-8 py-4 rounded-full border-2 border-dark-grey text-dark-grey font-bold hover:bg-dark-grey hover:text-white transition-all">Browse All Services <ArrowRight className="ml-2 w-5 h-5" /></Link>
@@ -171,7 +176,8 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">How Our Process Works</h2>
               <p className="text-medium-grey text-lg max-w-2xl mx-auto">A seamless, fully transparent process designed to give you clarity and deliver absolute value.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-6 relative">
+              {/* Connector line — only visible on md+ where cards are in a row */}
               <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 border-t-2 border-dashed border-amber-200 z-0" />
               {[
                 { step: '01', icon: <Clock className="w-7 h-7" />, title: 'Book a Slot', desc: 'Choose a time that works for you and securely pay ₹3,200 via Razorpay.' },
@@ -179,11 +185,13 @@ const Home = () => {
                 { step: '03', icon: <BookOpen className="w-7 h-7" />, title: 'Private Consultation', desc: 'Speak directly with Hari ram Beekrwar — safely and confidentially.' },
                 { step: '04', icon: <Sparkles className="w-7 h-7" />, title: 'Witness Growth', desc: 'Execute practical remedies and observe profound positive shifts.' },
               ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 text-center p-8 rounded-3xl relative shadow-sm hover:shadow-lg transition-shadow group z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-amber-300/30 absolute -top-10 left-1/2 -translate-x-1/2 border-4 border-white group-hover:scale-110 transition-transform">
+                <div key={idx} className="bg-white border border-gray-100 text-center rounded-3xl relative shadow-sm hover:shadow-lg transition-shadow group z-10 flex flex-col items-center">
+                  {/* Mobile: icon inline at top. Desktop: absolute circle floating above card */}
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 rounded-full flex items-center justify-center shadow-lg shadow-amber-300/30 border-4 border-white group-hover:scale-110 transition-transform
+                    -mt-10 md:absolute md:-top-10 md:left-1/2 md:-translate-x-1/2 md:mt-0">
                     {item.icon}
                   </div>
-                  <div className="mt-12">
+                  <div className="pt-4 md:mt-12 pb-8 px-6">
                     <h3 className="text-xl font-bold text-dark-grey mb-3">{item.step}. {item.title}</h3>
                     <p className="text-medium-grey text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -255,10 +263,11 @@ const Home = () => {
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-400/10 border border-amber-400/20 px-4 py-1.5 rounded-full mb-6">Free Resource</span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Get Your FREE Planetary Impact Report</h2>
             <p className="text-gray-300 text-xl mb-10 font-medium leading-relaxed max-w-2xl mx-auto">Enter your name and email — receive a personal blueprint revealing how upcoming energy cycles will impact your money and career this year.</p>
-            <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
-              <input type="text" required value={leadForm.name} onChange={e => setLeadForm(p => ({ ...p, name: e.target.value }))} placeholder="Your First Name" className="flex-1 px-6 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
-              <input type="email" required value={leadForm.email} onChange={e => setLeadForm(p => ({ ...p, email: e.target.value }))} placeholder="Your Best Email" className="flex-1 px-6 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
-              <button type="submit" className="btn-sweep shrink-0 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 px-8 py-4 rounded-full font-black text-base transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] shadow-lg flex items-center gap-2">
+            {/* Form: stacked on mobile, side-by-side on md+ only */}
+            <form onSubmit={handleLeadSubmit} className="flex flex-col md:flex-row gap-3 justify-center max-w-xl mx-auto">
+              <input type="text" required value={leadForm.name} onChange={e => setLeadForm(p => ({ ...p, name: e.target.value }))} placeholder="Your First Name" className="w-full px-5 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
+              <input type="email" required value={leadForm.email} onChange={e => setLeadForm(p => ({ ...p, email: e.target.value }))} placeholder="Your Best Email" className="w-full px-5 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
+              <button type="submit" className="btn-sweep w-full md:w-auto shrink-0 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 px-8 py-4 rounded-full font-black text-base transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] shadow-lg flex items-center justify-center gap-2">
                 <Send className="w-4 h-4" /> Send My Free Report
               </button>
             </form>
@@ -267,10 +276,10 @@ const Home = () => {
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-20 bg-light-grey px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto rounded-[3rem] p-10 sm:p-16 text-center text-slate-950 shadow-2xl relative overflow-hidden border border-amber-300" style={{background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)'}}>
-            <div className="absolute -top-24 -right-24 w-72 h-72 bg-white/20 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-amber-700/20 rounded-full blur-2xl pointer-events-none" />
+        <section className="py-12 sm:py-20 bg-light-grey px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto rounded-3xl sm:rounded-[3rem] p-6 sm:p-12 md:p-16 text-center text-slate-950 shadow-2xl relative overflow-hidden border border-amber-300" style={{background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)'}}>
+            <div className="absolute -top-24 -right-24 w-72 h-72 bg-white/20 rounded-full blur-2xl pointer-events-none hidden sm:block" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-amber-700/20 rounded-full blur-2xl pointer-events-none hidden sm:block" />
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 mb-6 tracking-tight">Are You Ready to Transform Your Life?</h2>
               <p className="text-slate-900/90 text-lg sm:text-xl mb-8 font-medium leading-relaxed">Don't let hidden energies hold you back. Take the first step toward a balanced and prosperous future today.</p>
@@ -280,7 +289,7 @@ const Home = () => {
                   Book Consultation NOW <ArrowRight className="ml-3 w-6 h-6" />
                 </Link>
                 <a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20a%20consultation%20with%20Hari%20Ram%20Ji." target="_blank" rel="noreferrer" className="inline-flex justify-center items-center px-10 py-5 rounded-full bg-white/30 text-slate-950 font-black text-lg hover:bg-white/50 transition-all border border-white/40">
-                  <span className="mr-2">💬</span> WhatsApp Us
+                  <MessageCircle className="w-5 h-5 mr-2 text-slate-950" /> WhatsApp Us
                 </a>
               </div>
               <div className="mt-8 inline-flex items-center gap-2 bg-white text-rose-700 font-bold px-5 py-2.5 rounded-full text-sm shadow-md border border-rose-200/80">

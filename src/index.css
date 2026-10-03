@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import "tailwindcss";
 
 /* ─── Explicit dark backgrounds (bypass Tailwind v4 gradient token issues) ─── */
@@ -58,9 +57,16 @@ h1, h2, h3 {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+.marquee-container {
+  overflow: hidden !important;
+  contain: paint;
+  width: 100%;
+  max-width: 100vw;
+}
 .marquee-track {
   display: flex;
   width: max-content;
+  will-change: transform;
   animation: marqueeScroll 28s linear infinite;
 }
 .marquee-track:hover { animation-play-state: paused; }
@@ -169,4 +175,47 @@ h1, h2, h3 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ─── Senior Mobile Ergonomics & Viewport Rules ─── */
+html {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+body {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+}
+
+/* Contain paint on any container with background glows or marquees */
+.overflow-hidden {
+  overflow: hidden !important;
+  contain: paint;
+}
+
+/* Prevent iOS Safari auto-zoom on form inputs */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Touch target comfort for touch devices */
+@media (pointer: coarse) {
+  button, a {
+    touch-action: manipulation;
+  }
 }

@@ -4,25 +4,26 @@ import { Calendar } from "lucide-react";
 
 export default function FloatingWidgets() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 items-end">
+      {/* Calendar Booking Button - visible on sm+ screens to preserve mobile viewport */}
       <Link
         to="/booking"
-        className="flex items-center justify-center gap-2 bg-yellow-400 text-dark-grey font-bold py-3 px-6 rounded-full shadow-lg hover:scale-105 transition-transform"
+        className="hidden sm:inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black py-2.5 px-5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm border border-amber-300/40"
       >
-        <Calendar className="w-5 h-5" /> Let's Talk!
+        <Calendar className="w-4 h-4" /> Let's Talk!
       </Link>
       
-      {/* ADDED: URL text parameter for WhatsApp auto text message */}
+      {/* WhatsApp Floating Button - official phone number */}
       <a
-        href="https://wa.me/919876543210?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation."
+        href="https://wa.me/919509610711?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation%20with%20Hari%20Ram%20Ji."
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform ml-auto"
+        aria-label="Chat on WhatsApp with Hari ram Beekrwar"
+        className="flex items-center justify-center bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_25px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group"
       >
-        {/* Real WhatsApp Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-8 h-8"
+          className="w-7 h-7 sm:w-8 sm:h-8"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
