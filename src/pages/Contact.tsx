@@ -8,16 +8,17 @@ const Contact = () => (
         title="Contact Us | Support & Enquiries | HARI RAM BEEKRWAR" 
         description="Get in touch with Hari ram Beekrwar's team for consultation bookings, or general support. We are here to guide you securely."
       />
-      <div className="min-h-screen py-24 px-4 bg-light-grey block relative pb-32">
-          {/* Background Map Placeholder Pattern */}
-          <div className="absolute inset-0 z-0 opacity-[0.02]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-              <div className="text-center mb-20">
-                 <div className="inline-block bg-white border border-gray-200 text-secondary px-6 py-2 rounded-full font-bold mb-6 text-sm tracking-widest uppercase shadow-sm">Support Center</div>
-                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-dark-grey">Get in Touch</h1>
-                 <p className="text-xl text-medium-grey max-w-2xl mx-auto leading-relaxed">Have questions about our reports or booking a private consultation? Our dedicated support team is here to assist you promptly.</p>
-              </div>
+      {/* ─── Hero Banner ─── */}
+      <section className="bg-hero-dark py-24 px-4 text-center starfield" style={{ backgroundColor: '#0F172A' }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="inline-block bg-white/10 border border-white/20 text-amber-300 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-5">Support Center</div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-5 text-white">Get in Touch</h1>
+          <p className="text-xl text-gray-300 leading-relaxed">Have questions about our services or booking? Our dedicated team is here to assist you — fastest response on WhatsApp.</p>
+        </div>
+      </section>
+
+      <div className="min-h-screen py-16 px-4 bg-light-grey pb-32">
+          <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
                   <div className="lg:col-span-2 space-y-6">
                       <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex items-center gap-6 hover:shadow-lg transition-transform hover:-translate-y-1">
@@ -104,8 +105,8 @@ const Contact = () => (
                             <label className="block text-sm font-bold text-dark-grey mb-3">Your Message</label>
                             <textarea required name="message" rows={5} placeholder="How can we help you?" className="w-full px-6 py-5 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none bg-gray-50 text-lg placeholder:text-gray-400"></textarea>
                           </div>
-                          <button type="submit" className="w-full bg-green-600 text-white py-6 rounded-full hover:bg-green-700 transition-all font-bold text-xl shadow-xl hover:-translate-y-1 transform flex justify-center items-center gap-2">
-                             Send Secure Message
+                          <button type="submit" className="btn-sweep w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-primary-deep text-slate-950 py-5 rounded-full transition-all font-black text-xl shadow-xl hover:-translate-y-1 transform flex justify-center items-center gap-2">
+                             <ShieldCheck className="w-5 h-5" /> Send Secure Message via WhatsApp
                           </button>
                       </form>
                   </div>

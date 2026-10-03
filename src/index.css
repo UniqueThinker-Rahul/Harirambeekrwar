@@ -1,18 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #F59E0B;
-  --color-secondary: #DC2626;
-  --color-tertiary: #059669;
-  --color-dark-grey: #1E1B4B;
-  --color-medium-grey: #475569;
-  --color-light-grey: #F8FAFC;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+/* ─── Explicit dark backgrounds (bypass Tailwind v4 gradient token issues) ─── */
+.bg-hero-dark {
+  background-color: #0F172A !important;
+  background-image: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%) !important;
+}
+.bg-love-dark {
+  background-color: #3B0716 !important;
+  background-image: linear-gradient(135deg, #4c0519 0%, #0F172A 40%, #1E1B4B 100%) !important;
+}
+.bg-cta-dark {
+  background-color: #0F172A !important;
+  background-image: linear-gradient(135deg, #0F172A 0%, #1E1B4B 60%, #0F172A 100%) !important;
 }
 
+@theme {
+  /* ─── Core Brand Colors ─── */
+  --color-primary:        #F59E0B;
+  --color-primary-deep:   #D97706;
+  --color-secondary:      #DC2626;
+  --color-tertiary:       #059669;
+
+  /* ─── Backgrounds & Dark Scale ─── */
+  --color-dark-grey:      #1E1B4B;
+  --color-cosmic-navy:    #0F172A;
+  --color-mystic-purple:  #4C1D95;
+  --color-medium-grey:    #475569;
+  --color-light-grey:     #F8FAFC;
+
+  /* ─── Fonts ─── */
+  --font-sans:    'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+/* ─── Base Styles ─── */
 body {
   background-color: var(--color-light-grey);
   color: var(--color-dark-grey);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary-deep); }
+
+/* ─── CSS Marquee (replaces <marquee> HTML tag) ─── */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ─── Gold Shimmer Text ─── */
+@keyframes goldShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, #F59E0B 0%, #FCD34D 30%, #F59E0B 50%, #D97706 70%, #F59E0B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* ─── Pulsing Gold Ring ─── */
+@keyframes ringPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
+}
+.ring-pulse { animation: ringPulse 2.5s ease-in-out infinite; }
+
+/* ─── Button Sweep Shimmer ─── */
+@keyframes btnSweep {
+  0%   { left: -100%; opacity: 0; }
+  30%  { opacity: 0.4; }
+  100% { left: 130%;  opacity: 0; }
+}
+.btn-sweep { position: relative; overflow: hidden; }
+.btn-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  animation: btnSweep 3s ease-in-out infinite;
+}
+
+/* ─── Glassmorphism Card ─── */
+.glass-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* ─── Star-field background ─── */
+.starfield {
+  background-color: #0F172A !important;
+  background-image:
+    radial-gradient(1.5px 1.5px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 25% 65%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 30%, rgba(245,158,11,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 80% 55%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 90% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 15% 90%, rgba(245,158,11,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 45%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 35% 35%, rgba(245,158,11,0.6) 0%, transparent 100%),
+    linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%) !important;
+}
+
+.bg-love-dark.starfield {
+  background-color: #3B0716 !important;
+  background-image:
+    radial-gradient(1.5px 1.5px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 25% 65%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 30%, rgba(245,158,11,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 80% 55%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 90% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 15% 90%, rgba(245,158,11,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 45%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 35% 35%, rgba(245,158,11,0.6) 0%, transparent 100%),
+    linear-gradient(135deg, #4c0519 0%, #0F172A 40%, #1E1B4B 100%) !important;
+}
+
+/* ─── Fade-In Utility ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
+
+/* ─── Accordion transition ─── */
+.accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.accordion-body.open {
+  grid-template-rows: 1fr;
+}
+.accordion-body > div { overflow: hidden; }
+
+/* ─── Gold gradient text (static) ─── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

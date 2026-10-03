@@ -11,20 +11,22 @@ const About = () => {
         description="Learn more about Hari ram Beekrwar. Transform Your Life Through the Power of Numerology & Vastu."
       />
       <div className="bg-light-grey min-h-screen">
-        {/* Hero Section - Solid yellow background with dark grey text */}
-        <section className="bg-primary text-dark-grey py-24 relative overflow-hidden">
+        {/* Hero Section - Cosmic dark matching site design */}
+        <section className="bg-hero-dark text-white py-28 relative overflow-hidden starfield" style={{ backgroundColor: '#0F172A' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="inline-block bg-white/10 border border-white/20 text-amber-300 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Meet the Expert</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Hari ram Beekrwar</h1>
-            <p className="text-xl md:text-2xl text-dark-grey max-w-3xl mx-auto leading-relaxed font-medium">
-              Transform Your Life Through the Power of Numerology & Vastu
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+              Transform Your Life Through the Power of Numerology &amp; Vastu
             </p>
           </div>
         </section>
 
+
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div className="relative">
+              <div className="relative px-4 pb-8">
                 <div className="absolute -inset-4 bg-primary/20 rounded-3xl transform rotate-3"></div>
                 <div className="relative z-10 flex justify-center bg-gray-50 rounded-3xl p-4 border border-gray-100 shadow-sm bg-white">
                    <img 
@@ -33,9 +35,9 @@ const About = () => {
                      className="rounded-xl shadow-lg w-full h-auto max-h-[600px] object-contain" 
                    />
                 </div>
-                <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
-                  <p className="text-5xl font-black text-secondary">5+</p>
-                  <p className="text-dark-grey font-bold tracking-wide">Years of Mastery</p>
+                <div className="absolute bottom-0 left-0 bg-white p-5 rounded-2xl shadow-xl z-20 hidden lg:block">
+                  <p className="text-4xl font-black text-secondary">5+</p>
+                  <p className="text-dark-grey font-bold tracking-wide text-sm">Years of Mastery</p>
                 </div>
               </div>
               <div>
@@ -73,9 +75,9 @@ const About = () => {
                   </div>
                 </div>
                 
-                {/* Button color changed to green */}
-                <Link to="/booking" className="inline-flex justify-center items-center px-10 py-5 rounded-full bg-green-600 text-white font-bold text-lg hover:bg-green-700 transition-all shadow-lg hover:-translate-y-1 w-full sm:w-auto">
-                  Book Your Consultation NOW <Star className="w-5 h-5 ml-2 fill-current text-white" />
+                {/* Button upgraded to brand gradient */}
+                <Link to="/booking" className="btn-sweep inline-flex justify-center items-center px-10 py-5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-primary-deep text-slate-950 font-black text-lg transition-all shadow-lg hover:-translate-y-1 w-full sm:w-auto">
+                  Book Your Consultation NOW <Star className="w-5 h-5 ml-2 fill-current text-slate-950" />
                 </Link>
               </div>
             </div>
