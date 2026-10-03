@@ -48,7 +48,7 @@ const Reports = () => (
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
             Comprehensive Personal<br />Numerology Reports
           </h1>
-          <p className="max-w-3xl mx-auto text-gray-300 text-lg sm:text-xl leading-relaxed font-light">
+          <p className="max-w-3xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed font-light">
             Unlike generic, computer-generated PDFs, these reports are <strong className="text-white font-semibold">meticulously crafted by hand</strong> — spending hours mathematically analysing your unique planetary alignments and numbers.
           </p>
         </div>

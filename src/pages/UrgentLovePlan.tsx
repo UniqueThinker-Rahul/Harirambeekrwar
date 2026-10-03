@@ -22,7 +22,7 @@ const UrgentLovePlan = () => (
             <br className="hidden md:block" />
             <span className="text-2xl sm:text-3xl md:text-5xl text-gray-200 mt-4 block font-semibold">Attract & Manifest True Love</span>
           </h1>
-          <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">Facing constant delays in marriage, heartbreak, or relationship misunderstandings? Get an immediate, high-priority energetic alignment to attract the love you deserve.</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">Facing constant delays in marriage, heartbreak, or relationship misunderstandings? Get an immediate, high-priority energetic alignment to attract the love you deserve.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/booking" className="btn-sweep inline-flex justify-center items-center px-8 py-4 rounded-full bg-red-500 text-white font-black hover:bg-red-600 transition-all shadow-[0_0_30px_rgba(239,68,68,0.35)] transform hover:-translate-y-1 text-lg">Book Priority Slot NOW <ArrowRight className="ml-2 w-5 h-5" /></Link>
             <a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20the%20Urgent%20Love%20Karna%20Hai%20Plan%20for%20₹3200/-" target="_blank" rel="noreferrer" className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-[#25D366] text-white font-bold hover:bg-[#20b858] transition-all shadow-lg hover:-translate-y-1 text-lg"><MessageCircle className="w-5 h-5 mr-2" /> Book via WhatsApp</a>
@@ -40,7 +40,7 @@ const UrgentLovePlan = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-secondary bg-red-50 border border-red-200 px-4 py-1.5 rounded-full mb-4">Who Is This For?</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">Is This Plan For You?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4">Is This Plan For You?</h2>
             <p className="text-medium-grey text-lg max-w-2xl mx-auto">If you are experiencing any of the following, this urgent intervention plan is designed specifically for you.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

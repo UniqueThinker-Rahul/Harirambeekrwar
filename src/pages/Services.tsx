@@ -43,7 +43,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-cosmic-navy/80 to-transparent pointer-events-none" />
           <div className="relative z-10 max-w-5xl mx-auto">
             <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 px-5 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold mb-5 text-xs sm:text-sm tracking-widest uppercase">Our Services</div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">Specialized, Data-Driven<br />Consultations</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">Specialized, Data-Driven<br />Consultations</h1>
             <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">We offer specialized, data-driven, and intuitive consultation services to bring balance to your personal and professional life.</p>
           </div>
         </section>

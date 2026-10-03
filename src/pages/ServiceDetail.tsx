@@ -31,7 +31,7 @@ const ServiceDetail = () => {
               <IconComponent className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
             <div className="inline-block bg-white/10 border border-white/20 text-amber-300 px-4 py-1 sm:px-5 sm:py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Consultation Service</div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 capitalize leading-tight">{title}</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 capitalize leading-tight">{title}</h1>
             {service && <p className="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">{service.subtitle}</p>}
           </div>
         </section>

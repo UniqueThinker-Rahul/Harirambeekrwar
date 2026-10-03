@@ -13,13 +13,13 @@ const PrivacyPolicy = () => {
       
       <div className="bg-light-grey min-h-screen pb-24 text-dark-grey">
         {/* Hero Section */}
-        <section className="bg-hero-dark py-24 text-center px-4 relative overflow-hidden text-white starfield" style={{ backgroundColor: '#0F172A' }}>
+        <section className="bg-hero-dark py-14 sm:py-24 text-center px-4 relative overflow-hidden text-white starfield" style={{ backgroundColor: '#0F172A' }}>
            <div className="relative z-10 max-w-4xl mx-auto">
-             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 text-amber-300 rounded-full mb-6 backdrop-blur-sm border border-white/20 shadow-lg">
-                <ShieldCheck className="w-8 h-8" />
+             <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/10 text-amber-300 rounded-full mb-5 backdrop-blur-sm border border-white/20 shadow-lg">
+                <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8" />
              </div>
-             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Privacy Policy</h1>
-             <p className="text-lg text-gray-300 leading-relaxed font-light">
+             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Privacy Policy</h1>
+             <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-light">
                At Hari ram Beekrwar, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and safeguard the information you provide when you visit our website or book our services.
              </p>
            </div>

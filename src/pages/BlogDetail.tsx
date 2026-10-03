@@ -28,7 +28,7 @@ const BlogDetail = () => {
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 text-secondary border border-amber-200 mb-4 sm:mb-5">
                 <Sparkles className="w-3.5 h-3.5 text-primary" /> Cosmic Insights & Remedies
               </div>
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-dark-grey capitalize leading-tight mb-4 sm:mb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-grey capitalize leading-tight mb-4 sm:mb-6 tracking-tight">
                 {title}
               </h1>
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-medium-grey">
@@ -86,7 +86,7 @@ const BlogDetail = () => {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-dark-grey font-medium text-xs sm:text-base">{item}</span>
+                    <span className="text-dark-grey font-medium text-sm sm:text-base">{item}</span>
                   </li>
                 ))}
               </ul>

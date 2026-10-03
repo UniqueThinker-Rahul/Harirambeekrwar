@@ -104,8 +104,8 @@ const Booking = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs sm:text-sm font-bold mb-4 shadow-sm animate-pulse"><Zap className="w-4 h-4" /> LIMITED TIME — 50% DISCOUNT ACTIVE</div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-dark-grey mb-3 sm:mb-4">Request Your Private Consultation</h1>
-            <p className="text-medium-grey text-sm sm:text-lg max-w-2xl mx-auto">Join 2,200+ individuals who transformed their lives. Fill in your details and pay securely to lock your slot.</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-grey mb-3 sm:mb-4">Request Your Private Consultation</h1>
+            <p className="text-medium-grey text-base sm:text-lg max-w-2xl mx-auto">Join 2,200+ individuals who transformed their lives. Fill in your details and pay securely to lock your slot.</p>
           </div>
 
           {/* Slot Indicator */}

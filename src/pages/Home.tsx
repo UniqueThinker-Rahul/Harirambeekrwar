@@ -60,11 +60,11 @@ const Home = () => {
             <div className="animate-fadeInUp ring-pulse inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-amber-400/30 backdrop-blur-sm text-sm font-semibold mb-8 text-amber-300">
               <Sparkles className="w-4 h-4" /> Numerology & Vastu Consultant
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-snug sm:leading-tight animate-fadeInUp">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight animate-fadeInUp">
               Transform Your Life Through the Power of{' '}
               <span className="text-shimmer inline-block">Numerology & Vastu</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               Welcome! I am <strong className="text-white">Hari ram Beekrwar</strong>. Every individual carries a unique energy — when aligned with the right numbers and surroundings, extraordinary growth becomes possible.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -108,7 +108,7 @@ const Home = () => {
               </div>
               <div className="md:w-1/2">
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-4">About the Expert</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-6">Meet Hari ram Beekrwar</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-6">Meet Hari ram Beekrwar</h2>
                 <p className="text-medium-grey text-lg mb-6 leading-relaxed">With over <strong className="text-dark-grey">5 years of rich experience</strong> in the science of energies, I have successfully guided more than <strong className="text-dark-grey">2,200 clients worldwide</strong>. My mission is to decode the hidden patterns of your life using numbers and optimize your surroundings using the ancient wisdom of Vastu Shastra.</p>
                 <div className="bg-gradient-to-br from-cosmic-navy to-dark-grey border border-indigo-800/60 p-6 rounded-2xl mb-8 relative overflow-hidden">
                   <div className="absolute top-2 left-4 text-5xl text-amber-400/20 font-serif leading-none">"</div>
@@ -131,7 +131,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-4">Services</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">Services Offered</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4">Services Offered</h2>
               <p className="text-medium-grey max-w-2xl mx-auto text-lg">Specialized, data-driven consultations to bring balance and prosperity to your personal and professional life.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -173,7 +173,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-4">Process</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">How Our Process Works</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4">How Our Process Works</h2>
               <p className="text-medium-grey text-lg max-w-2xl mx-auto">A seamless, fully transparent process designed to give you clarity and deliver absolute value.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-6 relative">
@@ -207,8 +207,8 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-6">Why Choose Us</span>
-                <h2 className="text-3xl md:text-5xl font-bold text-dark-grey mb-6 leading-tight">The Most Trusted Name in Numerology & Vastu</h2>
-                <p className="text-medium-grey text-lg mb-10 leading-relaxed">Finding an authentic consultant can be overwhelming. We pride ourselves on pure accuracy, highly ethical practices, and actionable remedies for real-life challenges.</p>
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-dark-grey mb-6 leading-tight">The Most Trusted Name in Numerology & Vastu</h2>
+                <p className="text-medium-grey text-base sm:text-lg mb-10 leading-relaxed">Finding an authentic consultant can be overwhelming. We pride ourselves on pure accuracy, highly ethical practices, and actionable remedies for real-life challenges.</p>
                 <ul className="space-y-6">
                   {[
                     { icon: <ShieldCheck className="w-8 h-8 text-tertiary" />, title: 'Confidential & Personalized', desc: 'Every consultation is treated with absolute privacy and tailored to your unique energetic blueprint.' },
@@ -224,7 +224,7 @@ const Home = () => {
               </div>
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-6">Client Testimonials</span>
-                <h3 className="text-2xl font-bold text-dark-grey mb-8">What Our Clients Say</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-8">What Our Clients Say</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {TESTIMONIALS.map((t, i) => (
                     <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
@@ -250,7 +250,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full mb-4">FAQs</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-grey mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4">Frequently Asked Questions</h2>
               <p className="text-medium-grey text-lg">Clear up your doubts before deciding to book.</p>
             </div>
             <div className="space-y-4">{FAQS.map((faq, i) => <FAQItem key={i} q={faq.q} a={faq.a} />)}</div>
@@ -261,8 +261,8 @@ const Home = () => {
         <section className="py-20 bg-hero-dark starfield border-t border-indigo-900/60" style={{ backgroundColor: '#0F172A' }}>
           <div className="max-w-4xl mx-auto px-4 text-center">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-400/10 border border-amber-400/20 px-4 py-1.5 rounded-full mb-6">Free Resource</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Get Your FREE Planetary Impact Report</h2>
-            <p className="text-gray-300 text-xl mb-10 font-medium leading-relaxed max-w-2xl mx-auto">Enter your name and email — receive a personal blueprint revealing how upcoming energy cycles will impact your money and career this year.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">Get Your FREE Planetary Impact Report</h2>
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-10 font-medium leading-relaxed max-w-2xl mx-auto">Enter your name and email — receive a personal blueprint revealing how upcoming energy cycles will impact your money and career this year.</p>
             {/* Form: stacked on mobile, side-by-side on md+ only */}
             <form onSubmit={handleLeadSubmit} className="flex flex-col md:flex-row gap-3 justify-center max-w-xl mx-auto">
               <input type="text" required value={leadForm.name} onChange={e => setLeadForm(p => ({ ...p, name: e.target.value }))} placeholder="Your First Name" className="w-full px-5 py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />

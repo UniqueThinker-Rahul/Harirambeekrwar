@@ -105,7 +105,7 @@ const Tools = () => {
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-amber-300 px-4 sm:px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-5 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-amber-300" /> Free Interactive Tool
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Vedic <span className="text-shimmer">Numerology Calculator</span>
             </h1>
             <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
@@ -117,8 +117,8 @@ const Tools = () => {
         {/* Calculator Body */}
         <div className="max-w-3xl mx-auto px-4 -mt-8 sm:-mt-10 relative z-20">
           <div className="bg-white rounded-2xl sm:rounded-[2.5rem] shadow-xl border border-gray-100 p-5 sm:p-8 md:p-12 text-center">
-            <h2 className="text-xl sm:text-3xl font-bold text-dark-grey mb-2 sm:mb-3">Calculate Your Destiny Number</h2>
-            <p className="text-medium-grey text-xs sm:text-base mb-6 sm:mb-8 max-w-md mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-dark-grey mb-2 sm:mb-3">Calculate Your Destiny Number</h2>
+            <p className="text-medium-grey text-sm sm:text-base mb-6 sm:mb-8 max-w-md mx-auto">
               Enter your full legal or frequently used name to calculate your primary name vibration.
             </p>
 
@@ -148,7 +148,7 @@ const Tools = () => {
                       <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-200/60 px-3 py-1 rounded-full">
                         Ruler: {currentInsight.ruler}
                       </span>
-                      <h3 className="text-xl sm:text-3xl font-black text-dark-grey mt-2">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-dark-grey mt-2">
                         {currentInsight.title}
                       </h3>
                     </div>
@@ -157,7 +157,7 @@ const Tools = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-3 sm:space-y-4 text-xs sm:text-base text-medium-grey">
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-medium-grey">
                     <p>
                       <strong className="text-dark-grey">Core Cosmic Traits:</strong> {currentInsight.traits}
                     </p>

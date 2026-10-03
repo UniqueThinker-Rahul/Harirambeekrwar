@@ -64,7 +64,7 @@ const Blog = () => (
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 px-5 sm:px-6 py-1.5 sm:py-2 rounded-full font-bold mb-5 text-xs sm:text-sm tracking-widest uppercase">
             <BookOpen className="w-4 h-4 text-amber-400" /> Cosmic Wisdom Journal
           </div>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
             Numerology &amp; Vastu<br />Insights &amp; Remedies
           </h1>
           <p className="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
@@ -96,7 +96,7 @@ const Blog = () => (
                   {post.title}
                 </h2>
 
-                <p className="text-medium-grey text-xs sm:text-base leading-relaxed mb-5 sm:mb-6 flex-grow">
+                <p className="text-medium-grey text-sm sm:text-base leading-relaxed mb-5 sm:mb-6 flex-grow">
                   {post.desc}
                 </p>
 

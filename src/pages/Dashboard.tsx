@@ -17,10 +17,10 @@ const Dashboard = () => (
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 text-secondary border border-amber-200 mb-2.5">
               <Sparkles className="w-3.5 h-3.5 text-primary" /> Client Portal
             </div>
-            <h1 className="text-2xl sm:text-4xl font-bold text-dark-grey flex items-center gap-2.5 sm:gap-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey flex items-center gap-2.5 sm:gap-3">
               <UserIcon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" /> My Spiritual Journey
             </h1>
-            <p className="text-medium-grey text-xs sm:text-base mt-1">
+            <p className="text-medium-grey text-sm sm:text-base mt-1">
               Manage your consultations, remedies, and cosmic alignment tools.
             </p>
           </div>
@@ -41,7 +41,7 @@ const Dashboard = () => (
                     <CalendarIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg sm:text-2xl text-dark-grey">My Consultations</h3>
+                    <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-dark-grey">My Consultations</h3>
                     <p className="text-xs sm:text-sm text-medium-grey">Upcoming appointments and past session notes</p>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ const Dashboard = () => (
                   <CalendarIcon className="w-6 h-6 sm:w-7 sm:h-7 text-amber-500" />
                 </div>
                 <h4 className="text-base sm:text-lg font-bold text-dark-grey mb-1">No Active Bookings Found</h4>
-                <p className="text-medium-grey text-xs sm:text-sm max-w-sm mb-6 leading-relaxed">
+                <p className="text-medium-grey text-sm max-w-sm mb-6 leading-relaxed">
                   You haven't scheduled a live 1-on-1 session yet. Book now to get your numbers and living space aligned.
                 </p>
                 <Link
