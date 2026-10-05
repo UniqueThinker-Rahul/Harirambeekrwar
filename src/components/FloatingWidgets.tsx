@@ -1,17 +1,10 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Calendar } from "lucide-react";
 
 export default function FloatingWidgets() {
-  const location = useLocation();
-  const isServiceDetail = location.pathname.startsWith('/services/') && location.pathname !== '/services';
-
   return (
-    <div className={`fixed z-50 flex flex-col gap-3 items-end transition-all ${
-      isServiceDetail 
-        ? "bottom-20 right-5 sm:bottom-6 sm:right-6 hidden lg:flex" 
-        : "bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-5 sm:bottom-6 sm:right-6"
-    }`}>
+    <div className="fixed z-50 flex flex-col gap-3 items-end transition-all bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-5 sm:bottom-6 sm:right-6">
       {/* Calendar Booking Button - visible on sm+ screens to preserve mobile viewport */}
       <Link
         to="/booking"

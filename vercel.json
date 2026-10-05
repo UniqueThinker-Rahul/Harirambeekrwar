@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/(booking|dashboard|admin)(.*)",
+      "source": "/(booking|admin)(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",

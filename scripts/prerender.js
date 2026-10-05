@@ -23,15 +23,10 @@ async function prerender() {
   const publicRoutes = [
     '/',
     '/about',
-    '/services',
-    '/services/advanced-numerology',
-    '/services/vastu-consultation',
-    '/urgent-love-plan',
-    '/reports',
-    '/tools',
+    '/vastu-consultation',
     '/blog',
     '/blog/saturn-transit',
-    '/blog/vastu-office',
+    '/blog/business-numerology-growth',
     '/blog/name-correction-science',
     '/blog/wristwatch-numerology',
     '/contact',
@@ -49,7 +44,7 @@ async function prerender() {
 
     const canonicalUrl = `${SITE_URL}${config.canonicalPath === '/' ? '' : config.canonicalPath}`;
     const ogImage = config.ogImage || DEFAULT_OG_IMAGE;
-    const ogImageAlt = config.ogImageAlt || `${BRAND_NAME} — Numerology & Vastu Consultant`;
+    const ogImageAlt = config.ogImageAlt || `${BRAND_NAME} — Vedic Numerology Consultant`;
     const imageWidth = ogImage === DEFAULT_OG_IMAGE ? 1200 : 800;
     const imageHeight = ogImage === DEFAULT_OG_IMAGE ? 630 : 800;
 
@@ -154,15 +149,14 @@ ${jsonLdTags}
   console.log('Generating sitemap.xml');
   const getPriority = (r) => {
     if (r === '/') return '1.0';
-    if (r === '/services') return '0.9';
-    if (r.startsWith('/services/') || r === '/about') return '0.8';
-    if (r.startsWith('/blog/') || r === '/reports') return '0.7';
-    if (r === '/tools' || r === '/contact' || r === '/urgent-love-plan') return '0.6';
+    if (r === '/about') return '0.8';
+    if (r.startsWith('/blog/')) return '0.7';
+    if (r === '/contact') return '0.6';
     return '0.3';
   };
 
   const getChangefreq = (r) => {
-    if (r === '/' || r === '/services' || r === '/blog') return 'weekly';
+    if (r === '/' || r === '/blog') return 'weekly';
     if (r.startsWith('/blog/')) return 'monthly';
     return 'monthly';
   };

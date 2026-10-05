@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
                   <>
                     <p className="mb-4 text-medium-grey">Your information is used strictly to:</p>
                     <ul className="list-none space-y-3">
-                      {["Provide personalized Numerology and Vastu consultation services.", "Schedule and confirm your one-on-one session slots.", "Respond promptly to your queries via WhatsApp or phone.", "Improve our consultation accuracy and client experience.", "Send appointment reminders and guidance updates (no spam, ever)."].map((item, i) => (
+                      {["Provide personalized Numerology consultation services.", "Schedule and confirm your one-on-one session slots.", "Respond promptly to your queries via WhatsApp or phone.", "Improve our consultation accuracy and client experience.", "Send appointment reminders and guidance updates (no spam, ever)."].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <span className="w-5 h-5 rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center shrink-0 mt-0.5 text-secondary text-xs font-bold">✓</span>
                           <span className="text-medium-grey text-xs sm:text-sm md:text-base leading-relaxed">{item}</span>

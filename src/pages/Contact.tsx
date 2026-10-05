@@ -151,9 +151,7 @@ const Contact = () => (
                              <select id="contact-subject" name="subject" className="w-full px-4 sm:px-5 py-3.5 rounded-xl sm:rounded-2xl border border-gray-200 outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all bg-gray-50/70 hover:bg-white text-base text-dark-grey font-medium cursor-pointer">
                                 <option>General Consultation Enquiry</option>
                                 <option>1-on-1 Numerology Session (₹3,200)</option>
-                                <option>Vastu Consultation (Home / Office)</option>
-                                <option>Urgent Love Plan Consultation</option>
-                                <option>Report Status or Existing Booking</option>
+                                <option>Existing Booking Support</option>
                              </select>
                           </div>
                           <div>

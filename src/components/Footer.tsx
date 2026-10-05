@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, MessageCircle, ShieldCheck, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, ShieldCheck, Clock } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const Footer = () => {
   return (
@@ -12,10 +13,10 @@ const Footer = () => {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <p className="font-bold text-white text-base sm:text-lg leading-tight">Join Our WhatsApp Community</p>
-            <p className="text-slate-300 text-xs sm:text-sm mt-0.5">Get free daily numerology tips, Vastu hacks &amp; exclusive consultation offers.</p>
+            <p className="text-slate-300 text-xs sm:text-sm mt-0.5">Get free daily numerology tips &amp; exclusive consultation offers.</p>
           </div>
           <a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20join%20your%20WhatsApp%20community%20for%20numerology%20tips." target="_blank" rel="noopener noreferrer" className="shrink-0 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold px-6 py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5 text-xs sm:text-sm">
-            <MessageCircle className="w-4 h-4" /> Join on WhatsApp
+            <WhatsAppIcon className="w-4 h-4 shrink-0" /> Join on WhatsApp
           </a>
         </div>
       </div>
@@ -44,7 +45,7 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Guiding you through the cosmic journey of life with authentic numerology and Vastu consultations. Trusted by 2,200+ clients across India and worldwide.</p>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">Guiding you through the cosmic journey of life with authentic Vedic numerology consultations. Trusted by 2,200+ clients across India and worldwide.</p>
             <div className="flex items-center gap-4 pt-1">
               <a href="https://www.instagram.com/harirambeekrwar/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-md" aria-label="Instagram"><Instagram className="w-4 h-4 text-white" /></a>
               <a href="https://facebook.com/profile.php?id=61571128232956" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-md" aria-label="Facebook"><Facebook className="w-4 h-4 text-white" /></a>
@@ -56,12 +57,9 @@ const Footer = () => {
             <h3 className="text-white font-bold mb-4 sm:mb-5 tracking-wider uppercase text-xs border-b border-indigo-800/60 pb-2.5 sm:pb-3">Quick Links</h3>
             <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-400">
               <FooterLink to="/about" label="About Hari Ram Beekrwar" />
-              <FooterLink to="/services" label="Our Services" />
               <FooterLink to="/booking" label="Book Consultation" />
-              <FooterLink to="/urgent-love-plan" label="Urgent Love Plan" />
-              <FooterLink to="/reports" label="Numerology Reports" />
-              <FooterLink to="/tools" label="Free Tools" />
               <FooterLink to="/blog" label="Blog &amp; Articles" />
+              <FooterLink to="/contact" label="Contact &amp; Support" />
             </ul>
           </div>
 
@@ -84,7 +82,7 @@ const Footer = () => {
             <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-400">
               <li className="flex items-start gap-3"><MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" /><span>Hari Ram Beekrwar<br />Bharatpur, Rajasthan 321001</span></li>
               <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-amber-400 shrink-0" /><a href="tel:+919509610711" className="hover:text-amber-300 transition-colors">+91 9509610711</a></li>
-              <li className="flex items-center gap-3"><MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" /><a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="hover:text-[#25D366] transition-colors">WhatsApp (Fastest)</a></li>
+              <li className="flex items-center gap-3"><WhatsAppIcon className="w-4 h-4 shrink-0" /><a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20a%20consultation." target="_blank" rel="noreferrer" className="hover:text-[#25D366] transition-colors">WhatsApp (Fastest)</a></li>
               <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-amber-400 shrink-0" /><a href="mailto:harirambeekrwar@gmail.com" className="hover:text-amber-300 transition-colors break-all">harirambeekrwar@gmail.com</a></li>
             </ul>
             <div className="mt-4 sm:mt-5 bg-white/5 border border-white/10 rounded-xl px-3 py-2.5 sm:py-3 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
@@ -97,7 +95,7 @@ const Footer = () => {
       <div className="border-t" style={{background: '#0F172A', borderColor: 'rgba(79,70,229,0.3)'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-[11px] sm:text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Hari Ram Beekrwar | ANKO KA MAYAZAAL. All rights reserved.</p>
-          <p className="text-slate-500">Numerology &amp; Vastu guidance is for educational &amp; spiritual purposes only.</p>
+          <p className="text-slate-500">Numerology guidance is for educational &amp; spiritual purposes only.</p>
         </div>
       </div>
     </footer>

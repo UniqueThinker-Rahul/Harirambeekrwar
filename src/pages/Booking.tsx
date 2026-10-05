@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, CheckCircle, Zap, MessageCircle, Send, CreditCard, Smartphone, Flame, Home as HomeIcon, Sparkles } from 'lucide-react';
+import { Calendar, Clock, MapPin, User, Mail, Phone, MessageSquare, ShieldCheck, Lock, CheckCircle, Zap, Send, CreditCard, Smartphone, Flame, Sparkles } from 'lucide-react';
 import SEO from '../components/SEO';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const Booking = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', dob: '', tob: '', pob: '', problemDesc: '' });
@@ -128,25 +129,9 @@ const Booking = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xs sm:text-sm md:text-base text-slate-300/90 max-w-xl mx-auto leading-relaxed font-normal mb-4 sm:mb-5">
+            <p className="text-xs sm:text-sm md:text-base text-slate-300/90 max-w-xl mx-auto leading-relaxed font-normal">
               Join 2,200+ clients with a private, 100% confidential consultation with <strong className="text-white font-medium">Hari Ram Beekrwar</strong>.
             </p>
-
-            {/* Slot Indicator inside Hero */}
-            <div className="max-w-md mx-auto bg-slate-900/80 border border-slate-700/80 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 shadow-lg">
-              <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 inline-block animate-pulse shrink-0" />
-              <div className="flex-1 text-left min-w-0">
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 mb-1 truncate">Today's Available Slots</p>
-                <div className="flex gap-1 sm:gap-1.5 w-full">
-                  {[1,2,3].map(i => <div key={i} className="flex-1 max-w-[28px] h-2 sm:h-2.5 bg-emerald-400 rounded-sm" />)}
-                  {[4,5,6,7,8].map(i => <div key={i} className="flex-1 max-w-[28px] h-2 sm:h-2.5 bg-slate-700 rounded-sm" />)}
-                </div>
-              </div>
-              <div className="text-right shrink-0">
-                <p className="font-black text-lg sm:text-2xl text-amber-400 leading-none">3</p>
-                <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Remaining</p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -324,17 +309,13 @@ const Booking = () => {
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" /> {f}</li>
                   ))}
                 </ul>
-                <div className="bg-amber-400/10 border border-amber-400/30 rounded-xl p-3 mb-5 text-xs text-amber-200/90 leading-relaxed flex items-start gap-2">
-                  <HomeIcon className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                  <span><strong>Vastu Consultation:</strong> Starting ₹20,000/- (Separate service).</span>
-                </div>
                 <a
                   href="https://wa.me/919509610711?text=Hello%20Hariram%20Ji,%20I%20want%20to%20book%20a%20consultation%20for%20₹3200"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full bg-[#25D366] text-white py-3.5 px-4 rounded-full font-bold text-xs sm:text-sm flex items-center justify-center gap-2 hover:bg-[#20b858] transition-all shadow-md hover:-translate-y-0.5"
                 >
-                  <MessageCircle className="w-4 h-4" /> Need Help? Chat on WhatsApp
+                  <WhatsAppIcon className="w-4 h-4 shrink-0" /> Need Help? Chat on WhatsApp
                 </a>
               </div>
               <div className="bg-white p-6 sm:p-8 rounded-[2rem] shadow-lg border border-gray-100 relative overflow-hidden">

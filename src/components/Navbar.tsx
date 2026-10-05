@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User, PhoneCall, ChevronDown, Sparkles, Heart, Home as HomeIcon, Flame, Star, ShieldCheck, FileText } from 'lucide-react';
+import { Menu, X, PhoneCall, ChevronDown, Sparkles, Flame, Star, ShieldCheck, Compass } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { openEnquiryModal } from './EnquiryModal';
 
 const MARQUEE_ITEMS = [
   { icon: PhoneCall, text: 'For Consultations, Call/WhatsApp: +91 9509610711' },
   { icon: Sparkles, text: '50% Off Numerology Consultation — ₹3,200 Only' },
-  { icon: HomeIcon, text: 'Vastu Consultation Starting ₹20,000' },
   { icon: Star, text: '2,200+ Lives Transformed' },
   { icon: ShieldCheck, text: '100% Confidential Guidance' },
   { icon: PhoneCall, text: 'For Consultations, Call/WhatsApp: +91 9509610711' },
   { icon: Sparkles, text: '50% Off Numerology Consultation — ₹3,200 Only' },
-  { icon: HomeIcon, text: 'Vastu Consultation Starting ₹20,000' },
   { icon: Star, text: '2,200+ Lives Transformed' },
   { icon: ShieldCheck, text: '100% Confidential Guidance' },
 ];
@@ -43,38 +42,38 @@ const Navbar = () => {
       {/* ─── 1. Main Navigation Bar (Explicit z-30 Stacking Context) ─── */}
       <nav className="relative z-30 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 w-full">
+          <div className="flex justify-between items-center h-16 sm:h-20 w-full">
             {/* Brand Logo & Name */}
-            <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0" aria-label="ANKO KA MAYAZAAL — Home">
               <picture className="shrink-0">
                 <source type="image/webp" srcSet="/Resource/logo.webp" />
                 <img
                   src="/Resource/logo.jpeg"
                   alt="ANKO KA MAYAZAAL — Hari Ram Beekrwar Logo"
-                  width="44"
-                  height="44"
+                  width="56"
+                  height="56"
                   decoding="async"
-                  className="h-10 sm:h-11 w-auto object-contain rounded-xl shadow-sm border border-amber-200/60 group-hover:scale-105 transition-transform duration-300"
+                  className="h-12 sm:h-14 md:h-15 w-auto object-contain rounded-2xl shadow-sm border border-amber-200/80 group-hover:scale-105 transition-transform duration-300"
                 />
               </picture>
               <div className="flex flex-col">
-                <span className="font-extrabold text-sm sm:text-base md:text-lg lg:text-xl text-dark-grey tracking-tight group-hover:text-secondary transition-colors leading-tight whitespace-nowrap">
+                <span className="font-bold text-xs sm:text-sm md:text-base text-dark-grey tracking-wide group-hover:text-secondary transition-colors leading-tight whitespace-nowrap">
                   ANKO KA MAYAZAAL
                 </span>
-                <span className="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wide flex items-center gap-1 whitespace-nowrap">
+                <span className="text-[9px] sm:text-[11px] text-amber-600 font-medium tracking-wide flex items-center gap-1 whitespace-nowrap">
                   <span>Hari Ram Beekrwar</span>
                   <span className="hidden sm:inline text-gray-300">•</span>
-                  <span className="hidden sm:inline text-medium-grey font-normal">Numerology &amp; Vastu</span>
+                  <span className="hidden sm:inline text-medium-grey font-normal">Numerology Expert</span>
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5">
+            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
               <NavLink to="/" label="Home" />
               <NavLink to="/about" label="About" />
 
-              {/* Consultation Dropdown (Higher z-50 with safe mouse bridge) */}
+              {/* Consultation Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={handleMouseEnter}
@@ -86,7 +85,7 @@ const Navbar = () => {
                   aria-expanded={consultationDropdown}
                   onClick={() => setConsultationDropdown(prev => !prev)}
                   className={`px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-semibold transition-colors flex items-center gap-1 cursor-pointer focus:outline-none whitespace-nowrap ${
-                    consultationDropdown || location.pathname.startsWith('/booking') || location.pathname.startsWith('/services') || location.pathname === '/urgent-love-plan'
+                    consultationDropdown || location.pathname.startsWith('/booking')
                       ? 'text-secondary font-bold'
                       : 'text-medium-grey hover:text-dark-grey'
                   }`}
@@ -108,7 +107,7 @@ const Navbar = () => {
                     <div className="absolute -top-2 left-0 right-0 h-2" />
 
                     <div className="p-2 border-b border-gray-100 mb-1">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-amber-600">1-on-1 Consultations</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-amber-600">1-on-1 Consultation</p>
                     </div>
 
                     <Link
@@ -133,64 +132,34 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                      to="/services/vastu-consultation"
+                      to="/vastu-consultation"
                       onClick={() => setConsultationDropdown(false)}
-                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-indigo-50 transition-colors group/item"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-amber-50 transition-colors group/item mt-1"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shrink-0 group-hover/item:bg-indigo-100 transition-colors">
-                        <HomeIcon className="w-5 h-5 text-indigo-600" />
+                      <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center shrink-0 group-hover/item:bg-orange-100 transition-colors">
+                        <Compass className="w-5 h-5 text-orange-600" />
                       </div>
                       <div>
-                        <p className="font-bold text-sm text-dark-grey group-hover/item:text-secondary transition-colors">
-                          Vastu Consultation
-                        </p>
-                        <p className="text-xs text-medium-grey mt-0.5">From ₹20,000 · Residential &amp; commercial</p>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/urgent-love-plan"
-                      onClick={() => setConsultationDropdown(false)}
-                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-rose-50 transition-colors group/item"
-                    >
-                      <div className="w-10 h-10 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center shrink-0 group-hover/item:bg-rose-100 transition-colors">
-                        <Heart className="w-5 h-5 text-rose-500" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-sm text-dark-grey group-hover/item:text-secondary transition-colors">
-                          Urgent Love Plan
-                        </p>
-                        <p className="text-xs text-medium-grey mt-0.5">₹3,200 · Priority relationship guidance</p>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/reports"
-                      onClick={() => setConsultationDropdown(false)}
-                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-emerald-50 transition-colors group/item"
-                    >
-                      <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 group-hover/item:bg-emerald-100 transition-colors">
-                        <FileText className="w-5 h-5 text-emerald-600" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-sm text-dark-grey group-hover/item:text-secondary transition-colors">
-                          Handcrafted Reports
-                        </p>
-                        <p className="text-xs text-medium-grey mt-0.5">From ₹3,999 · Deep personal analysis</p>
+                        <div className="flex items-center gap-2">
+                          <p className="font-bold text-sm text-dark-grey group-hover/item:text-secondary transition-colors">
+                            Vastu Consultation
+                          </p>
+                          <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
+                            On Enquiry
+                          </span>
+                        </div>
+                        <p className="text-xs text-medium-grey mt-0.5">Explore page &amp; enquiry form</p>
                       </div>
                     </Link>
                   </div>
                 )}
               </div>
 
-              <NavLink to="/services" label="Services" />
-              <NavLink to="/reports" label="Reports" />
-              <NavLink to="/tools" label="Calculator" badge="Free" />
               <NavLink to="/blog" label="Blog" />
               <NavLink to="/contact" label="Contact" />
             </div>
 
-            {/* Desktop Action Buttons (Single-Line Enquire Button) */}
+            {/* Desktop Action Buttons */}
             <div className="hidden lg:flex items-center gap-2.5 shrink-0">
               <button
                 type="button"
@@ -200,15 +169,6 @@ const Navbar = () => {
                 <PhoneCall className="w-3.5 h-3.5 shrink-0" />
                 <span className="whitespace-nowrap">Enquire Now</span>
               </button>
-
-              <Link
-                to="/dashboard"
-                className="text-dark-grey hover:text-primary transition-colors bg-gray-50 hover:bg-amber-50 p-2 rounded-full border border-gray-200 shadow-sm shrink-0"
-                aria-label="Client Portal"
-                title="Client Portal"
-              >
-                <User className="w-4 h-4" />
-              </Link>
             </div>
 
             {/* Mobile Header Controls */}
@@ -254,41 +214,16 @@ const Navbar = () => {
                   </span>
                   <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-md font-black">₹3,200</span>
                 </Link>
-
                 <Link
-                  to="/services/vastu-consultation"
+                  to="/vastu-consultation"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-white text-dark-grey hover:text-secondary font-bold text-sm shadow-sm border border-indigo-100"
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-white text-dark-grey hover:text-secondary font-bold text-sm shadow-sm border border-amber-100 mt-2"
                 >
                   <span className="flex items-center gap-2">
-                    <HomeIcon className="w-4 h-4 text-indigo-500 shrink-0" />
+                    <Compass className="w-4 h-4 text-orange-600 shrink-0" />
                     <span>Vastu Consultation</span>
                   </span>
-                  <span className="text-xs text-indigo-700 font-bold">From ₹20,000</span>
-                </Link>
-
-                <Link
-                  to="/urgent-love-plan"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-white text-dark-grey hover:text-secondary font-bold text-sm shadow-sm border border-rose-100"
-                >
-                  <span className="flex items-center gap-2">
-                    <Heart className="w-4 h-4 text-rose-500 shrink-0" />
-                    <span>Urgent Love Plan</span>
-                  </span>
-                  <span className="text-xs text-rose-600 font-black">₹3,200</span>
-                </Link>
-
-                <Link
-                  to="/reports"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-white text-dark-grey hover:text-secondary font-bold text-sm shadow-sm border border-emerald-100"
-                >
-                  <span className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Personal Reports</span>
-                  </span>
-                  <span className="text-xs text-emerald-700 font-bold">From ₹3,999</span>
+                  <span className="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md font-bold">On Enquiry</span>
                 </Link>
               </div>
 
@@ -296,11 +231,8 @@ const Navbar = () => {
               <div className="space-y-1">
                 <MobileNavLink to="/" label="Home" onClick={() => setIsOpen(false)} />
                 <MobileNavLink to="/about" label="About Hari Ram Beekrwar" onClick={() => setIsOpen(false)} />
-                <MobileNavLink to="/services" label="All Services" onClick={() => setIsOpen(false)} />
-                <MobileNavLink to="/tools" label="Free Numerology Calculator" onClick={() => setIsOpen(false)} badge="Free" />
                 <MobileNavLink to="/blog" label="Wisdom Blog &amp; Articles" onClick={() => setIsOpen(false)} />
                 <MobileNavLink to="/contact" label="Contact &amp; Support" onClick={() => setIsOpen(false)} />
-                <MobileNavLink to="/dashboard" label="My Account / Portal" onClick={() => setIsOpen(false)} />
               </div>
 
               {/* Mobile Quick Action Buttons */}
@@ -323,6 +255,7 @@ const Navbar = () => {
                   rel="noreferrer"
                   className="w-full py-3 rounded-xl bg-[#25D366] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm hover:bg-[#20ba59] transition-colors"
                 >
+                  <WhatsAppIcon className="w-4 h-4 shrink-0" />
                   <span>Chat on WhatsApp (+91 9509610711)</span>
                 </a>
               </div>
@@ -342,9 +275,6 @@ const Navbar = () => {
             Numerology 50% Off → ₹3,200/-
           </span>
           <span className="hidden sm:inline text-gray-500 font-semibold line-through">₹6,400/-</span>
-          <span className="hidden md:inline text-indigo-950 font-bold bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded whitespace-nowrap">
-            Vastu Starts ₹20,000
-          </span>
           <span className="font-bold whitespace-nowrap">Book Now →</span>
         </span>
       </Link>

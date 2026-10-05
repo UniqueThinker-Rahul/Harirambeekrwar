@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, ShieldCheck, Heart, Sparkles, CheckCircle, Clock, Users, BookOpen, ChevronDown, ChevronUp, Send, Lock, MessageCircle, Home as HomeIcon } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Heart, Sparkles, Compass, CheckCircle, Clock, Users, BookOpen, ChevronDown, ChevronUp, Lock } from 'lucide-react';
 import SEO from '../components/SEO';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const FAQS = [
   { q: 'How does Numerology actually help me?', a: 'Numerology decodes the hidden vibrations in your date of birth and name. It reveals your Life Path, strengths, challenges, and future cycles — giving you clarity to make better decisions in career, relationships, and finances.' },
-  { q: 'Is Vastu suitable for existing homes and offices?', a: 'Absolutely. Most of our Vastu recommendations use simple adjustments — colours, placement shifts, and elemental corrections — that work perfectly in existing properties without any major demolition.' },
   { q: 'Are consultations truly personalized for me?', a: 'Every consultation is strictly tailored to your unique birth details, personal goals, and current life situation. There are no generic scripts or copy-paste answers here.' },
   { q: 'Can I book an online consultation from outside India?', a: 'Yes. Consultations are available via Video Call / Voice Call for clients across India and worldwide. International clients are warmly welcome.' },
   { q: 'What happens after I pay and book?', a: 'Immediately after payment, you will be redirected to WhatsApp with your full details pre-filled. Our team will confirm your slot within 2–4 hours and arrange a direct call with Hari Ram Beekrwar.' },
-  { q: 'Are there any superstitious rituals involved?', a: 'None whatsoever. Our remedies are logical, modern, and practical — no expensive pujas, no complex rituals. Just science-backed energy alignment through numbers and space.' },
+  { q: 'Are there any superstitious rituals involved?', a: 'None whatsoever. Our remedies are logical, modern, and practical — no expensive pujas, no complex rituals. Just science-backed energy alignment through numbers and personal frequencies.' },
 ];
 
 const TESTIMONIALS = [
   { name: 'Ramesh S.', city: 'Jaipur', text: 'My business turned around completely after following Hari Ram Ji\'s numerology guidance. The clarity I gained was life-changing. Highly recommend!', initials: 'RS', color: 'from-amber-500 to-orange-500' },
-  { name: 'Priya M.', city: 'Delhi', text: 'Our home feels so much more peaceful and financially blessed after the Vastu consultation. We noticed positive changes within weeks!', initials: 'PM', color: 'from-indigo-500 to-purple-500' },
+  { name: 'Priya M.', city: 'Delhi', text: 'Our life feels so much more peaceful and financially blessed after the numerology consultation. We noticed positive changes within weeks!', initials: 'PM', color: 'from-indigo-500 to-purple-500' },
   { name: 'Vikram T.', city: 'Mumbai', text: 'I was sceptical at first, but the name correction advice genuinely improved my professional relationships and career growth dramatically.', initials: 'VT', color: 'from-emerald-500 to-teal-500' },
   { name: 'Sunita K.', city: 'Bharatpur', text: 'Got guidance on my marriage prospects and the remedies were so practical and easy. Within 3 months, things fell into place naturally.', initials: 'SK', color: 'from-rose-500 to-pink-500' },
 ];
@@ -37,13 +37,6 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 };
 
 const Home = () => {
-  const [leadForm, setLeadForm] = useState({ name: '', email: '' });
-
-  const handleLeadSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const text = encodeURIComponent(`*🌟 FREE REPORT REQUEST 🌟*\n\n*Name:* ${leadForm.name}\n*Email:* ${leadForm.email}\n\nPlease send me my Free Planetary Impact Report.`);
-    window.open(`https://wa.me/919509610711?text=${text}`, '_blank');
-  };
 
   return (
     <>
@@ -67,18 +60,18 @@ const Home = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
               </span>
               <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
-              <span className="truncate">Numerology &amp; Vastu Consultant</span>
+              <span className="truncate">Vedic Numerology Consultant</span>
             </div>
 
             {/* Main Fluid Heading */}
             <h1 className="text-[1.75rem] xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.15] animate-fadeInUp">
               Transform Your Life Through the Power of{' '}
-              <span className="text-shimmer inline-block">Numerology &amp; Vastu</span>
+              <span className="text-shimmer inline-block">Vedic Numerology</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xs sm:text-sm md:text-base text-slate-300/90 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed font-normal px-1 sm:px-0">
-              Welcome! I am <strong className="text-white font-medium">Hari Ram Beekrwar</strong>. Align your personal numbers and living space with proven remedies to unlock peace, growth, and lasting abundance.
+              Welcome! I am <strong className="text-white font-medium">Hari Ram Beekrwar</strong>. Align your personal numbers and name vibrations with proven remedies to unlock peace, growth, and lasting abundance.
             </p>
 
             {/* Action Buttons */}
@@ -97,7 +90,7 @@ const Home = () => {
                 rel="noreferrer"
                 className="w-full sm:w-auto inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-md text-white font-bold transition-all text-sm sm:text-base active:scale-[0.98] group hover:border-amber-400/40"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-[#25D366] shrink-0 group-hover:scale-110 transition-transform" />
+                <WhatsAppIcon className="w-5 h-5 mr-2 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
@@ -147,7 +140,7 @@ const Home = () => {
                       <source type="image/jpeg" srcSet="/Resource/2.jpg" />
                       <img
                         src="/Resource/2.jpg"
-                        alt="Hari Ram Beekrwar — Numerology & Vastu Expert"
+                        alt="Hari Ram Beekrwar — Numerology Expert"
                         width="500"
                         height="540"
                         loading="eager"
@@ -169,19 +162,16 @@ const Home = () => {
                     <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 bg-slate-950/90 backdrop-blur-sm text-white font-bold px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl shadow-xl text-xs border border-indigo-700/80 flex items-center gap-1.5">
                       <Users className="w-3.5 h-3.5 text-amber-400" /> 2,200+ Clients
                     </div>
-                    <div className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 bg-white/95 backdrop-blur-sm border border-emerald-300 text-emerald-800 font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg text-xs hidden sm:flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />100% Confidential
-                    </div>
                   </div>
                 </div>
               </div>
               <div className="md:w-1/2 w-full" data-reveal="fade-up" data-delay="100">
                 <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-amber-50 border border-amber-200 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4">About the Expert</span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">Meet Hari Ram Beekrwar</h2>
-                <p className="text-medium-grey text-sm sm:text-base md:text-lg mb-6 leading-relaxed">With over <strong className="text-dark-grey font-semibold">5 years of rich experience</strong> in the science of energies, I have successfully guided more than <strong className="text-dark-grey font-semibold">2,200 clients worldwide</strong>. My mission is to decode the hidden patterns of your life using numbers and optimize your surroundings using the ancient wisdom of Vastu Shastra.</p>
+                <p className="text-medium-grey text-sm sm:text-base md:text-lg mb-6 leading-relaxed">With over <strong className="text-dark-grey font-semibold">5 years of rich experience</strong> in the science of energies, I have successfully guided more than <strong className="text-dark-grey font-semibold">2,200 clients worldwide</strong>. My mission is to decode the hidden patterns of your life using numbers and optimize your personal vibrational energies.</p>
                 <div className="bg-gradient-to-br from-cosmic-navy to-dark-grey border border-indigo-800/60 p-5 sm:p-6 rounded-2xl mb-6 sm:mb-8 relative overflow-hidden">
                   <div className="absolute top-2 left-4 text-4xl sm:text-5xl text-amber-400/20 font-serif leading-none">"</div>
-                  <p className="text-gray-200 text-sm sm:text-base italic font-medium relative z-10 leading-relaxed">"Your date of birth holds the blueprint of your destiny, and your space holds the power to manifest it. Let's align them together."</p>
+                  <p className="text-gray-200 text-sm sm:text-base italic font-medium relative z-10 leading-relaxed">"Your date of birth holds the blueprint of your destiny, and your name vibration holds the power to manifest it. Let's align them together."</p>
                   <p className="text-amber-400 font-bold text-xs sm:text-sm mt-2.5 sm:mt-3 relative z-10">— Hari Ram Beekrwar</p>
                 </div>
                 <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
@@ -199,40 +189,87 @@ const Home = () => {
         <section className="py-14 sm:py-24 bg-light-grey">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-16" data-reveal="fade-up">
-              <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-amber-50 border border-amber-200 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4">Services</span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-3 sm:mb-4">Services Offered</h2>
-              <p className="text-medium-grey max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">Specialized, data-driven consultations to bring balance and prosperity to your personal and professional life.</p>
+              <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-amber-50 border border-amber-200 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4">Consultation</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-3 sm:mb-4">Personal Consultations</h2>
+              <p className="text-medium-grey max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">Specialized, data-driven 1-on-1 sessions to bring balance, clarity, and prosperity to your personal and professional life.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
-              {[
-                { title: 'Advanced Numerology', price: '₹3,200', offer: '50% Off', icon: Sparkles, iconBg: 'bg-amber-50 text-amber-600 border-amber-200/80', desc: 'Deep analysis of your birth date and name to uncover your Life Path, strengths, future cycles, name correction, and career-business guidance.', link: '/services/advanced-numerology', color: 'from-amber-500 to-orange-500' },
-                { title: 'Scientific & Traditional Vastu', price: '₹20,000+', offer: 'Custom', icon: HomeIcon, iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200/80', desc: 'Vastu evaluations for your home or workplace using colours, elements, and placement corrections — no major demolition required.', link: '/services/vastu-consultation', color: 'from-indigo-500 to-blue-600' },
-              ].map((service, idx) => {
-                const Icon = service.icon;
-                return (
-                  <div key={idx} data-reveal="fade-up" data-delay={idx * 150} className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group hover:-translate-y-2">
-                    <div className={`h-1.5 -mx-5 sm:-mx-8 -mt-5 sm:-mt-8 mb-5 sm:mb-8 rounded-t-2xl sm:rounded-t-3xl bg-gradient-to-r ${service.color}`} />
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform ${service.iconBg}`}>
-                        <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xl sm:text-2xl font-black text-dark-grey">{service.price}</div>
-                        <div className="text-[11px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">{service.offer}</div>
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto items-stretch">
+              {/* Card 1: Numerology */}
+              <div data-reveal="fade-up" className="bg-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group hover:-translate-y-1.5">
+                <div>
+                  <div className="h-1.5 -mx-6 sm:-mx-10 -mt-6 sm:-mt-10 mb-6 sm:mb-8 rounded-t-2xl sm:rounded-t-3xl bg-gradient-to-r from-amber-500 to-orange-500" />
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform bg-amber-50 text-amber-600 border-amber-200/80">
+                      <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-2.5 sm:mb-3">{service.title}</h3>
-                    <p className="text-medium-grey text-xs sm:text-sm md:text-base mb-6 flex-grow leading-relaxed">{service.desc}</p>
-                    <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
-                      <Link to="/booking" className="flex-1 text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold px-4 py-3 rounded-full hover:from-amber-500 hover:to-amber-600 transition-all shadow-sm text-xs sm:text-sm">Book Now</Link>
-                      <Link to={service.link} className="flex-1 text-center border-2 border-gray-200 text-dark-grey font-bold px-4 py-3 rounded-full hover:border-amber-400 hover:text-secondary transition-all text-xs sm:text-sm">Learn More</Link>
+                    <div className="text-right">
+                      <div className="flex items-baseline justify-end gap-2">
+                        <span className="text-sm sm:text-base text-gray-400 line-through font-semibold">₹6,400</span>
+                        <span className="text-2xl sm:text-3xl font-black text-dark-grey">₹3,200</span>
+                      </div>
+                      <span className="text-[11px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 rounded-full inline-block mt-0.5">50% Off</span>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-            <div className="text-center mt-8 sm:mt-10" data-reveal="fade-up">
-              <Link to="/services" className="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border-2 border-dark-grey text-dark-grey font-bold hover:bg-dark-grey hover:text-white transition-all text-sm sm:text-base">Browse All Services <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" /></Link>
+                  <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-2.5 sm:mb-3">Advanced Numerology Consultation</h3>
+                  <p className="text-medium-grey text-sm sm:text-base mb-6 leading-relaxed">Deep analysis of your birth date and name to uncover your Life Path, core strengths, future cycles, lucky numbers, name correction, and career-business guidance.</p>
+                </div>
+                <div className="flex flex-col gap-2.5 pt-3">
+                  <Link
+                    to="/booking"
+                    className="w-full text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black px-6 py-3.5 rounded-full hover:from-amber-500 hover:to-amber-600 transition-all shadow-md hover:shadow-lg text-sm flex items-center justify-center gap-2 group/btn"
+                  >
+                    <span>Book Consultation Now</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                  <a
+                    href="https://wa.me/919509610711?text=Hello%20Hari%20Ram%20Ji,%20I%20want%20to%20enquire%20about%20the%20Numerology%20Consultation."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full text-center border-2 border-gray-200 hover:border-emerald-400 text-dark-grey hover:text-emerald-700 font-bold px-6 py-3 rounded-full transition-all text-sm flex items-center justify-center gap-2 bg-gray-50/50 hover:bg-emerald-50/30"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                    <span>Enquire on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Card 2: Vastu Consultation (Enquiry Only, No Price) */}
+              <div data-reveal="fade-up" data-delay="100" className="bg-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group hover:-translate-y-1.5">
+                <div>
+                  <div className="h-1.5 -mx-6 sm:-mx-10 -mt-6 sm:-mt-10 mb-6 sm:mb-8 rounded-t-2xl sm:rounded-t-3xl bg-gradient-to-r from-orange-500 to-amber-500" />
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform bg-orange-50 text-orange-600 border-orange-200/80">
+                      <Compass className="w-6 h-6 sm:w-7 sm:h-7" />
+                    </div>
+                    <div className="text-right">
+                      <span className="inline-block text-xs sm:text-sm font-extrabold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+                        On Enquiry
+                      </span>
+                      <div className="text-[11px] text-gray-500 font-medium mt-1">Direct via WhatsApp</div>
+                    </div>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-dark-grey mb-2.5 sm:mb-3">Scientific &amp; Traditional Vastu Consultation</h3>
+                  <p className="text-medium-grey text-sm sm:text-base mb-6 leading-relaxed">Comprehensive energy and layout analysis for homes, offices, and plots with practical, non-invasive remedies without demolition. Harmonize your space for peace, health, and prosperity.</p>
+                </div>
+                <div className="flex flex-col gap-2.5 pt-3">
+                  <Link
+                    to="/vastu-consultation"
+                    className="w-full text-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black px-6 py-3.5 rounded-full hover:from-amber-500 hover:to-amber-600 transition-all shadow-md hover:shadow-lg text-sm flex items-center justify-center gap-2 group/btn"
+                  >
+                    <span>View Details &amp; Enquire</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                  <a
+                    href="https://wa.me/919509610711?text=Hello%20Hari%20Ram%20Ji,%20I%20would%20like%20to%20enquire%20about%20Scientific%20Vastu%20Consultation."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full text-center border-2 border-gray-200 hover:border-emerald-400 text-dark-grey hover:text-emerald-700 font-bold px-6 py-3 rounded-full transition-all text-sm flex items-center justify-center gap-2 bg-gray-50/50 hover:bg-emerald-50/30"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                    <span>Enquire on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -276,7 +313,7 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start">
               <div data-reveal="fade-right">
                 <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary bg-amber-50 border border-amber-200 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-6">Why Choose Us</span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">The Most Trusted Name in Numerology &amp; Vastu</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">The Most Trusted Name in Vedic Numerology</h2>
                 <p className="text-medium-grey text-sm sm:text-base md:text-lg mb-8 sm:mb-10 leading-relaxed">Finding an authentic consultant can be overwhelming. We pride ourselves on pure accuracy, highly ethical practices, and actionable remedies for real-life challenges.</p>
                 <ul className="space-y-4 sm:space-y-6">
                   {[
@@ -327,24 +364,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* FREE REPORT */}
-        <section className="py-14 sm:py-20 bg-hero-dark starfield border-t border-indigo-900/60" style={{ backgroundColor: '#0F172A' }}>
-          <div className="max-w-4xl mx-auto px-4 text-center" data-reveal="scale-up">
-            <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/10 border border-amber-400/20 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-6">Free Resource</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Get Your FREE Planetary Impact Report</h2>
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 font-normal leading-relaxed max-w-2xl mx-auto">Enter your name and email — receive a personal blueprint revealing how upcoming energy cycles will impact your money and career this year.</p>
-            {/* Form: stacked on mobile, side-by-side on md+ only */}
-            <form onSubmit={handleLeadSubmit} className="flex flex-col md:flex-row gap-3 justify-center max-w-xl mx-auto">
-              <input id="lead-name" name="leadName" aria-label="Your First Name" type="text" required value={leadForm.name} onChange={e => setLeadForm(p => ({ ...p, name: e.target.value }))} placeholder="Your First Name" className="w-full px-5 py-3.5 sm:py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
-              <input id="lead-email" name="leadEmail" aria-label="Your Best Email" type="email" required value={leadForm.email} onChange={e => setLeadForm(p => ({ ...p, email: e.target.value }))} placeholder="Your Best Email" className="w-full px-5 py-3.5 sm:py-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
-              <button type="submit" className="btn-sweep w-full md:w-auto shrink-0 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-black text-sm sm:text-base transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] shadow-lg flex items-center justify-center gap-2">
-                <Send className="w-4 h-4" /> Send My Free Report
-              </button>
-            </form>
-            <p className="text-gray-500 text-[11px] sm:text-xs mt-3.5 sm:mt-4">We'll connect you on WhatsApp to deliver your free report. No spam, ever.</p>
-          </div>
-        </section>
-
         {/* FINAL CTA */}
         <section className="py-12 sm:py-20 bg-light-grey px-4 sm:px-6 lg:px-8">
           <div data-reveal="scale-up" className="max-w-5xl mx-auto rounded-3xl sm:rounded-[3rem] p-6 sm:p-12 md:p-16 text-center text-slate-950 shadow-2xl relative overflow-hidden border border-amber-300" style={{background: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)'}}>
@@ -359,13 +378,10 @@ const Home = () => {
                   Book Consultation NOW <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6" />
                 </Link>
                 <a href="https://wa.me/919509610711?text=Hello!%20I%20want%20to%20book%20a%20consultation%20with%20Hari%20Ram%20Ji." target="_blank" rel="noreferrer" className="inline-flex justify-center items-center px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white/30 text-slate-950 font-black text-base sm:text-lg hover:bg-white/50 transition-all border border-white/40">
-                  <MessageCircle className="w-5 h-5 mr-2 text-slate-950" /> WhatsApp Us
+                  <WhatsAppIcon className="w-5 h-5 mr-2 shrink-0" /> WhatsApp Us
                 </a>
               </div>
-              <div className="mt-6 sm:mt-8 inline-flex items-center gap-2 bg-white text-rose-700 font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm shadow-md border border-rose-200/80">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse inline-block" /> 3 Consultation Slots Available Today
-              </div>
-              <p className="text-slate-800 text-xs sm:text-sm mt-4 sm:mt-5 flex items-center justify-center gap-1.5 sm:gap-2 font-medium"><Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> 100% Secure Payment · Powered by Razorpay</p>
+              <p className="text-slate-800 text-xs sm:text-sm mt-5 sm:mt-6 flex items-center justify-center gap-1.5 sm:gap-2 font-medium"><Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> 100% Secure Payment · Powered by Razorpay</p>
             </div>
           </div>
         </section>

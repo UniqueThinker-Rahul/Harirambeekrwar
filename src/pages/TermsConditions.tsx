@@ -45,7 +45,7 @@ const TermsConditions = () => {
               { 
                 icon: <Briefcase className="w-6 h-6 text-primary" />, 
                 title: "Services & Scope", 
-                content: "Our Numerology and Vastu consultations are intended for guidance, spiritual alignment, and personal growth. They are based on traditional Vedic sciences and should not substitute for licensed medical, legal, or psychiatric treatment." 
+                content: "Our Numerology consultations are intended for guidance, spiritual alignment, and personal growth. They are based on traditional Vedic sciences and should not substitute for licensed medical, legal, or psychiatric treatment." 
               },
               { 
                 icon: <CalendarCheck className="w-6 h-6 text-primary" />, 

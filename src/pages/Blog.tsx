@@ -16,10 +16,10 @@ const POSTS = [
     icon: Sparkles,
   },
   {
-    slug: 'vastu-office',
-    category: 'Vastu Shastra',
-    title: '5 Practical Vastu Tips for Massive Business Growth & Cash Flow',
-    desc: 'Enhance productivity and clear financial blockages in your office or workspace with directional corrections, desk placement, and elemental balance — zero demolition needed.',
+    slug: 'business-numerology-growth',
+    category: 'Business Numerology',
+    title: '5 Practical Numerology Strategies for Business Growth & Cash Flow',
+    desc: 'Enhance productivity and clear financial blockages in your business with lucky compound numbers, favorable launch dates, and name resonance.',
     readTime: '6 min read',
     date: 'Sep 2026',
     author: 'Hari Ram Beekrwar',
@@ -77,7 +77,7 @@ const Blog = () => (
 
           {/* Fluid Heading */}
           <h1 className="text-[1.75rem] xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-5 text-white leading-[1.2] sm:leading-[1.15] tracking-tight">
-            Numerology &amp; Vastu{' '}
+            Numerology{' '}
             <span className="text-shimmer inline-block">Insights &amp; Remedies</span>
           </h1>
 
@@ -89,7 +89,7 @@ const Blog = () => (
           {/* Category Chips */}
           <div className="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-medium text-slate-300">
             <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Numerology</span>
-            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Vastu Shastra</span>
+            <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Life Path &amp; Numbers</span>
             <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Wristwatch Therapy</span>
             <span className="bg-slate-900/60 border border-slate-700/60 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full"># Planetary Remedies</span>
           </div>

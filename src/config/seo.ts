@@ -34,25 +34,21 @@ export interface RouteSEOConfig {
 
 export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
   '/': {
-    title: 'Numerology & Vastu Consultant | Hari Ram Beekrwar',
-    description: 'Consult trusted Numerology and Vastu expert Hari Ram Beekrwar. Get personalized guidance for career, home & prosperity. Call or WhatsApp +91 9509610711.',
-    keywords: 'Numerology Consultant, Vastu Consultant India, Hari Ram Beekrwar, Vedic Numerology, Name Correction, Vastu Shastra',
+    title: 'Vedic Numerology Consultant | Hari Ram Beekrwar',
+    description: 'Consult trusted Vedic Numerology expert Hari Ram Beekrwar. Get personalized guidance for career, relationships & personal growth. Call or WhatsApp +91 9509610711.',
+    keywords: 'Numerology Consultant, Numerology Consultant India, Hari Ram Beekrwar, Vedic Numerology, Name Correction, Destiny Numbers',
     canonicalPath: '/',
     ogType: 'website',
     ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Hari Ram Beekrwar — Numerology & Vastu Consultant',
+    ogImageAlt: 'Hari Ram Beekrwar — Vedic Numerology Consultant',
     faqs: [
       {
         question: 'What is the duration of a consultation session?',
-        answer: 'Each one-on-one numerology consultation session typically lasts 45 to 60 minutes over a private voice or video call. Vastu consultations range from 60 to 90 minutes depending on property size.'
+        answer: 'Each one-on-one numerology consultation session typically lasts 45 to 60 minutes over a private voice or video call.'
       },
       {
         question: 'What information do I need to provide for a consultation?',
-        answer: 'You will need to provide your full legal name, date of birth, time of birth (if known), and city of birth. For Vastu consultations, a basic floor plan or compass directions of your space are helpful.'
-      },
-      {
-        question: 'Are the Vastu remedies practical or do they require demolition?',
-        answer: 'All our Vastu remedies are strictly non-destructive and practical. We focus on elemental balance, color therapy, and direction adjustments without requiring expensive architectural demolition.'
+        answer: 'You will need to provide your full legal name, date of birth, time of birth (if known), and city of birth.'
       },
       {
         question: 'How does name spelling correction work?',
@@ -68,10 +64,37 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
       }
     ]
   },
+  '/vastu-consultation': {
+    title: 'Vastu Consultation Services | Hari Ram Beekrwar',
+    description: 'Authentic Scientific & Traditional Vastu consultation for home, office & plot. Practical remedies without structural demolition. Enquire via WhatsApp.',
+    keywords: 'Vastu Consultation, Scientific Vastu, Traditional Vastu Shastra, Residential Vastu, Commercial Vastu, Hari Ram Beekrwar, No Demolition Vastu Remedies',
+    canonicalPath: '/vastu-consultation',
+    ogType: 'website',
+    ogImage: DEFAULT_OG_IMAGE,
+    ogImageAlt: 'Scientific and Traditional Vastu Consultation by Hari Ram Beekrwar',
+    breadcrumbItems: [
+      { name: 'Home', path: '/' },
+      { name: 'Vastu Consultation', path: '/vastu-consultation' }
+    ],
+    faqs: [
+      {
+        question: 'Do I need to break walls or demolish structures for Vastu corrections?',
+        answer: 'No. Hari Ram Beekrwar specializes strictly in non-invasive, no-demolition remedies through energy balancing and directional alignment.'
+      },
+      {
+        question: 'Can Vastu consultation be conducted online using floor plans?',
+        answer: 'Yes, online consultations are seamlessly conducted using detailed layout maps, cardinal directions, and property photos or videos.'
+      },
+      {
+        question: 'What types of properties are covered in Vastu consultation?',
+        answer: 'Consultations cover residential homes, apartments, commercial offices, retail shops, factories, industrial plants, and plot/land evaluation.'
+      }
+    ]
+  },
   '/about': {
-    title: 'About Hari Ram Beekrwar | Numerology & Vastu Consultant',
-    description: 'About Hari Ram Beekrwar: Numerology Consultation at ₹3,200 and Vastu Consultation from ₹20,000+. Call +91 9509610711 to book your session.',
-    keywords: 'About Hari Ram Beekrwar, Vedic Numerology Expert, Vastu Consultant Profile, Energy Alignment',
+    title: 'About Hari Ram Beekrwar | Vedic Numerology Consultant',
+    description: 'About Hari Ram Beekrwar: 1-on-1 Numerology Consultation at ₹3,200. Call +91 9509610711 to book your session.',
+    keywords: 'About Hari Ram Beekrwar, Vedic Numerology Expert, Numerologist Profile, Energy Alignment',
     canonicalPath: '/about',
     ogType: 'profile',
     ogImage: `${SITE_URL}/Resource/1.png`,
@@ -81,111 +104,10 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
       { name: 'About', path: '/about' }
     ]
   },
-  '/services': {
-    title: 'Numerology & Vastu Services | Hari Ram Beekrwar',
-    description: 'Explore Numerology Consultation (₹3,200) and Vastu services (₹20,000+) by Hari Ram Beekrwar. Call +91 9509610711 to schedule your appointment.',
-    keywords: 'Numerology Services, Vastu Consultation Services, Life Path Analysis, Home Vastu, Business Vastu',
-    canonicalPath: '/services',
-    ogType: 'website',
-    ogImage: `${SITE_URL}/Resource/3.png`,
-    ogImageAlt: 'Numerology and Vastu Consultation Services',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Services', path: '/services' }
-    ]
-  },
-  '/services/advanced-numerology': {
-    title: 'Advanced Numerology Consultation | Hari Ram Beekrwar',
-    description: 'Book advanced Numerology Consultation (₹3,200) with Hari Ram Beekrwar. Get detailed personal guidance. Call +91 9509610711 for availability.',
-    keywords: 'Advanced Numerology Consultation, Name Correction, Destiny Number Analysis, Lucky Numbers, Wristwatch Numerology',
-    canonicalPath: '/services/advanced-numerology',
-    ogType: 'website',
-    ogImage: `${SITE_URL}/Resource/image_9e22c5.jpg`,
-    ogImageAlt: 'Advanced Numerology Consultation Session',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Services', path: '/services' },
-      { name: 'Advanced Numerology', path: '/services/advanced-numerology' }
-    ],
-    services: [
-      {
-        name: 'Advanced Numerology Consultation',
-        description: 'Comprehensive 1-on-1 personalized analysis of birth date, name correction, destiny vibration, and career cycles.',
-        price: '3200 INR'
-      }
-    ]
-  },
-  '/services/vastu-consultation': {
-    title: 'Scientific Vastu Consultation | Hari Ram Beekrwar',
-    description: 'Book Vastu Consultation with Hari Ram Beekrwar from ₹20,000+. Get personalized remedies for home & office. Call +91 9509610711 today.',
-    keywords: 'Scientific Vastu Consultation, Residential Vastu, Commercial Vastu, Non-destructive Vastu Remedies, Office Vastu',
-    canonicalPath: '/services/vastu-consultation',
-    ogType: 'website',
-    ogImage: `${SITE_URL}/Resource/2.png`,
-    ogImageAlt: 'Scientific and Traditional Vastu Consultation',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Services', path: '/services' },
-      { name: 'Vastu Consultation', path: '/services/vastu-consultation' }
-    ],
-    services: [
-      {
-        name: 'Scientific & Traditional Vastu Consultation',
-        description: 'Detailed evaluation of residential or commercial properties with non-destructive elemental remedies.',
-        price: '20000 INR'
-      }
-    ]
-  },
-  '/urgent-love-plan': {
-    title: 'Urgent Love Plan Consultation | Hari Ram Beekrwar',
-    description: 'Need urgent relationship solutions? Get the Urgent Love Plan for ₹3,200 with Hari Ram Beekrwar. Call +91 9509610711 for immediate guidance.',
-    keywords: 'Urgent Love Plan, Relationship Numerology, Marriage Compatibility Consultation, Priority Numerology Slot',
-    canonicalPath: '/urgent-love-plan',
-    ogType: 'website',
-    ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Urgent Love and Relationship Numerology Plan',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Urgent Love Plan', path: '/urgent-love-plan' }
-    ],
-    services: [
-      {
-        name: 'Urgent Love & Relationship Priority Plan',
-        description: 'Fast-tracked 24-hour priority consultation focusing on relationship alignment and compatibility.',
-        price: '3200 INR'
-      }
-    ]
-  },
-  '/reports': {
-    title: 'Personal Numerology Reports | Hari Ram Beekrwar',
-    description: 'Get detailed Numerology Reports from ₹3,999+ by Hari Ram Beekrwar. Marriage & Career blueprints available. Call +91 9509610711 to order.',
-    keywords: 'Numerology Reports PDF, Marriage Compatibility Blueprint, Career and Wealth Matrix, Manual Numerology Chart',
-    canonicalPath: '/reports',
-    ogType: 'website',
-    ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Handcrafted Personal Numerology Reports',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Reports', path: '/reports' }
-    ]
-  },
-  '/tools': {
-    title: 'Free Numerology Calculator | Hari Ram Beekrwar',
-    description: 'Use the Free Numerology Calculator by Hari Ram Beekrwar to reveal your core numbers. Get instant insights rooted in numerology. Try it now.',
-    keywords: 'Free Numerology Calculator, Destiny Number Calculator, Name Numerology Online, Vedic Number Vibration',
-    canonicalPath: '/tools',
-    ogType: 'website',
-    ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Free Vedic Numerology Calculator Tool',
-    breadcrumbItems: [
-      { name: 'Home', path: '/' },
-      { name: 'Free Tools', path: '/tools' }
-    ]
-  },
   '/blog': {
     title: 'Cosmic Wisdom Blog | Hari Ram Beekrwar',
-    description: 'Explore the Cosmic Blog by Hari Ram Beekrwar for numerology insights, Vastu tips, and zodiac wisdom. Read our latest authentic articles.',
-    keywords: 'Numerology Blog, Vastu Shastra Articles, Planetary Transits, Name Correction Tips, Cosmic Wisdom',
+    description: 'Explore the Cosmic Blog by Hari Ram Beekrwar for numerology insights, name correction tips, and zodiac wisdom. Read our latest authentic articles.',
+    keywords: 'Numerology Blog, Planetary Transits, Name Correction Tips, Cosmic Wisdom',
     canonicalPath: '/blog',
     ogType: 'website',
     ogImage: DEFAULT_OG_IMAGE,
@@ -197,7 +119,7 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
   },
   '/blog/saturn-transit': {
     title: 'Saturn Transit Effects & Remedies | Hari Ram Beekrwar',
-    description: "Learn Saturn transit effects on your numbers and life. Practical Vastu & numerology remedies to reduce hurdles. Consult Hari Ram Beekrwar.",
+    description: "Learn Saturn transit effects on your numbers and life. Practical numerology remedies to reduce hurdles. Consult Hari Ram Beekrwar.",
     keywords: 'Saturn Transit Numerology, Shani Transit Effects, Saturn Remedies, Planetary Transit Alignment',
     canonicalPath: '/blog/saturn-transit',
     ogType: 'article',
@@ -213,14 +135,14 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
       { name: 'Saturn Transit', path: '/blog/saturn-transit' }
     ]
   },
-  '/blog/vastu-office': {
-    title: 'Office Vastu Tips for Business Growth | Hari Ram Beekrwar',
-    description: 'Improve workplace energy with practical Office Vastu tips for growth and prosperity. Get personalised guidance from expert Hari Ram Beekrwar.',
-    keywords: 'Office Vastu Tips, Commercial Vastu, Workplace Energy, Business Growth Vastu, Cash Flow Vastu',
-    canonicalPath: '/blog/vastu-office',
+  '/blog/business-numerology-growth': {
+    title: 'Business Numerology Tips for Growth | Hari Ram Beekrwar',
+    description: 'Improve business energy with practical numerology strategies for growth and prosperity. Get personalised guidance from expert Hari Ram Beekrwar.',
+    keywords: 'Business Numerology, Commercial Prosperity, Workplace Energy, Business Growth Numerology, Cash Flow Numbers',
+    canonicalPath: '/blog/business-numerology-growth',
     ogType: 'article',
     ogImage: DEFAULT_OG_IMAGE,
-    ogImageAlt: 'Office Vastu Tips for Business Success',
+    ogImageAlt: 'Business Numerology Tips for Success',
     articleMeta: {
       publishedTime: '2026-09-15',
       author: 'Hari Ram Beekrwar'
@@ -228,7 +150,7 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
     breadcrumbItems: [
       { name: 'Home', path: '/' },
       { name: 'Blog', path: '/blog' },
-      { name: 'Office Vastu', path: '/blog/vastu-office' }
+      { name: 'Business Numerology', path: '/blog/business-numerology-growth' }
     ]
   },
   '/blog/name-correction-science': {
@@ -316,12 +238,6 @@ export const ROUTES_SEO: Record<string, RouteSEOConfig> = {
     description: 'Book your private 1-on-1 Numerology consultation session securely.',
     canonicalPath: '/booking',
     noindex: true
-  },
-  '/dashboard': {
-    title: 'Client Portal | Hari Ram Beekrwar',
-    description: 'Access your consultation notes, reports, and resources.',
-    canonicalPath: '/dashboard',
-    noindex: true
   }
 };
 
@@ -339,7 +255,7 @@ export function generateStructuredData(config: RouteSEOConfig) {
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
     name: BRAND_NAME,
-    description: 'Vedic Numerology & Scientific Vastu Consultations by Hari Ram Beekrwar',
+    description: 'Vedic Numerology Consultations by Hari Ram Beekrwar',
     inLanguage: 'en-IN'
   });
 
@@ -353,7 +269,7 @@ export function generateStructuredData(config: RouteSEOConfig) {
     logo: `${SITE_URL}/Resource/logo.jpeg`,
     image: `${SITE_URL}/Resource/2.png`,
     telephone: DEFAULT_PHONE,
-    priceRange: '₹3,200 - ₹20,000',
+    priceRange: '₹3,200',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Bharatpur',

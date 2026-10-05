@@ -47,13 +47,13 @@ const SEO: React.FC<SEOProps> = (props) => {
 
   const routeConfig = ROUTES_SEO[normalizedPath] || ROUTES_SEO['/'] || {};
 
-  const title = props.title || routeConfig.title || `${BRAND_NAME} | Numerology & Vastu Consultant`;
-  const description = props.description || routeConfig.description || 'Consult Hari Ram Beekrwar for authentic Vedic Numerology and Vastu consultations. Call or WhatsApp +91 9509610711.';
+  const title = props.title || routeConfig.title || `${BRAND_NAME} | Vedic Numerology Consultant`;
+  const description = props.description || routeConfig.description || 'Consult Hari Ram Beekrwar for authentic Vedic Numerology consultations. Call or WhatsApp +91 9509610711.';
   const keywords = props.keywords || routeConfig.keywords;
   const noindex = props.noindex ?? routeConfig.noindex ?? false;
   const ogType = props.ogType || routeConfig.ogType || 'website';
   const ogImage = props.image || routeConfig.ogImage || DEFAULT_OG_IMAGE;
-  const ogImageAlt = props.imageAlt || routeConfig.ogImageAlt || `${BRAND_NAME} — Numerology & Vastu Consultant`;
+  const ogImageAlt = props.imageAlt || routeConfig.ogImageAlt || `${BRAND_NAME} — Vedic Numerology Consultant`;
   const imageWidth = props.imageWidth || (ogImage === DEFAULT_OG_IMAGE ? 1200 : 800);
   const imageHeight = props.imageHeight || (ogImage === DEFAULT_OG_IMAGE ? 630 : 800);
 

@@ -35,7 +35,7 @@ const About = () => {
 
             {/* Subtitle */}
             <p className="text-xs sm:text-sm md:text-base text-slate-300/90 max-w-2xl mx-auto leading-relaxed font-normal mb-5 sm:mb-6 px-1 sm:px-0">
-              Decoding sacred numbers and directional energies to align your life, career, and space with purposeful success.
+              Decoding sacred numbers and personal vibrations to align your life, career, and future with purposeful success.
             </p>
 
             {/* Quick Hero Highlights */}
@@ -64,7 +64,7 @@ const About = () => {
                     <source type="image/jpeg" srcSet="/Resource/1.jpg" />
                     <img 
                       src="/Resource/1.jpg" 
-                      alt="Hari Ram Beekrwar — Numerology & Vastu Consultant Profile" 
+                      alt="Hari Ram Beekrwar — Numerology Consultant Profile" 
                       width="500"
                       height="500"
                       loading="eager"
@@ -89,14 +89,14 @@ const About = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-grey mb-4 sm:mb-6 leading-tight">Decoding The Hidden Patterns of Your Life</h2>
                 <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 sm:mb-3 flex items-center gap-2"><BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-primary"/> Welcome!</h3>
                 <p className="text-medium-grey text-sm sm:text-base leading-relaxed mb-6 italic border-l-4 border-primary pl-4 sm:pl-6 bg-gray-50 py-3 sm:py-4 rounded-r-lg">
-                  "I am Hari Ram Beekrwar, a professional Numerology and Vastu Consultant dedicated to helping you align your life, career, and living spaces with prosperity, harmony, and success. I believe that every individual carries a unique energy, and when that energy is aligned with the right numbers and surroundings, extraordinary growth becomes possible." <br/><br/><span className="text-dark-grey font-bold">— Hari Ram Beekrwar</span>
+                  "I am Hari Ram Beekrwar, a professional Numerology Consultant dedicated to helping you align your life, career, and personal path with prosperity, harmony, and success. I believe that every individual carries a unique energy, and when that energy is aligned with the right numbers and vibrations, extraordinary growth becomes possible." <br/><br/><span className="text-dark-grey font-bold">— Hari Ram Beekrwar</span>
                 </p>
                 
                 <h3 className="text-lg sm:text-xl font-bold text-dark-grey mb-2 sm:mb-3 mt-6 flex items-center gap-2"><Target className="w-4 h-4 sm:w-5 sm:h-5 text-primary"/> What We Do</h3>
                 <div className="space-y-3.5 sm:space-y-4 mb-8">
                   <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-amber-200/80 transition-all">
                     <p className="text-medium-grey text-xs sm:text-sm md:text-base leading-relaxed">
-                      <strong className="text-dark-grey block text-sm sm:text-base font-bold mb-1">Our Mission:</strong> Whether you are seeking accelerated career growth, business turnaround, financial security, healthier relationships, or a peaceful living space, we offer personalized guidance engineered to bring clarity, confidence, and measurable results.
+                      <strong className="text-dark-grey block text-sm sm:text-base font-bold mb-1">Our Mission:</strong> Whether you are seeking accelerated career growth, business turnaround, financial security, healthier relationships, or a fulfilling life path, we offer personalized guidance engineered to bring clarity, confidence, and measurable results.
                     </p>
                   </div>
                   <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-amber-200/80 transition-all">
